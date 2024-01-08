@@ -9,4 +9,4 @@ morea_labels:
   - EE 445
 ---
 Basic feedforward neural network
-(Image: Wikipedia), 
+(Icon: Wikipedia)
