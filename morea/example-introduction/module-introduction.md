@@ -24,8 +24,9 @@ morea_labels:
 morea_sort_order: 10
 morea_prerequisites:
   - lin-reg
+  - lin-class
   - single-neuron
-
+  - ff-nn
 ---
 
 How we got here!
