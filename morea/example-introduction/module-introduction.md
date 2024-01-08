@@ -3,6 +3,8 @@ title: "Introduction to Machine Learning"
 published: true
 morea_coming_soon: false
 morea_id: example-introduction
+morea_prerequisites:
+	- lin-reg
 morea_outcomes:
   - outcome-course-structure
 morea_readings:
@@ -24,4 +26,4 @@ morea_labels:
 morea_sort_order: 10
 ---
 
-Overview of EE 445, and useful information for the course.
+How we got here!
