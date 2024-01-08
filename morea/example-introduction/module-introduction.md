@@ -3,8 +3,6 @@ title: "Introduction to Machine Learning"
 published: true
 morea_coming_soon: false
 morea_id: example-introduction
-morea_prerequisites:
-	- lin-reg
 morea_outcomes:
   - outcome-course-structure
 morea_readings:
@@ -24,6 +22,8 @@ morea_start_date: "2023-01-26"
 morea_end_date: "2023-07-01T23:00"
 morea_labels:
 morea_sort_order: 10
+morea_prerequisites: lin-reg
+
 ---
 
 How we got here!
