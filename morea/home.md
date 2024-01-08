@@ -5,47 +5,45 @@ morea_type: home
 published: true
 ---
 
-## Welcome to EE 645, Spring 2024
+## Welcome to EE 445, Spring 2023
 
-EE 645 is an graduate level course in machine learning, and a foundational
-course for graduate students who would like to use AI/machine learning
-in their research.
+<div class="alert alert-danger" role="alert" markdown="1">
 
+  <i class="fa-solid fa-circle-exclamation fa-xl"></i> **Warning: material has not been migrated, you may find demo fillers instead of EE 445 material.**
+  <hr/>
+  
+  The course material is transitioning into the Morea Framework. 
 
+  See the <a href="https://morea-framework.github.io">Morea Framework Project Site</a> for details.
+</div>
 
+EE 445 is an undergraduate level introduction to Machine Learning for
+Electrical and Computer Engineering students. It augments your base in
+probability and linear algebra (and to some extent related engineering
+concepts), and leverages this foundation to provide a comprehensive
+introduction to machine learning fundamentals.
 
 ## Who should take this course
 
-The Spring 2024 edition welcomes students from multiple departments:
-in addition to the traditional ECE, Computer Science, and other STEM
-departments (ME, CEE, Math, Astronomy), we have students from social
-sciences, business and urban planning. Basic familiarity with
-statistics, probability and some linear algebra, supplemented with a
-willingness to learn fundamentals, is all that is required. Ideally,
-students should have had some exposure to using machine learning/AI
-(even if it is only YouTube videos or playing with them as black
-boxes). The goal is for all students to pick up the central tenets of
-this field in a way that can guide them to use AI/machine learning in
-a sophisticated and nuanced fashion.
+This course is intended for undergraduates in ECE/Math, or graduate
+students in ICS, Economics, Math, and Business with a basic working
+knowledge of python, probability and linear algebra.
 
 ## Pedagogy
 
-EE 645 is structured as a series of
-[modules](https://uhm-descartes.github.io/ee345/modules), each taking
-approximately 2-3 weeks to complete. Given the diversity of students,
-we will tailor courses towards multiple categories of students
-(theory, simulations, developing applications for non-traditional
-areas). The course will operate in partially flipped mode, where we
-will delegate some topics to recordings and use class time for threading
-multiple perspectives together. 
+EE 445 is structured as a series of [modules](/modules), each taking
+approximately 1-2 weeks to complete. Each module has material we will
+cover in class (usually the harder or the more important parts), and
+will often have supplementary material that you are encouraged to
+do. By design the course is open ended, where you have the option of
+going "ahead of lectures", so to speak, and I am always available to help
+you when you do so. Each module typically has:
 
-Modules have:
-
-  * [Prerequisites](https://uhm-descartes.github.io/ee345/prerequisites), describing skills you should have prior to starting the module.
-  * [Learning outcomes](https://uhm-descartes.github.io/ee345/outcomes), describing the major goals for the module.
-  * [Readings and other online resources](https://uhm-descartes.github.io/ee345/readings), providing background material.
-  * [Experiential learning activities](https://uhm-descartes.github.io/ee345/experiences), providing a structured set of challenges enabling you to acquire mastery of material.
-  * [Assessments](https://uhm-descartes.github.io/ee345/assessments), which help you determine if you have acquired mastery of the material.
+  * [Prerequisites](https://uhm-descartes.github.io/ee445/prerequisites), describing skills you should have prior to starting the module.
+  * [Learning outcomes](https://uhm-descartes.github.io/ee445/outcomes), describing the major goals for the module.
+  * [Readings and other online resources](https://uhm-descartes.github.io/ee445/readings), providing background material.
+  * [Experiential learning activities](https://uhm-descartes.github.io/ee445/experiences), providing a structured set of challenges enabling you to acquire mastery of material.
+  * [Assessments](https://uhm-descartes.github.io/ee445/assessments), which help you determine if you have acquired mastery of the material.
 
 ## About the instructor
 

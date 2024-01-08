@@ -1,0 +1,2151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0063)https://tkf.github.io/emacs-ipython-notebook/#commands-keybinds -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    
+    <title>Welcome to Emacs IPython Notebook’s documentation! — Emacs IPython Notebook 0.2.1alpha1 documentation</title>
+    
+    <link rel="stylesheet" href="./dele_files/nature.css" type="text/css">
+    <link rel="stylesheet" href="./dele_files/pygments.css" type="text/css">
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.2.1alpha1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script><style type="text/css" id="operaUserStyle"></style>
+    <script type="text/javascript" src="./dele_files/jquery.js.download"></script>
+    <script type="text/javascript" src="./dele_files/underscore.js.download"></script>
+    <script type="text/javascript" src="./dele_files/doctools.js.download"></script>
+    <link rel="top" title="Emacs IPython Notebook 0.2.1alpha1 documentation" href="https://tkf.github.io/emacs-ipython-notebook/#"> 
+  <style type="text/css"></style></head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="https://tkf.github.io/emacs-ipython-notebook/genindex.html" title="General Index" accesskey="I">index</a></li>
+        <li><a href="https://tkf.github.io/emacs-ipython-notebook/#">Emacs IPython Notebook 0.2.1alpha1 documentation</a> »</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body">
+            
+  <div class="section" id="welcome-to-emacs-ipython-notebook-s-documentation">
+<h1><a class="toc-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id24">Welcome to Emacs IPython Notebook’s documentation!</a><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#welcome-to-emacs-ipython-notebook-s-documentation" title="Permalink to this headline">¶</a></h1>
+<p>Emacs IPython Notebook (EIN) provides a IPython Notebook client and
+integrated REPL (like <a class="reference external" href="http://common-lisp.net/project/slime/">SLIME</a>) in Emacs.  While EIN makes notebook
+editing very powerful by allowing you to use any Emacs features, it
+also expose IPython features such as code evaluation, object
+inspection and code completion to the Emacs side.  These features can
+be accessed anywhere in Emacs and improve Python code editing and
+reading in Emacs.</p>
+<p>Highlighted features:</p>
+<ul class="simple">
+<li>Copy/paste cells, even to/from different notebooks.</li>
+<li>Console integration: You can easily connect to kernel via console
+application.  This enables you to start debugging in the same
+kernel.  It is even possible to connect console over ssh <a class="footnote-reference" href="https://tkf.github.io/emacs-ipython-notebook/#id3" id="id1">[1]</a>.</li>
+<li>IPython kernel can be “connected” to any buffers.  This enables you
+to evaluate buffer/region using same kernel as notebook.  Notebook
+goodies such as tooltip help, help browser and code completion are
+available in these buffers. <a class="footnote-reference" href="https://tkf.github.io/emacs-ipython-notebook/#id4" id="id2">[2]</a></li>
+<li>Jump to definition (go to the definition by hitting <tt class="docutils literal"><span class="pre">M-.</span></tt> over an
+object).</li>
+</ul>
+<p>Other notebook features:</p>
+<ul class="simple">
+<li>Inline images</li>
+<li>Auto/manual-completion</li>
+<li>Popup (tooltip) help</li>
+<li>Syntax highlighting in each cell types (Python/Markdown/ReST/HTML)</li>
+<li>Help browser (opens when executing <tt class="docutils literal"><span class="pre">function?</span></tt>)</li>
+<li>Traceback viewer</li>
+</ul>
+<p>Links:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://tkf.github.com/emacs-ipython-notebook/">Online Documentation</a></li>
+<li><a class="reference external" href="https://github.com/tkf/emacs-ipython-notebook/wiki">Wiki</a><ul>
+<li><a class="reference external" href="https://github.com/tkf/emacs-ipython-notebook/wiki/Screenshots">Screenshots</a></li>
+<li><a class="reference external" href="https://github.com/tkf/emacs-ipython-notebook/wiki/Tips">Tips</a></li>
+</ul>
+</li>
+<li><a class="reference external" href="https://github.com/tkf/emacs-ipython-notebook/tags">Downloads</a></li>
+<li><a class="reference external" href="https://github.com/tkf/emacs-ipython-notebook">Repository at GitHub</a></li>
+<li><a class="reference external" href="https://github.com/tkf/emacs-ipython-notebook/issues">Issue Tracker at GitHub</a></li>
+</ul>
+<table class="docutils footnote" frame="void" id="id3" rules="none">
+<colgroup><col class="label"><col></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id1">[1]</a></td><td>You need to setup <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:console-args" title="ein:console-args"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:console-args</span></tt></a> properly</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id4" rules="none">
+<colgroup><col class="label"><col></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id2">[2]</a></td><td>Use the command <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:connect-to-notebook-command" title="ein:connect-to-notebook-command"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:connect-to-notebook-command</span></tt></a>.</td></tr>
+</tbody>
+</table>
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#welcome-to-emacs-ipython-notebook-s-documentation" id="id24">Welcome to Emacs IPython Notebook’s documentation!</a><ul>
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#quick-try" id="id25">Quick try</a></li>
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#requirements" id="id26">Requirements</a></li>
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#install" id="id27">Install</a><ul>
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#using-el-get" id="id28">Using el-get</a></li>
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#using-package-el-melpa" id="id29">Using package.el (MELPA)</a></li>
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#manual-install" id="id30">Manual install</a></li>
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#setup" id="id31">Setup</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#usage" id="id32">Usage</a></li>
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#commands-keybinds" id="id33">Commands/Keybinds</a><ul>
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#notebook-list" id="id34">Notebook list</a></li>
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#notebook" id="id35">Notebook</a></li>
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#connected-buffer" id="id36">Connected buffer</a></li>
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#shared-output-buffer" id="id37">Shared output buffer</a></li>
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#traceback-viewer" id="id38">Traceback viewer</a></li>
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#pytools" id="id39">PyTools</a></li>
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#misc" id="id40">Misc</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#org-mode-integration" id="id41">Org-mode integration</a></li>
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#customization" id="id42">Customization</a><ul>
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#subpackages" id="id43">Subpackages</a></li>
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#id12" id="id44">Notebook list</a></li>
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#id13" id="id45">Notebook</a></li>
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#console" id="id46">Console</a></li>
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#connect" id="id47">Connect</a><ul>
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#jedi-el" id="id48">Jedi.el</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#id15" id="id49">MuMaMo</a></li>
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#id16" id="id50">Misc</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#gotchas-and-caveats" id="id51">Gotchas and caveats</a><ul>
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#url-retrieve" id="id52"><tt class="xref el el-symbol docutils literal"><span class="pre">url-retrieve</span></tt></a></li>
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#id17" id="id53">MuMaMo</a></li>
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#gotchas-python-mode-el" id="id54">python-mode.el</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#advanced" id="id55">Advanced</a></li>
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#reporting-issue" id="id56">Reporting issue</a><ul>
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#logging" id="id57">Logging</a><ul>
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#id20" id="id58">websocket.el</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#debugging" id="id59">Debugging</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#change-log" id="id60">Change Log</a><ul>
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#v0-2-1" id="id61">v0.2.1</a></li>
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#v0-2" id="id62">v0.2</a></li>
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#v0-1-2" id="id63">v0.1.2</a></li>
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#v0-1-1" id="id64">v0.1.1</a></li>
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#v0-1" id="id65">v0.1</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#license" id="id66">License</a></li>
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#indices-and-tables" id="id67">Indices and tables</a></li>
+</ul>
+</div>
+<div class="section" id="quick-try">
+<h2><a class="toc-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id25">Quick try</a><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#quick-try" title="Permalink to this headline">¶</a></h2>
+<p>This is a quick and clean way to try EIN separately from your Emacs
+setting.  If you want to try EIN but think preparing all the
+requirements is too much, try this!:</p>
+<div class="highlight-cl"><div class="highlight"><pre><span class="nv">git</span> <span class="nv">clone</span> <span class="nv">git://github.com/tkf/emacs-ipython-notebook.git</span>
+<span class="nv">cd</span> <span class="nv">emacs-ipython-notebook/</span>
+<span class="nv">lisp/zeroein.el</span>
+</pre></div>
+</div>
+<p>This will launch a new Emacs instance.</p>
+<p>You can use environment variable <tt class="docutils literal"><span class="pre">EMACS</span></tt> to control Emacs executable
+to use.:</p>
+<div class="highlight-cl"><div class="highlight"><pre><span class="nv">EMACS=emacs-snapshot</span> <span class="nv">lisp/zeroein.el</span>
+</pre></div>
+</div>
+<p>The above command requires /bin/sh.  If the above command does not work
+(e.g., you are using MS Windows), try the following command:</p>
+<div class="highlight-cl"><div class="highlight"><pre><span class="nv">emacs</span> <span class="nv">-Q</span> <span class="nv">-l</span> <span class="nv">lisp/zeroein.el</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="requirements">
+<h2><a class="toc-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id26">Requirements</a><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#requirements" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="http://ipython.org/">IPython</a> 0.12 or higher.</li>
+<li><a class="reference external" href="https://github.com/ahyatt/emacs-websocket">websocket.el</a> 0.9</li>
+<li><a class="reference external" href="https://github.com/tkf/emacs-request">request.el</a> &gt;= 0.2</li>
+<li>(optional) <a class="reference external" href="http://www.emacswiki.org/emacs/MuMaMo">mumamo</a> developmental version:
+It will be automatically loaded when it is on the path.
+The official way to setup path is to load <a class="reference external" href="http://ourcomments.org/Emacs/nXhtml/doc/nxhtml.html">nXhtml</a>.</li>
+<li>(optional) markdown-mode</li>
+<li>(optional) python-mode:
+It should work with either python.el or <a class="reference external" href="https://tkf.github.io/emacs-ipython-notebook/:https://launchpad.net/python-mode">python-mode.el</a> <a class="footnote-reference" href="https://tkf.github.io/emacs-ipython-notebook/#id6" id="id5">[3]</a>.
+Fabian Gallina’s <a class="reference external" href="https://github.com/fgallina/python.el">python.el</a> is required to use
+<tt class="xref el el-symbol docutils literal"><span class="pre">ein:console-open</span></tt> command.</li>
+<li>(optional) <a class="reference external" href="http://cx4a.org/software/auto-complete/">auto-complete.el</a>
+You need to configure <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:use-auto-complete" title="ein:use-auto-complete"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:use-auto-complete</span></tt></a> to enable
+this feature.</li>
+<li>(optional) <a class="reference external" href="https://github.com/myuhe/smartrep.el">smartrep.el</a>:
+This package enables you to omit typing prefix keys (e.g.,
+<tt class="docutils literal"><span class="pre">C-c</span> <span class="pre">C-n</span> <span class="pre">C-n</span> <span class="pre">C-n</span> <span class="pre">...</span></tt> instead of <tt class="docutils literal"><span class="pre">C-c</span> <span class="pre">C-n</span> <span class="pre">C-c</span> <span class="pre">C-n</span> <span class="pre">C-c</span> <span class="pre">C-n</span> <span class="pre">...</span></tt>).
+You need to configure <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:use-smartrep" title="ein:use-smartrep"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:use-smartrep</span></tt></a> to enable
+this feature.</li>
+</ul>
+<p>Also, EIN heavily relies on standard Emacs libraries including EWOC,
+EIEIO and json.el.  EIN is currently tested against Emacs 23.3 and 24.3.
+It is known to work in Emacs 23.2, 24.1 and 24.2.</p>
+<table class="docutils footnote" frame="void" id="id6" rules="none">
+<colgroup><col class="label"><col></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id5">[3]</a></td><td>See
+<a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#gotchas-python-mode-el"><em>Gotchas and caveats &gt; python-mode.el</em></a>.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="install">
+<h2><a class="toc-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id27">Install</a><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#install" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">As EIN relies on many packages and it will not work
+properly with outdated versions, installing it using el-get or
+MELPA is highly recommended.</p>
+</div>
+<div class="section" id="using-el-get">
+<h3><a class="toc-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id28">Using el-get</a><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#using-el-get" title="Permalink to this headline">¶</a></h3>
+<p>If you use developmental version of <a class="reference external" href="https://github.com/dimitri/el-get">el-get</a>, you can install it
+easily using it.  Emacs IPython Notebook is registered as package
+<tt class="docutils literal"><span class="pre">ein</span></tt>.   See <a class="reference external" href="https://github.com/dimitri/el-get">el-get</a> website for more information.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>If you get error “Cannot open load file: request” that means
+you have older el-get version.  You can fix this problem by
+either (1) install request.el manually, (2) use the latest recipe,
+or (3) update el-get to its master.</p>
+<p>You can get the latest recipe here:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/dimitri/el-get/blob/master/recipes/ein.rcp">https://github.com/dimitri/el-get/blob/master/recipes/ein.rcp</a></li>
+<li><a class="reference external" href="https://github.com/dimitri/el-get/blob/master/recipes/request.rcp">https://github.com/dimitri/el-get/blob/master/recipes/request.rcp</a></li>
+</ul>
+<p class="last">See <a class="reference external" href="https://github.com/tkf/emacs-ipython-notebook/issues/98">issue 98</a>
+for more information.</p>
+</div>
+</div>
+<div class="section" id="using-package-el-melpa">
+<h3><a class="toc-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id29">Using package.el (MELPA)</a><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#using-package-el-melpa" title="Permalink to this headline">¶</a></h3>
+<p>You can install EIN using <a class="reference external" href="http://emacswiki.org/emacs/ELPA">package.el</a> when <a class="reference external" href="https://github.com/milkypostman/melpa">MELPA</a> package repository
+is added to its setting. See <a class="reference external" href="https://github.com/milkypostman/melpa">MELPA</a> website for more information.</p>
+</div>
+<div class="section" id="manual-install">
+<h3><a class="toc-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id30">Manual install</a><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#manual-install" title="Permalink to this headline">¶</a></h3>
+<p>Put Emacs lisp <tt class="docutils literal"><span class="pre">ein*.el</span></tt> files and Python file <tt class="docutils literal"><span class="pre">ein.py</span></tt> in
+a directory defined in your <tt class="xref el el-symbol docutils literal"><span class="pre">load-path</span></tt>.</p>
+<p>You should byte compile EIN, especially when using MuMaMo, otherwise
+editing large notebook will be very slow.  You can use the following
+command to compile EIN.  If you don’t specify all the optional
+packages, there will be compiler warning but that is OK as long as you
+don’t use that optional package.</p>
+<div class="highlight-sh"><div class="highlight"><pre>emacs -Q -batch -L .          <span class="se">\ </span> <span class="c"># don't forget the dot!</span>
+    -L PATH/TO/websocket/     <span class="se">\</span>
+    -L PATH/TO/nxhtml/util/   <span class="se">\ </span> <span class="c"># optional (for MuMaMo)</span>
+    -L PATH/TO/auto-complete/ <span class="se">\ </span> <span class="c"># optional</span>
+    -L PATH/TO/popup/         <span class="se">\ </span> <span class="c"># optional (for auto-complete)</span>
+    -L PATH/TO/fuzzy/         <span class="se">\ </span> <span class="c"># optional (for auto-complete)</span>
+    -L PATH/TO/smartrep/      <span class="se">\ </span> <span class="c"># optional</span>
+    -L PATH/TO/rst-mode/      <span class="se">\ </span> <span class="c"># optional</span>
+    -f batch-byte-compile *.el
+</pre></div>
+</div>
+</div>
+<div class="section" id="setup">
+<h3><a class="toc-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id31">Setup</a><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#setup" title="Permalink to this headline">¶</a></h3>
+<p>Here is the minimal configuration.  See <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#customization">customization</a> for more details.</p>
+<div class="highlight-cl"><div class="highlight"><pre><span class="p">(</span><span class="nb">require</span> <span class="ss">'ein</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="usage">
+<h2><a class="toc-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id32">Usage</a><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#usage" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Start <a class="reference external" href="http://ipython.org/ipython-doc/stable/interactive/htmlnotebook.html">IPython notebook server</a>.</li>
+<li>Hit <tt class="docutils literal"><span class="pre">M-x</span> <span class="pre">ein:notebooklist-open</span></tt> to open notebook list.  This will
+open <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#notebook-list-commands"><em>notebook list</em></a> buffer.</li>
+<li>In the notebook list buffer, you can open notebooks by hitting
+<tt class="docutils literal"><span class="pre">[Open]</span></tt> buttons.  See <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#notebook-commands"><em>notebook</em></a>
+section for what you can do in the notebook buffer.</li>
+</ol>
+</div>
+<div class="section" id="commands-keybinds">
+<h2><a class="toc-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id33">Commands/Keybinds</a><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#commands-keybinds" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="notebook-list">
+<span id="notebook-list-commands"></span><h3><a class="toc-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id34">Notebook list</a><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#notebook-list" title="Permalink to this headline">¶</a></h3>
+<p>You can start notebook by <tt class="docutils literal"><span class="pre">M-x</span> <span class="pre">ein:notebooklist-open</span></tt> and enter the
+port or URL of the IPython notebook server.</p>
+<dl class="function">
+<dt id="ein:notebooklist-open">
+<em class="property">function </em><big>(</big><tt class="descname">ein:notebooklist-open </tt><em>&amp;optional</em> <em>url-or-port</em> <em>no-popup</em><big>)</big><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:notebooklist-open" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open notebook list buffer.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="ein:notebooklist-new-notebook">
+<em class="property">function </em><big>(</big><tt class="descname">ein:notebooklist-new-notebook </tt><em>&amp;optional</em> <em>url-or-port</em> <em>callback</em> <em>cbargs</em><big>)</big><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:notebooklist-new-notebook" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ask server to create a new notebook and open it in a new buffer.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="ein:notebooklist-open-notebook-global">
+<em class="property">function </em><big>(</big><tt class="descname">ein:notebooklist-open-notebook-global </tt><em>nbpath</em> <em>&amp;optional</em> <em>callback</em> <em>cbargs</em><big>)</big><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:notebooklist-open-notebook-global" title="Permalink to this definition">¶</a></dt>
+<dd><p>Choose notebook from all opened notebook list and open it.
+Notebook is specified by a string NBPATH whose format is
+“URL-OR-PORT/NOTEBOOK-NAME”.</p>
+<p>When used in lisp, CALLBACK and CBARGS are passed to <tt class="xref el el-symbol docutils literal"><span class="pre">ein:notebook-open</span></tt>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="ein:notebooklist-login">
+<em class="property">function </em><big>(</big><tt class="descname">ein:notebooklist-login </tt><em>url-or-port</em> <em>password</em><big>)</big><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:notebooklist-login" title="Permalink to this definition">¶</a></dt>
+<dd><p>Login to IPython notebook server.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="ein:junk-new">
+<em class="property">function </em><big>(</big><tt class="descname">ein:junk-new </tt><em>name</em> <em>url-or-port</em><big>)</big><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:junk-new" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open a notebook to try random thing.
+Notebook name is determined based on
+<a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:junk-notebook-name-template" title="ein:junk-notebook-name-template"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:junk-notebook-name-template</span></tt></a>.</p>
+<p>When prefix argument is given, it asks URL or port to use.</p>
+</dd></dl>
+
+<p>Keymap for <tt class="xref el el-symbol docutils literal"><span class="pre">ein:notebooklist-mode</span></tt>.</p>
+<dl class="keybind">
+<dt>
+<tt class="descname">TAB</tt><tt class="descclassname"> widget-forward</tt></dt>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-M-i</tt><tt class="descclassname"> widget-backward</tt></dt>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">&lt;S-tab&gt;</tt><tt class="descclassname"> widget-backward</tt></dt>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">&lt;backtab&gt;</tt><tt class="descclassname"> widget-backward</tt></dt>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c C-r</tt><tt class="descclassname"> ein:notebooklist-reload</tt></dt>
+
+<dd></dd><dd class="first last"><p>Reload current Notebook list.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">g</tt><tt class="descclassname"> ein:notebooklist-reload</tt></dt>
+
+<dd></dd><dd class="first last"><p>Reload current Notebook list.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">p</tt><tt class="descclassname"> ein:notebooklist-prev-item</tt></dt>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">n</tt><tt class="descclassname"> ein:notebooklist-next-item</tt></dt>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">q</tt><tt class="descclassname"> bury-buffer</tt></dt>
+</dl>
+
+</div>
+<div class="section" id="notebook">
+<span id="notebook-commands"></span><h3><a class="toc-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id35">Notebook</a><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#notebook" title="Permalink to this headline">¶</a></h3>
+<p>The following keybinds are available in notebook buffers.</p>
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c C-c</tt><tt class="descclassname"> ein:worksheet-execute-cell</tt></dt>
+
+<dd></dd><dd class="first last"><p>Execute code type CELL.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c C-'</tt><tt class="descclassname"> ein:worksheet-turn-on-autoexec</tt></dt>
+
+<dd></dd><dd class="first last"><p>Turn on auto-execution flag of the cells in region or cell at point.
+When the prefix argument is given, turn off the flag instead.</p>
+<p>To use autoexec feature, you need to turn on auto-execution mode
+in connected buffers, using the <tt class="xref el el-symbol docutils literal"><span class="pre">ein:connect-toggle-autoexec</span></tt>
+command.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c C-e</tt><tt class="descclassname"> ein:worksheet-toggle-output</tt></dt>
+
+<dd></dd><dd class="first last"><p>Toggle the visibility of the output of the cell at point.
+This does not alter the actual data stored in the cell.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c C-v</tt><tt class="descclassname"> ein:worksheet-set-output-visibility-all</tt></dt>
+
+<dd></dd><dd class="first last"><p>Show all cell output.  When prefix is given, hide all cell output.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c C-l</tt><tt class="descclassname"> ein:worksheet-clear-output</tt></dt>
+
+<dd></dd><dd class="first last"><p>Clear output from the current cell at point.
+Do not clear input prompt when the prefix argument is given.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c C-S-l</tt><tt class="descclassname"> ein:worksheet-clear-all-output</tt></dt>
+
+<dd></dd><dd class="first last"><p>Clear output from all cells.
+Do not clear input prompts when the prefix argument is given.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c C-;</tt><tt class="descclassname"> ein:shared-output-show-code-cell-at-point</tt></dt>
+
+<dd></dd><dd class="first last"><p>Show code cell at point in shared-output buffer.
+It is useful when the output of the cell at point is truncated.
+See also <tt class="xref el el-symbol docutils literal"><span class="pre">ein:cell-max-num-outputs</span></tt>.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c C-k</tt><tt class="descclassname"> ein:worksheet-kill-cell</tt></dt>
+
+<dd></dd><dd class="first last"><p>Kill (“cut”) the cell at point or cells in region.
+Note that the kill-ring for cells is not shared with the default
+kill-ring of Emacs (kill-ring for texts).</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c M-w</tt><tt class="descclassname"> ein:worksheet-copy-cell</tt></dt>
+
+<dd></dd><dd class="first last"><p>Copy the cell at point.  (Put the current cell into the kill-ring.)</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c M-{</tt><tt class="descclassname"> ein:notebook-worksheet-move-prev</tt></dt>
+
+<dd></dd><dd class="first last"><p>Switch the current worksheet with the previous one.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c M-}</tt><tt class="descclassname"> ein:notebook-worksheet-move-next</tt></dt>
+
+<dd></dd><dd class="first last"><p>Switch the current worksheet with the previous one.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c M-+</tt><tt class="descclassname"> ein:notebook-worksheet-insert-prev</tt></dt>
+
+<dd></dd><dd class="first last"><p>Insert a new worksheet before this worksheet and open it.
+See also <tt class="xref el el-symbol docutils literal"><span class="pre">ein:notebook-worksheet-insert-next</span></tt>.</p>
+<p>(fn NOTEBOOK WS &amp;optional (RENDER t) (SHOW (function switch-to-buffer)))</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c C-w</tt><tt class="descclassname"> ein:worksheet-copy-cell</tt></dt>
+
+<dd></dd><dd class="first last"><p>Copy the cell at point.  (Put the current cell into the kill-ring.)</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c C-y</tt><tt class="descclassname"> ein:worksheet-yank-cell</tt></dt>
+
+<dd></dd><dd class="first last"><p>Insert (“paste”) the latest killed cell.
+Prefixes are act same as the normal <tt class="xref el el-symbol docutils literal"><span class="pre">yank</span></tt> command.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c C-a</tt><tt class="descclassname"> ein:worksheet-insert-cell-above</tt></dt>
+
+<dd></dd><dd class="first last"><p>Insert cell above.  Insert markdown cell instead of code cell
+when the prefix argument is given.
+See also: <tt class="xref el el-symbol docutils literal"><span class="pre">ein:worksheet-insert-cell-below</span></tt>.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c C-b</tt><tt class="descclassname"> ein:worksheet-insert-cell-below</tt></dt>
+
+<dd></dd><dd class="first last"><p>Insert cell below.  Insert markdown cell instead of code cell
+when the prefix argument is given.</p>
+<p>When used as a lisp function, insert a cell of TYPE-OR-CELL just
+after PIVOT and return the new cell.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c C-t</tt><tt class="descclassname"> ein:worksheet-toggle-cell-type</tt></dt>
+
+<dd></dd><dd class="first last"><p>Toggle the cell type of the cell at point.
+Use <tt class="xref el el-symbol docutils literal"><span class="pre">ein:worksheet-change-cell-type</span></tt> to change the cell type
+directly.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c C-u</tt><tt class="descclassname"> ein:worksheet-change-cell-type</tt></dt>
+
+<dd></dd><dd class="first last"><p>Change the cell type of the current cell.
+Prompt will appear in the minibuffer.</p>
+<p>When used in as a Lisp function, TYPE (string) should be chose
+from “code”, “markdown”, “raw” and “heading”.  LEVEL is
+an integer used only when the TYPE is “heading”.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c C-s</tt><tt class="descclassname"> ein:worksheet-split-cell-at-point</tt></dt>
+
+<dd></dd><dd class="first last"><p>Split cell at current position. Newlines at the splitting
+point will be removed. This can be omitted by giving a prefix
+argument (C-u).</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c C-m</tt><tt class="descclassname"> ein:worksheet-merge-cell</tt></dt>
+
+<dd></dd><dd class="first last"><p>Merge previous cell into current cell.
+If prefix is given, merge current cell into next cell.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c C-n</tt><tt class="descclassname"> ein:worksheet-goto-next-input</tt></dt>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c C-p</tt><tt class="descclassname"> ein:worksheet-goto-prev-input</tt></dt>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c &lt;up&gt;</tt><tt class="descclassname"> ein:worksheet-move-cell-up</tt></dt>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c &lt;down&gt;</tt><tt class="descclassname"> ein:worksheet-move-cell-down</tt></dt>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c C-f</tt><tt class="descclassname"> ein:pytools-request-tooltip-or-help</tt></dt>
+
+<dd></dd><dd class="first last"><p>Show the help for the object at point using tooltip.
+When the prefix argument <tt class="docutils literal"><span class="pre">C-u</span></tt> is given, open the help in the
+pager buffer.  You can explicitly specify the object by selecting it.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c C-i</tt><tt class="descclassname"> ein:completer-complete</tt></dt>
+
+<dd></dd><dd class="first last"><p>Start completion for the code at point.</p>
+<p>(fn KERNEL &amp;rest ARGS &amp;key CALLBACKS &amp;allow-other-keys)</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c C-x</tt><tt class="descclassname"> ein:tb-show</tt></dt>
+
+<dd></dd><dd class="first last"><p>Show full traceback in traceback viewer.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c C-r</tt><tt class="descclassname"> ein:notebook-restart-kernel-command</tt></dt>
+
+<dd></dd><dd class="first last"><p>Send request to the server to restart kernel.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c C-z</tt><tt class="descclassname"> ein:notebook-kernel-interrupt-command</tt></dt>
+
+<dd></dd><dd class="first last"><p>Interrupt the kernel.
+This is equivalent to do <tt class="docutils literal"><span class="pre">C-c</span></tt> in the console program.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c C-q</tt><tt class="descclassname"> ein:notebook-kill-kernel-then-close-command</tt></dt>
+
+<dd></dd><dd class="first last"><p>Kill kernel and then kill notebook buffer.
+To close notebook without killing kernel, just close the buffer
+as usual.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c C-#</tt><tt class="descclassname"> ein:notebook-close</tt></dt>
+
+<dd></dd><dd class="first last"><p>Close NOTEBOOK and kill its buffer.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c C-o</tt><tt class="descclassname"> ein:console-open</tt></dt>
+
+<dd></dd><dd class="first last"><p>Open IPython console.
+To use this function, <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:console-security-dir" title="ein:console-security-dir"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:console-security-dir</span></tt></a> and
+<a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:console-args" title="ein:console-args"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:console-args</span></tt></a> must be set properly.
+This function works best with the new <a class="reference external" href="https://github.com/fgallina/python.el">python.el</a> which is shipped
+with Emacs 24.2 or later.  If you don’t have it, this function
+opens a “plain” command line interpreter (comint) buffer where
+you cannot use fancy stuff such as TAB completion.
+It should be possible to support python-mode.el.  Patches are welcome!</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c C-.</tt><tt class="descclassname"> ein:pytools-jump-to-source-command</tt></dt>
+
+<dd></dd><dd class="first last"><p>Jump to the source code of the object at point.
+When the prefix argument <tt class="docutils literal"><span class="pre">C-u</span></tt> is given, open the source code
+in the other window.  You can explicitly specify the object by
+selecting it.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c C-,</tt><tt class="descclassname"> ein:pytools-jump-back-command</tt></dt>
+
+<dd></dd><dd class="first last"><p>Go back to the point where <tt class="xref el el-symbol docutils literal"><span class="pre">ein:pytools-jump-to-source-command</span></tt>
+is executed last time.  When the prefix argument <tt class="docutils literal"><span class="pre">C-u</span></tt> is
+given, open the last point in the other window.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c C-/</tt><tt class="descclassname"> ein:notebook-scratchsheet-open</tt></dt>
+
+<dd></dd><dd class="first last"><p>Open “scratch sheet”.
+Open a new one when prefix argument is given.
+Scratch sheet is almost identical to worksheet.  However, EIN
+will not save the buffer.  Use this buffer like of normal IPython
+console.  Note that you can always copy cells into the normal
+worksheet to save result.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c !</tt><tt class="descclassname"> ein:worksheet-rename-sheet</tt></dt>
+
+<dd></dd><dd class="first last"><p>Change worksheet name (<em>not</em> notebook name).</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c {</tt><tt class="descclassname"> ein:notebook-worksheet-open-prev-or-last</tt></dt>
+
+<dd></dd><dd class="first last"><p>Open previous or last worksheet.
+See also <tt class="xref el el-symbol docutils literal"><span class="pre">ein:notebook-worksheet-open-next-or-first</span></tt> and
+<tt class="xref el el-symbol docutils literal"><span class="pre">ein:notebook-worksheet-open-prev</span></tt>.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c }</tt><tt class="descclassname"> ein:notebook-worksheet-open-next-or-first</tt></dt>
+
+<dd></dd><dd class="first last"><p>Open next or first worksheet.</p>
+<p>Try to open the worksheet to the worksheet WS using the function
+<tt class="xref el el-symbol docutils literal"><span class="pre">ein:notebook-worksheet-open-next</span></tt>, open the first worksheet if
+not found.</p>
+<p>SHOW is a function to be called with the worksheet buffer if
+given.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c +</tt><tt class="descclassname"> ein:notebook-worksheet-insert-next</tt></dt>
+
+<dd></dd><dd class="first last"><p>Insert a new worksheet after this worksheet and open it.
+See also <tt class="xref el el-symbol docutils literal"><span class="pre">ein:notebook-worksheet-insert-prev</span></tt>.</p>
+<p>(fn NOTEBOOK WS &amp;optional (RENDER t) (SHOW (function switch-to-buffer)))</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c -</tt><tt class="descclassname"> ein:notebook-worksheet-delete</tt></dt>
+
+<dd></dd><dd class="first last"><p>Delete the current worksheet.
+When used as a lisp function, delete worksheet WS from NOTEBOOk.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c 1</tt><tt class="descclassname"> ein:notebook-worksheet-open-1th</tt></dt>
+
+<dd></dd><dd class="first last"><p>Open 1-th worksheet.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c 2</tt><tt class="descclassname"> ein:notebook-worksheet-open-2th</tt></dt>
+
+<dd></dd><dd class="first last"><p>Open 2-th worksheet.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c 3</tt><tt class="descclassname"> ein:notebook-worksheet-open-3th</tt></dt>
+
+<dd></dd><dd class="first last"><p>Open 3-th worksheet.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c 4</tt><tt class="descclassname"> ein:notebook-worksheet-open-4th</tt></dt>
+
+<dd></dd><dd class="first last"><p>Open 4-th worksheet.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c 5</tt><tt class="descclassname"> ein:notebook-worksheet-open-5th</tt></dt>
+
+<dd></dd><dd class="first last"><p>Open 5-th worksheet.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c 6</tt><tt class="descclassname"> ein:notebook-worksheet-open-6th</tt></dt>
+
+<dd></dd><dd class="first last"><p>Open 6-th worksheet.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c 7</tt><tt class="descclassname"> ein:notebook-worksheet-open-7th</tt></dt>
+
+<dd></dd><dd class="first last"><p>Open 7-th worksheet.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c 8</tt><tt class="descclassname"> ein:notebook-worksheet-open-8th</tt></dt>
+
+<dd></dd><dd class="first last"><p>Open 8-th worksheet.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c 9</tt><tt class="descclassname"> ein:notebook-worksheet-open-last</tt></dt>
+
+<dd></dd><dd class="first last"><p>Open the last worksheet.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">M-RET</tt><tt class="descclassname"> ein:worksheet-execute-cell-and-goto-next</tt></dt>
+
+<dd></dd><dd class="first last"><p>Execute cell at point if it is a code cell and move to the
+next cell, or insert if none.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">M-.</tt><tt class="descclassname"> ein:pytools-jump-to-source-command</tt></dt>
+
+<dd></dd><dd class="first last"><p>Jump to the source code of the object at point.
+When the prefix argument <tt class="docutils literal"><span class="pre">C-u</span></tt> is given, open the source code
+in the other window.  You can explicitly specify the object by
+selecting it.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">M-,</tt><tt class="descclassname"> ein:pytools-jump-back-command</tt></dt>
+
+<dd></dd><dd class="first last"><p>Go back to the point where <tt class="xref el el-symbol docutils literal"><span class="pre">ein:pytools-jump-to-source-command</span></tt>
+is executed last time.  When the prefix argument <tt class="docutils literal"><span class="pre">C-u</span></tt> is
+given, open the last point in the other window.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">M-p</tt><tt class="descclassname"> ein:worksheet-previous-input-history</tt></dt>
+
+<dd></dd><dd class="first last"><p>Insert the previous input in the execution history.
+You can go back further in the history by repeating this command.
+Use <tt class="xref el el-symbol docutils literal"><span class="pre">ein:worksheet-next-input-history</span></tt> to go forward in the
+history.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">M-n</tt><tt class="descclassname"> ein:worksheet-next-input-history</tt></dt>
+
+<dd></dd><dd class="first last"><p>Insert next input in the execution history.
+You can go forward further in the history by repeating this
+command.  Use <tt class="xref el el-symbol docutils literal"><span class="pre">ein:worksheet-previous-input-history</span></tt> to go back
+in the history.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">&lt;M-S-return&gt;</tt><tt class="descclassname"> ein:worksheet-execute-cell-and-insert-below</tt></dt>
+
+<dd></dd><dd class="first last"><p>Execute cell at point if it is a code cell and insert a
+cell bellow.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">&lt;C-up&gt;</tt><tt class="descclassname"> ein:worksheet-goto-prev-input</tt></dt>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">&lt;C-down&gt;</tt><tt class="descclassname"> ein:worksheet-goto-next-input</tt></dt>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">&lt;M-up&gt;</tt><tt class="descclassname"> ein:worksheet-move-cell-up</tt></dt>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">&lt;M-down&gt;</tt><tt class="descclassname"> ein:worksheet-move-cell-down</tt></dt>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-:</tt><tt class="descclassname"> ein:shared-output-eval-string</tt></dt>
+
+<dd></dd><dd class="first last"><p>Evaluate a piece of code.  Prompt will appear asking the code to run.
+This is handy when you want to execute something quickly without
+making a cell.  If the code outputs something, it will go to the
+shared output buffer.  You can open the buffer by the command
+<a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:shared-output-pop-to-buffer" title="ein:shared-output-pop-to-buffer"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:shared-output-pop-to-buffer</span></tt></a>.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-x C-s</tt><tt class="descclassname"> ein:notebook-save-notebook-command</tt></dt>
+
+<dd></dd><dd class="first last"><p>Save the notebook.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-x C-w</tt><tt class="descclassname"> ein:notebook-rename-command</tt></dt>
+
+<dd></dd><dd class="first last"><p>Rename current notebook and save it immediately.</p>
+<p>NAME is any non-empty string that does not contain ‘/’ or ‘’.</p>
+</dd>
+</dl>
+
+<dl class="function">
+<dt id="ein:worksheet-delete-cell">
+<em class="property">function </em><big>(</big><tt class="descname">ein:worksheet-delete-cell </tt><em>ws</em> <em>cell</em> <em>&amp;optional</em> <em>focus</em><big>)</big><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:worksheet-delete-cell" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete a cell.  (WARNING: no undo!)
+This command has no key binding because there is no way to undo
+deletion.  Use kill to play on the safe side.</p>
+<p>If you really want use this command, you can do something like this
+(but be careful when using it!):</p>
+<div class="highlight-cl"><div class="highlight"><pre><span class="p">(</span><span class="nv">define-key</span> <span class="nv">ein:notebook-mode-map</span> <span class="s">"\C-c\C-d"</span>
+            <span class="ss">'ein:worksheet-delete-cell</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="ein:junk-rename">
+<em class="property">function </em><big>(</big><tt class="descname">ein:junk-rename </tt><em>name</em><big>)</big><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:junk-rename" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rename the current notebook based on <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:junk-notebook-name-template" title="ein:junk-notebook-name-template"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:junk-notebook-name-template</span></tt></a>
+and save it immediately.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="ein:notebook-kill-all-buffers">
+<em class="property">function </em><tt class="descname">ein:notebook-kill-all-buffers</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:notebook-kill-all-buffers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close all opened notebooks.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="ein:iexec-mode">
+<em class="property">function </em><big>(</big><tt class="descname">ein:iexec-mode </tt><em>&amp;optional</em> <em>arg</em><big>)</big><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:iexec-mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instant cell execution minor mode.
+Code cell at point will be automatically executed after any
+change in its input area.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="connected-buffer">
+<h3><a class="toc-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id36">Connected buffer</a><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#connected-buffer" title="Permalink to this headline">¶</a></h3>
+<p>You can connect any buffer (typically buffer opening Python file) to
+opened notebook and use the kernel of the notebook to execute the
+code, inspect objects, auto-complete code, jump to the other source,
+etc.  Once the buffer is connected to the notebook, minor mode
+<tt class="xref el el-symbol docutils literal"><span class="pre">ein:connect-mode</span></tt> is enabled and the following keybinds
+are available.</p>
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c C-c</tt><tt class="descclassname"> ein:connect-run-or-eval-buffer</tt></dt>
+
+<dd></dd><dd class="first last"><p>Run buffer using the <tt class="docutils literal"><span class="pre">%run</span></tt> magic command or eval whole
+buffer if the prefix <tt class="docutils literal"><span class="pre">C-u</span></tt> is given.
+Variable <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:connect-run-command" title="ein:connect-run-command"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:connect-run-command</span></tt></a> sets the command to run.
+You can change the command and/or set the options.
+See also: <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:connect-run-buffer" title="ein:connect-run-buffer"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:connect-run-buffer</span></tt></a>, <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:connect-eval-buffer" title="ein:connect-eval-buffer"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:connect-eval-buffer</span></tt></a>.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c C-l</tt><tt class="descclassname"> ein:connect-reload-buffer</tt></dt>
+
+<dd></dd><dd class="first last"><p>Reload buffer using the command set by <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:connect-reload-command" title="ein:connect-reload-command"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:connect-reload-command</span></tt></a>.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c C-r</tt><tt class="descclassname"> ein:connect-eval-region</tt></dt>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c C-f</tt><tt class="descclassname"> ein:pytools-request-tooltip-or-help</tt></dt>
+
+<dd></dd><dd class="first last"><p>Show the help for the object at point using tooltip.
+When the prefix argument <tt class="docutils literal"><span class="pre">C-u</span></tt> is given, open the help in the
+pager buffer.  You can explicitly specify the object by selecting it.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c C-i</tt><tt class="descclassname"> ein:completer-complete</tt></dt>
+
+<dd></dd><dd class="first last"><p>Start completion for the code at point.</p>
+<p>(fn KERNEL &amp;rest ARGS &amp;key CALLBACKS &amp;allow-other-keys)</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c C-z</tt><tt class="descclassname"> ein:connect-pop-to-notebook</tt></dt>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c C-a</tt><tt class="descclassname"> ein:connect-toggle-autoexec</tt></dt>
+
+<dd></dd><dd class="first last"><p>Toggle auto-execution mode of the current connected buffer.</p>
+<p>When auto-execution mode is on, cells in connected notebook will
+be automatically executed whenever run, eval or reload command <a class="footnote-reference" href="https://tkf.github.io/emacs-ipython-notebook/#id9" id="id8">[4]</a>
+is called in this buffer.</p>
+<table class="docutils footnote" frame="void" id="id9" rules="none">
+<colgroup><col class="label"><col></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id8">[4]</a></td><td><p class="first">Namely, one of</p>
+<ul class="last simple">
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:connect-run-buffer" title="ein:connect-run-buffer"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:connect-run-buffer</span></tt></a></li>
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:connect-eval-buffer" title="ein:connect-eval-buffer"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:connect-eval-buffer</span></tt></a></li>
+<li><tt class="xref el el-symbol docutils literal"><span class="pre">ein:connect-run-or-eval-buffer</span></tt></li>
+<li><tt class="xref el el-symbol docutils literal"><span class="pre">ein:connect-reload-buffer</span></tt></li>
+</ul>
+</td></tr>
+</tbody>
+</table>
+<p>Note that you need to set cells to run in the connecting buffer
+or no cell will be executed.
+Use the <tt class="xref el el-symbol docutils literal"><span class="pre">ein:worksheet-turn-on-autoexec</span></tt> command in notebook to
+change the cells to run.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c C-o</tt><tt class="descclassname"> ein:console-open</tt></dt>
+
+<dd></dd><dd class="first last"><p>Open IPython console.
+To use this function, <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:console-security-dir" title="ein:console-security-dir"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:console-security-dir</span></tt></a> and
+<a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:console-args" title="ein:console-args"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:console-args</span></tt></a> must be set properly.
+This function works best with the new <a class="reference external" href="https://github.com/fgallina/python.el">python.el</a> which is shipped
+with Emacs 24.2 or later.  If you don’t have it, this function
+opens a “plain” command line interpreter (comint) buffer where
+you cannot use fancy stuff such as TAB completion.
+It should be possible to support python-mode.el.  Patches are welcome!</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c C-x</tt><tt class="descclassname"> ein:tb-show</tt></dt>
+
+<dd></dd><dd class="first last"><p>Show full traceback in traceback viewer.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c C-.</tt><tt class="descclassname"> ein:pytools-jump-to-source-command</tt></dt>
+
+<dd></dd><dd class="first last"><p>Jump to the source code of the object at point.
+When the prefix argument <tt class="docutils literal"><span class="pre">C-u</span></tt> is given, open the source code
+in the other window.  You can explicitly specify the object by
+selecting it.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c C-,</tt><tt class="descclassname"> ein:pytools-jump-back-command</tt></dt>
+
+<dd></dd><dd class="first last"><p>Go back to the point where <tt class="xref el el-symbol docutils literal"><span class="pre">ein:pytools-jump-to-source-command</span></tt>
+is executed last time.  When the prefix argument <tt class="docutils literal"><span class="pre">C-u</span></tt> is
+given, open the last point in the other window.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c C-/</tt><tt class="descclassname"> ein:notebook-scratchsheet-open</tt></dt>
+
+<dd></dd><dd class="first last"><p>Open “scratch sheet”.
+Open a new one when prefix argument is given.
+Scratch sheet is almost identical to worksheet.  However, EIN
+will not save the buffer.  Use this buffer like of normal IPython
+console.  Note that you can always copy cells into the normal
+worksheet to save result.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-:</tt><tt class="descclassname"> ein:shared-output-eval-string</tt></dt>
+
+<dd></dd><dd class="first last"><p>Evaluate a piece of code.  Prompt will appear asking the code to run.
+This is handy when you want to execute something quickly without
+making a cell.  If the code outputs something, it will go to the
+shared output buffer.  You can open the buffer by the command
+<a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:shared-output-pop-to-buffer" title="ein:shared-output-pop-to-buffer"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:shared-output-pop-to-buffer</span></tt></a>.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">M-.</tt><tt class="descclassname"> ein:pytools-jump-to-source-command</tt></dt>
+
+<dd></dd><dd class="first last"><p>Jump to the source code of the object at point.
+When the prefix argument <tt class="docutils literal"><span class="pre">C-u</span></tt> is given, open the source code
+in the other window.  You can explicitly specify the object by
+selecting it.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">M-,</tt><tt class="descclassname"> ein:pytools-jump-back-command</tt></dt>
+
+<dd></dd><dd class="first last"><p>Go back to the point where <tt class="xref el el-symbol docutils literal"><span class="pre">ein:pytools-jump-to-source-command</span></tt>
+is executed last time.  When the prefix argument <tt class="docutils literal"><span class="pre">C-u</span></tt> is
+given, open the last point in the other window.</p>
+</dd>
+</dl>
+
+<p>Other useful commands:</p>
+<dl class="function">
+<dt id="ein:connect-to-notebook-command">
+<em class="property">function </em><big>(</big><tt class="descname">ein:connect-to-notebook-command </tt><em>&amp;optional</em> <em>not-yet-opened</em><big>)</big><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:connect-to-notebook-command" title="Permalink to this definition">¶</a></dt>
+<dd><p>Connect to notebook.  When the prefix argument is given,
+you can choose any notebook on your server including the ones
+not yet opened.  Otherwise, already chose from already opened
+notebooks.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="ein:connect-eval-buffer">
+<em class="property">function </em><tt class="descname">ein:connect-eval-buffer</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:connect-eval-buffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the whole buffer.  Note that this will run the code
+inside the <tt class="docutils literal"><span class="pre">if</span> <span class="pre">__name__</span> <span class="pre">==</span> <span class="pre">"__main__":</span></tt> block.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="ein:connect-run-buffer">
+<em class="property">function </em><big>(</big><tt class="descname">ein:connect-run-buffer </tt><em>&amp;optional</em> <em>ask-command</em><big>)</big><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:connect-run-buffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run buffer using <tt class="docutils literal"><span class="pre">%run</span></tt>.  Ask for command if the prefix <tt class="docutils literal"><span class="pre">C-u</span></tt> is given.
+Variable <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:connect-run-command" title="ein:connect-run-command"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:connect-run-command</span></tt></a> sets the default command.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="shared-output-buffer">
+<h3><a class="toc-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id37">Shared output buffer</a><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#shared-output-buffer" title="Permalink to this headline">¶</a></h3>
+<dl class="function">
+<dt id="ein:shared-output-pop-to-buffer">
+<em class="property">function </em><tt class="descname">ein:shared-output-pop-to-buffer</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:shared-output-pop-to-buffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open shared output buffer.</p>
+</dd></dl>
+
+<p>Keymap for <tt class="xref el el-symbol docutils literal"><span class="pre">ein:shared-output-mode</span></tt>.</p>
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c C-x</tt><tt class="descclassname"> ein:tb-show</tt></dt>
+
+<dd></dd><dd class="first last"><p>Show full traceback in traceback viewer.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">C-c C-.</tt><tt class="descclassname"> ein:pytools-jump-to-source-command</tt></dt>
+
+<dd></dd><dd class="first last"><p>Jump to the source code of the object at point.
+When the prefix argument <tt class="docutils literal"><span class="pre">C-u</span></tt> is given, open the source code
+in the other window.  You can explicitly specify the object by
+selecting it.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">M-.</tt><tt class="descclassname"> ein:pytools-jump-to-source-command</tt></dt>
+
+<dd></dd><dd class="first last"><p>Jump to the source code of the object at point.
+When the prefix argument <tt class="docutils literal"><span class="pre">C-u</span></tt> is given, open the source code
+in the other window.  You can explicitly specify the object by
+selecting it.</p>
+</dd>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">q</tt><tt class="descclassname"> bury-buffer</tt></dt>
+</dl>
+
+</div>
+<div class="section" id="traceback-viewer">
+<h3><a class="toc-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id38">Traceback viewer</a><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#traceback-viewer" title="Permalink to this headline">¶</a></h3>
+<p>Traceback in notebook buffer is not easy to understand.  You can open
+Traceback viewer by the command <tt class="xref el el-symbol docutils literal"><span class="pre">ein:notebook-view-traceback</span></tt>.
+In the Traceback viewer, following keybinds are available.</p>
+<p>Keymap for <tt class="xref el el-symbol docutils literal"><span class="pre">ein:traceback-mode</span></tt>.</p>
+<dl class="keybind">
+<dt>
+<tt class="descname">RET</tt><tt class="descclassname"> ein:tb-jump-to-source-at-point-command</tt></dt>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">p</tt><tt class="descclassname"> ein:tb-prev-item</tt></dt>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">n</tt><tt class="descclassname"> ein:tb-next-item</tt></dt>
+</dl>
+
+<dl class="keybind">
+<dt>
+<tt class="descname">q</tt><tt class="descclassname"> bury-buffer</tt></dt>
+</dl>
+
+</div>
+<div class="section" id="pytools">
+<h3><a class="toc-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id39">PyTools</a><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#pytools" title="Permalink to this headline">¶</a></h3>
+<p>These commands can be used in the notebook buffer and the connected
+buffer.</p>
+<dl class="function">
+<dt id="ein:pytools-doctest">
+<em class="property">function </em><tt class="descname">ein:pytools-doctest</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:pytools-doctest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Do the doctest of the object at point.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="ein:pytools-whos">
+<em class="property">function </em><tt class="descname">ein:pytools-whos</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:pytools-whos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute <tt class="docutils literal"><span class="pre">%whos</span></tt> magic command and popup the result.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="ein:pytools-hierarchy">
+<em class="property">function </em><big>(</big><tt class="descname">ein:pytools-hierarchy </tt><em>&amp;optional</em> <em>ask</em><big>)</big><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:pytools-hierarchy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw inheritance graph of the class at point.
+<a class="reference external" href="https://github.com/tkf/ipython-hierarchymagic">hierarchymagic</a> extension is needed to be installed.
+You can explicitly specify the object by selecting it.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="ein:pytools-pandas-to-ses">
+<em class="property">function </em><big>(</big><tt class="descname">ein:pytools-pandas-to-ses </tt><em>dataframe</em><big>)</big><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:pytools-pandas-to-ses" title="Permalink to this definition">¶</a></dt>
+<dd><p>View <a class="reference external" href="http://pandas.pydata.org/">pandas</a> DataFrame in <a class="reference external" href="http://www.gnu.org/software/emacs/manual/html_node/ses/index.html">SES</a> (Simple Emacs Spreadsheet).
+Open a <tt class="xref el el-symbol docutils literal"><span class="pre">ses-mode</span></tt> buffer and import DataFrame object into it.</p>
+<p><a class="reference external" href="http://www.gnu.org/software/emacs/manual/html_node/ses/index.html">SES</a> is distributed with Emacs since Emacs 22, so you don’t need
+to install it if you are using newer Emacs.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="misc">
+<h3><a class="toc-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id40">Misc</a><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#misc" title="Permalink to this headline">¶</a></h3>
+<dl class="function">
+<dt id="helm-ein-kernel-history">
+<em class="property">function </em><tt class="descname">helm-ein-kernel-history</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#helm-ein-kernel-history" title="Permalink to this definition">¶</a></dt>
+<dd><p>Search kernel execution history then insert the selected one.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="helm-ein-notebook-buffers">
+<em class="property">function </em><tt class="descname">helm-ein-notebook-buffers</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#helm-ein-notebook-buffers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Choose opened notebook using helm interface.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="anything-ein-kernel-history">
+<em class="property">function </em><tt class="descname">anything-ein-kernel-history</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#anything-ein-kernel-history" title="Permalink to this definition">¶</a></dt>
+<dd><p>Search kernel execution history then insert the selected one.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="anything-ein-notebook-buffers">
+<em class="property">function </em><tt class="descname">anything-ein-notebook-buffers</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#anything-ein-notebook-buffers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Choose opened notebook using anything.el interface.</p>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="org-mode-integration">
+<h2><a class="toc-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id41">Org-mode integration</a><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#org-mode-integration" title="Permalink to this headline">¶</a></h2>
+<p>You can link to IPython notebook from <a class="reference external" href="http://orgmode.org/">org-mode</a> files.</p>
+<ol class="arabic simple">
+<li>Call org-mode function <tt class="xref el el-symbol docutils literal"><span class="pre">org-store-link</span></tt>
+<a class="footnote-reference" href="https://tkf.github.io/emacs-ipython-notebook/#org-store-link" id="id11">[5]</a> in notebook buffer.  You can select a region to
+specify a position in the notebook.</li>
+<li>Go to org-mode file and type <tt class="docutils literal"><span class="pre">C-c</span> <span class="pre">C-l</span></tt>
+(<tt class="xref el el-symbol docutils literal"><span class="pre">org-insert-link</span></tt>).  This will insert a link to the
+notebook.</li>
+<li>Type <tt class="docutils literal"><span class="pre">C-c</span> <span class="pre">C-o</span></tt> (<tt class="xref el el-symbol docutils literal"><span class="pre">org-open-at-point</span></tt>) to open
+the link at the point of cursor.</li>
+</ol>
+<table class="docutils footnote" frame="void" id="org-store-link" rules="none">
+<colgroup><col class="label"><col></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id11">[5]</a></td><td>See <a class="reference external" href="http://orgmode.org/manual/Activation.html">1.3 Activation</a> in org-mode manual.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="customization">
+<h2><a class="toc-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id42">Customization</a><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#customization" title="Permalink to this headline">¶</a></h2>
+<p>You can customize EIN using the Emacs customization UI by typing
+<tt class="docutils literal"><span class="pre">M-x</span> <span class="pre">customize-group</span> <span class="pre">RET</span> <span class="pre">ein</span> <span class="pre">RET</span></tt>.
+All the configurable variables are listed below.</p>
+<div class="section" id="subpackages">
+<h3><a class="toc-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id43">Subpackages</a><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#subpackages" title="Permalink to this headline">¶</a></h3>
+<dl class="variable">
+<dt id="ein:use-auto-complete">
+<em class="property">variable </em><tt class="descname">ein:use-auto-complete</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:use-auto-complete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set to <tt class="xref el el-symbol docutils literal"><span class="pre">t</span></tt> to use preset auto-complete configuration.
+Use <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:use-auto-complete-superpack" title="ein:use-auto-complete-superpack"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:use-auto-complete-superpack</span></tt></a> when you need more powerful
+auto completion.</p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="ein:use-auto-complete-superpack">
+<em class="property">variable </em><tt class="descname">ein:use-auto-complete-superpack</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:use-auto-complete-superpack" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set to <tt class="xref el el-symbol docutils literal"><span class="pre">t</span></tt> to use preset a little bit hacky auto-complete configuration.
+When this option is enabled, cached omni completion is available.</p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="ein:ac-max-cache">
+<em class="property">variable </em><tt class="descname">ein:ac-max-cache</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:ac-max-cache" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum number of cache to store.</p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="ein:use-smartrep">
+<em class="property">variable </em><tt class="descname">ein:use-smartrep</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:use-smartrep" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set to <tt class="xref el el-symbol docutils literal"><span class="pre">t</span></tt> to use preset smartrep configuration.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">When used with MuMaMo (see <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:notebook-modes" title="ein:notebook-modes"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:notebook-modes</span></tt></a>),
+keyboard macro which manipulates cell (add, remove, move,
+etc.) may start infinite loop (you need to stop it with
+<tt class="docutils literal"><span class="pre">C-g</span></tt>).  Please be careful using this option if you are a
+heavy keyboard macro user.  Using keyboard macro for other
+commands is fine.</p>
+</div>
+</dd></dl>
+
+<dl class="variable">
+<dt id="ein:load-dev">
+<em class="property">variable </em><tt class="descname">ein:load-dev</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:load-dev" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load development helper.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="id12">
+<h3><a class="toc-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id44">Notebook list</a><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#id12" title="Permalink to this headline">¶</a></h3>
+<dl class="variable">
+<dt id="ein:url-or-port">
+<em class="property">variable </em><tt class="descname">ein:url-or-port</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:url-or-port" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of default url-or-port values.
+This will be used for completion. So put your IPython servers.
+You can connect to servers not in this list (but you will need
+to type every time).</p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="ein:default-url-or-port">
+<em class="property">variable </em><tt class="descname">ein:default-url-or-port</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:default-url-or-port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default URL or port.  This should be your main IPython
+Notebook server.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="ein:notebooklist-load">
+<em class="property">function </em><big>(</big><tt class="descname">ein:notebooklist-load </tt><em>&amp;optional</em> <em>url-or-port</em><big>)</big><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:notebooklist-load" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load notebook list but do not pop-up the notebook list buffer.</p>
+<p>For example, if you want to load notebook list when Emacs starts,
+add this in the Emacs initialization file:</p>
+<div class="highlight-cl"><div class="highlight"><pre><span class="p">(</span><span class="nv">add-to-hook</span> <span class="ss">'after-init-hook</span> <span class="ss">'ein:notebooklist-load</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>or even this (if you want fast Emacs start-up):</p>
+<div class="highlight-cl"><div class="highlight"><pre><span class="c1">;; load notebook list if Emacs is idle for 3 sec after start-up</span>
+<span class="p">(</span><span class="nv">run-with-idle-timer</span> <span class="mi">3</span> <span class="no">nil</span> <span class="nf">#'</span><span class="nv">ein:notebooklist-load</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You should setup <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:url-or-port" title="ein:url-or-port"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:url-or-port</span></tt></a> or <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:default-url-or-port" title="ein:default-url-or-port"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:default-url-or-port</span></tt></a>
+in order to make this code work.</p>
+<p>See also:
+<a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:connect-to-default-notebook" title="ein:connect-to-default-notebook"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:connect-to-default-notebook</span></tt></a>, <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:connect-default-notebook" title="ein:connect-default-notebook"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:connect-default-notebook</span></tt></a>.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="id13">
+<h3><a class="toc-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id45">Notebook</a><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#id13" title="Permalink to this headline">¶</a></h3>
+<dl class="variable">
+<dt id="ein:worksheet-enable-undo">
+<em class="property">variable </em><tt class="descname">ein:worksheet-enable-undo</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:worksheet-enable-undo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configure undo in notebook buffers.</p>
+<dl class="docutils">
+<dt><tt class="xref el el-symbol docutils literal"><span class="pre">no</span></tt> <span class="classifier-delimiter">:</span> <span class="classifier">symbol</span></dt>
+<dd>Do not use undo in notebook buffers.  It is the safest option.</dd>
+<dt><tt class="xref el el-symbol docutils literal"><span class="pre">yes</span></tt> <span class="classifier-delimiter">:</span> <span class="classifier">symbol</span></dt>
+<dd>Enable undo in notebook buffers.  You can’t undo after
+modification of cell (execution, add, remove, etc.).  This
+is default.</dd>
+<dt><tt class="xref el el-symbol docutils literal"><span class="pre">full</span></tt> <span class="classifier-delimiter">:</span> <span class="classifier">symbol</span></dt>
+<dd>Enable full undo in notebook buffers.  It is powerful but
+sometime (typically after the cell specific commands) undo
+mess up notebook buffer.  Use it on your own risk.  When the
+buffer is messed up, you can just redo and continue editing,
+or save it once and reopen it if you want to be careful.</dd>
+</dl>
+<p>You need to reopen the notebook buffer to reflect the change of
+this value.</p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="ein:notebook-modes">
+<em class="property">variable </em><tt class="descname">ein:notebook-modes</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:notebook-modes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Notebook modes to use (in order of preference).</p>
+<p>When the notebook is opened, mode in this value is checked one by one
+and the first usable mode is used.</p>
+<p>Available modes:</p>
+<ul class="simple">
+<li><tt class="xref el el-symbol docutils literal"><span class="pre">ein:notebook-multilang-mode</span></tt></li>
+<li><tt class="xref el el-symbol docutils literal"><span class="pre">ein:notebook-mumamo-mode</span></tt></li>
+<li><tt class="xref el el-symbol docutils literal"><span class="pre">ein:notebook-python-mode</span></tt></li>
+<li><tt class="xref el el-symbol docutils literal"><span class="pre">ein:notebook-plain-mode</span></tt></li>
+</ul>
+<p>Examples:</p>
+<p>Use MuMaMo if it is installed.  Otherwise, use plain mode.
+This is the old default setting:</p>
+<div class="highlight-cl"><div class="highlight"><pre><span class="p">(</span><span class="k">setq</span> <span class="nv">ein:notebook-modes</span> <span class="o">'</span><span class="p">(</span><span class="nv">ein:notebook-mumamo-mode</span> <span class="nv">ein:notebook-plain-mode</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Avoid using MuMaMo even when it is installed:</p>
+<div class="highlight-cl"><div class="highlight"><pre><span class="p">(</span><span class="k">setq</span> <span class="nv">ein:notebook-modes</span> <span class="o">'</span><span class="p">(</span><span class="nv">ein:notebook-plain-mode</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Use simple <tt class="xref el el-symbol docutils literal"><span class="pre">python-mode</span></tt> based notebook mode when MuMaMo is not installed:</p>
+<div class="highlight-cl"><div class="highlight"><pre><span class="p">(</span><span class="k">setq</span> <span class="nv">ein:notebook-modes</span> <span class="o">'</span><span class="p">(</span><span class="nv">ein:notebook-mumamo-mode</span> <span class="nv">ein:notebook-python-mode</span><span class="p">))</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="variable">
+<dt id="ein:notebook-kill-buffer-ask">
+<em class="property">variable </em><tt class="descname">ein:notebook-kill-buffer-ask</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:notebook-kill-buffer-ask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether EIN should ask before killing unsaved notebook buffer.</p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="ein:notebook-querty-timeout-open">
+<em class="property">variable </em><tt class="descname">ein:notebook-querty-timeout-open</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:notebook-querty-timeout-open" title="Permalink to this definition">¶</a></dt>
+<dd><p>Query timeout for opening notebook.
+If you cannot open large notebook because of timeout error, try
+to increase this value.  Setting this value to <tt class="xref el el-symbol docutils literal"><span class="pre">nil</span></tt> means to use
+global setting.  For global setting and more information, see
+<a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:query-timeout" title="ein:query-timeout"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:query-timeout</span></tt></a>.</p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="ein:notebook-querty-timeout-save">
+<em class="property">variable </em><tt class="descname">ein:notebook-querty-timeout-save</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:notebook-querty-timeout-save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Query timeout for saving notebook.
+Similar to <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:notebook-querty-timeout-open" title="ein:notebook-querty-timeout-open"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:notebook-querty-timeout-open</span></tt></a>, but for saving
+notebook.  For global setting and more information, see
+<a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:query-timeout" title="ein:query-timeout"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:query-timeout</span></tt></a>.</p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="ein:cell-traceback-level">
+<em class="property">variable </em><tt class="descname">ein:cell-traceback-level</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:cell-traceback-level" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of traceback stack to show.
+Hidden tracebacks are not discarded.  You can always view them
+using the command <tt class="xref el el-symbol docutils literal"><span class="pre">ein:notebook-view-traceback</span></tt>.</p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="ein:cell-autoexec-prompt">
+<em class="property">variable </em><tt class="descname">ein:cell-autoexec-prompt</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:cell-autoexec-prompt" title="Permalink to this definition">¶</a></dt>
+<dd><p>String shown in the cell prompt when the auto-execution flag
+is on.  See also <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:connect-aotoexec-lighter" title="ein:connect-aotoexec-lighter"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:connect-aotoexec-lighter</span></tt></a>.</p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="ein:junk-notebook-name-template">
+<em class="property">variable </em><tt class="descname">ein:junk-notebook-name-template</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:junk-notebook-name-template" title="Permalink to this definition">¶</a></dt>
+<dd><p>Junk notebook name template.
+This value is used from <tt class="xref el el-symbol docutils literal"><span class="pre">ein:notebooklist-new-scratch-notebook</span></tt>
+and <tt class="xref el el-symbol docutils literal"><span class="pre">ein:notebook-rename-to-scratch-command</span></tt>.  This must be a
+format string which can be passed to <tt class="xref el el-symbol docutils literal"><span class="pre">format-time-string</span></tt>.</p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="ein:iexec-delay">
+<em class="property">variable </em><tt class="descname">ein:iexec-delay</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:iexec-delay" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delay before executing cell after change in second.</p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="ein:complete-on-dot">
+<em class="property">variable </em><tt class="descname">ein:complete-on-dot</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:complete-on-dot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start completion when inserting a dot.  Note that
+<a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:use-auto-complete" title="ein:use-auto-complete"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:use-auto-complete</span></tt></a> (or <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:use-auto-complete-superpack" title="ein:use-auto-complete-superpack"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:use-auto-complete-superpack</span></tt></a>)
+must be <tt class="xref el el-symbol docutils literal"><span class="pre">t</span></tt> to enable this option.  This variable has effect on
+notebook buffers and connected buffers.</p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="ein:helm-kernel-history-search-key">
+<em class="property">variable </em><tt class="descname">ein:helm-kernel-history-search-key</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:helm-kernel-history-search-key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bind <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#helm-ein-kernel-history" title="helm-ein-kernel-history"><tt class="xref el el-symbol docutils literal"><span class="pre">helm-ein-kernel-history</span></tt></a> to this key in notebook mode.</p>
+<p>Example:</p>
+<div class="highlight-cl"><div class="highlight"><pre><span class="p">(</span><span class="k">setq</span> <span class="nv">ein:helm-kernel-history-search-key</span> <span class="s">"\M-r"</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This key will be installed in the <tt class="xref el el-symbol docutils literal"><span class="pre">ein:notebook-mode-map</span></tt>.</p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="ein:anything-kernel-history-search-key">
+<em class="property">variable </em><tt class="descname">ein:anything-kernel-history-search-key</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:anything-kernel-history-search-key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bind <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#anything-ein-kernel-history" title="anything-ein-kernel-history"><tt class="xref el el-symbol docutils literal"><span class="pre">anything-ein-kernel-history</span></tt></a> to this key in notebook mode.</p>
+<p>Example:</p>
+<div class="highlight-cl"><div class="highlight"><pre><span class="p">(</span><span class="k">setq</span> <span class="nv">ein:anything-kernel-history-search-key</span> <span class="s">"\M-r"</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This key will be installed in the <tt class="xref el el-symbol docutils literal"><span class="pre">ein:notebook-mode-map</span></tt>.</p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="ein:helm-kernel-history-search-auto-pattern">
+<em class="property">variable </em><tt class="descname">ein:helm-kernel-history-search-auto-pattern</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:helm-kernel-history-search-auto-pattern" title="Permalink to this definition">¶</a></dt>
+<dd><p>Automatically construct search pattern when non-<tt class="xref el el-symbol docutils literal"><span class="pre">nil</span></tt>.</p>
+<ol class="arabic simple">
+<li>Single space is converted to “*”.</li>
+<li>A backslash followed by a space is converted to a single space.</li>
+<li>A “*” is added at the beginning and end of the pattern.</li>
+</ol>
+<p>This variable applies to both <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#helm-ein-kernel-history" title="helm-ein-kernel-history"><tt class="xref el el-symbol docutils literal"><span class="pre">helm-ein-kernel-history</span></tt></a> and
+<a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#anything-ein-kernel-history" title="anything-ein-kernel-history"><tt class="xref el el-symbol docutils literal"><span class="pre">anything-ein-kernel-history</span></tt></a>.</p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="ein:output-type-preference">
+<em class="property">variable </em><tt class="descname">ein:output-type-preference</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:output-type-preference" title="Permalink to this definition">¶</a></dt>
+<dd><p>Output types to be used in notebook.
+First output-type found in this list will be used.
+This variable can be a list or a function returning a list given
+DATA plist.
+See also <tt class="xref el el-symbol docutils literal"><span class="pre">ein:output-type-prefer-pretty-text-over-html</span></tt>.</p>
+<p><strong>Example</strong>:
+If you prefer HTML type over text type, you can set it as:</p>
+<div class="highlight-cl"><div class="highlight"><pre><span class="p">(</span><span class="k">setq</span> <span class="nv">ein:output-type-preference</span>
+      <span class="o">'</span><span class="p">(</span><span class="nv">emacs-lisp</span> <span class="nv">svg</span> <span class="nv">png</span> <span class="nv">jpeg</span> <span class="nv">html</span> <span class="nv">text</span> <span class="nv">latex</span> <span class="nv">javascript</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Note that <tt class="docutils literal"><span class="pre">html</span></tt> comes before <tt class="docutils literal"><span class="pre">text</span></tt>.</p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="ein:shr-env">
+<em class="property">variable </em><tt class="descname">ein:shr-env</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:shr-env" title="Permalink to this definition">¶</a></dt>
+<dd><p>Variables let-bound while calling <tt class="xref el el-symbol docutils literal"><span class="pre">shr-insert-document</span></tt>.</p>
+<p>To use default shr setting:</p>
+<div class="highlight-cl"><div class="highlight"><pre><span class="p">(</span><span class="k">setq</span> <span class="nv">ein:shr-env</span> <span class="no">nil</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Draw boundaries for table (default):</p>
+<div class="highlight-cl"><pre>(setq ein:shr-env
+      '((shr-table-horizontal-line ?-)
+        (shr-table-vertical-line ?|)
+        (shr-table-corner ?+)))</pre>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="console">
+<h3><a class="toc-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id46">Console</a><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#console" title="Permalink to this headline">¶</a></h3>
+<dl class="variable">
+<dt id="ein:console-security-dir">
+<em class="property">variable </em><tt class="descname">ein:console-security-dir</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:console-security-dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Security directory setting.</p>
+<p>Following types are valid:</p>
+<dl class="docutils">
+<dt>string</dt>
+<dd>Use this value as a path to security directory.
+Handy when you have only one IPython server.</dd>
+<dt>alist</dt>
+<dd>An alist whose element is “(URL-OR-PORT . DIR)”.
+Key (URL-OR-PORT) can be string (URL), integer (port), or
+<tt class="xref el el-symbol docutils literal"><span class="pre">default</span></tt> (symbol).  The value of <tt class="xref el el-symbol docutils literal"><span class="pre">default</span></tt> is used when
+other key does not much.  Normally you should have this
+entry.</dd>
+<dt>function</dt>
+<dd>Called with an argument URL-OR-PORT (integer or string).
+You can have complex setting using this.</dd>
+</dl>
+</dd></dl>
+
+<dl class="variable">
+<dt id="ein:console-executable">
+<em class="property">variable </em><tt class="descname">ein:console-executable</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:console-executable" title="Permalink to this definition">¶</a></dt>
+<dd><p>IPython executable used for console.</p>
+<p>Example: <tt class="docutils literal"><span class="pre">"/user/bin/ipython"</span></tt>.
+Types same as <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:console-security-dir" title="ein:console-security-dir"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:console-security-dir</span></tt></a> are valid.</p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="ein:console-args">
+<em class="property">variable </em><tt class="descname">ein:console-args</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:console-args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Additional argument when using console.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Space-separated string is obsolete now.  Use a list
+of string as value now.</p>
+</div>
+<p>Setting to use IPython profile named “YOUR-IPYTHON-PROFILE”:</p>
+<div class="highlight-cl"><div class="highlight"><pre><span class="p">(</span><span class="k">setq</span> <span class="nv">ein:console-args</span> <span class="o">'</span><span class="p">(</span><span class="s">"--profile"</span> <span class="s">"YOUR-IPYTHON-PROFILE"</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Together with <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:console-security-dir" title="ein:console-security-dir"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:console-security-dir</span></tt></a>, you can open IPython
+console connecting to a remote kernel.:</p>
+<div class="highlight-cl"><div class="highlight"><pre><span class="p">(</span><span class="k">setq</span> <span class="nv">ein:console-args</span> <span class="o">'</span><span class="p">(</span><span class="s">"--ssh"</span> <span class="s">"HOSTNAME"</span><span class="p">))</span>
+<span class="p">(</span><span class="k">setq</span> <span class="nv">ein:console-security-dir</span> <span class="s">"PATH/TO/SECURITY/DIR"</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You can setup <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:console-args" title="ein:console-args"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:console-args</span></tt></a> per server basis using alist form:</p>
+<div class="highlight-cl"><div class="highlight"><pre><span class="p">(</span><span class="k">setq</span> <span class="nv">ein:console-args</span>
+      <span class="o">'</span><span class="p">((</span><span class="mi">8888</span> <span class="o">.</span> <span class="o">'</span><span class="p">(</span><span class="s">"--profile"</span> <span class="s">"PROFILE"</span><span class="p">))</span>
+        <span class="p">(</span><span class="mi">8889</span> <span class="o">.</span> <span class="o">'</span><span class="p">(</span><span class="s">"--ssh"</span> <span class="s">"HOSTNAME"</span><span class="p">))</span>
+        <span class="p">(</span><span class="nv">default</span> <span class="o">.</span> <span class="o">'</span><span class="p">(</span><span class="s">"--profile"</span> <span class="s">"default"</span><span class="p">))))</span>
+</pre></div>
+</div>
+<p>If you want to use more complex setting, you can set a function to it:</p>
+<div class="highlight-cl"><div class="highlight"><pre><span class="p">(</span><span class="k">setq</span> <span class="nv">ein:console-args</span>
+      <span class="p">(</span><span class="k">lambda</span> <span class="p">(</span><span class="nv">url-or-port</span><span class="p">)</span> <span class="o">'</span><span class="p">(</span><span class="s">"--ssh"</span> <span class="s">"HOSTNAME"</span><span class="p">)))</span>
+</pre></div>
+</div>
+<p>See also: <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:console-security-dir" title="ein:console-security-dir"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:console-security-dir</span></tt></a>.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="connect">
+<h3><a class="toc-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id47">Connect</a><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#connect" title="Permalink to this headline">¶</a></h3>
+<dl class="variable">
+<dt id="ein:connect-run-command">
+<em class="property">variable </em><tt class="descname">ein:connect-run-command</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:connect-run-command" title="Permalink to this definition">¶</a></dt>
+<dd><p><tt class="docutils literal"><span class="pre">%run</span></tt> magic command used for <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:connect-run-buffer" title="ein:connect-run-buffer"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:connect-run-buffer</span></tt></a>.
+Types same as <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:console-security-dir" title="ein:console-security-dir"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:console-security-dir</span></tt></a> are valid.</p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="ein:connect-reload-command">
+<em class="property">variable </em><tt class="descname">ein:connect-reload-command</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:connect-reload-command" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setting for <tt class="xref el el-symbol docutils literal"><span class="pre">ein:connect-reload-buffer</span></tt>.
+Same as <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:connect-run-command" title="ein:connect-run-command"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:connect-run-command</span></tt></a>.</p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="ein:connect-save-before-run">
+<em class="property">variable </em><tt class="descname">ein:connect-save-before-run</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:connect-save-before-run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the buffer should be saved before <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:connect-run-buffer" title="ein:connect-run-buffer"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:connect-run-buffer</span></tt></a>.</p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="ein:propagate-connect">
+<em class="property">variable </em><tt class="descname">ein:propagate-connect</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:propagate-connect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set to <tt class="xref el el-symbol docutils literal"><span class="pre">t</span></tt> to connect to the notebook after jumping to a buffer.</p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="ein:connect-aotoexec-lighter">
+<em class="property">variable </em><tt class="descname">ein:connect-aotoexec-lighter</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:connect-aotoexec-lighter" title="Permalink to this definition">¶</a></dt>
+<dd><p>String appended to the lighter of <tt class="xref el el-symbol docutils literal"><span class="pre">ein:connect-mode</span></tt> (<tt class="xref el el-symbol docutils literal"><span class="pre">ein:c</span></tt>)
+when auto-execution mode is on.  When <tt class="xref el el-symbol docutils literal"><span class="pre">nil</span></tt>, use the same string
+as <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:cell-autoexec-prompt" title="ein:cell-autoexec-prompt"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:cell-autoexec-prompt</span></tt></a>.</p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="ein:connect-default-notebook">
+<em class="property">variable </em><tt class="descname">ein:connect-default-notebook</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:connect-default-notebook" title="Permalink to this definition">¶</a></dt>
+<dd><p>Notebook to be connect when <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:connect-to-default-notebook" title="ein:connect-to-default-notebook"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:connect-to-default-notebook</span></tt></a> is called.</p>
+<p>Example setting to connect to “My_Notebook” in the server at
+port 8888 when opening any buffer in <tt class="xref el el-symbol docutils literal"><span class="pre">python-mode</span></tt>:</p>
+<div class="highlight-cl"><div class="highlight"><pre><span class="p">(</span><span class="k">setq</span> <span class="nv">ein:connect-default-notebook</span> <span class="s">"8888/My_Notebook"</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">add-hook</span> <span class="ss">'python-mode-hook</span> <span class="ss">'ein:connect-to-default-notebook</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:connect-default-notebook" title="ein:connect-default-notebook"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:connect-default-notebook</span></tt></a> can also be a function without any
+argument.  This function must return a string (notebook path of
+the form “URL-OR-PORT/NOTEBOOK-NAME”).</p>
+<p>As <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:connect-to-default-notebook" title="ein:connect-to-default-notebook"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:connect-to-default-notebook</span></tt></a> requires notebook list to be
+loaded, consider using <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:notebooklist-load" title="ein:notebooklist-load"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:notebooklist-load</span></tt></a> to load notebook
+list if you want to connect to notebook without manually opening
+notebook list.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="ein:connect-to-default-notebook">
+<em class="property">function </em><tt class="descname">ein:connect-to-default-notebook</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:connect-to-default-notebook" title="Permalink to this definition">¶</a></dt>
+<dd><p>Connect to the default notebook specified by
+<a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:connect-default-notebook" title="ein:connect-default-notebook"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:connect-default-notebook</span></tt></a>.  Set this to <tt class="xref el el-symbol docutils literal"><span class="pre">python-mode-hook</span></tt>
+to automatically connect any python-mode buffer to the
+notebook.</p>
+</dd></dl>
+
+<div class="section" id="jedi-el">
+<h4><a class="toc-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id48">Jedi.el</a><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#jedi-el" title="Permalink to this headline">¶</a></h4>
+<dl class="function">
+<dt id="ein:jedi-setup">
+<em class="property">function </em><tt class="descname">ein:jedi-setup</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:jedi-setup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setup auto-completion using EIN and <a class="reference external" href="https://github.com/tkf/emacs-jedi">Jedi.el</a> together.</p>
+<p><a class="reference external" href="https://github.com/tkf/emacs-jedi">Jedi.el</a> is a Python auto-completion library for Emacs.
+To use EIN and Jedi together, add the following in your Emacs setup.:</p>
+<div class="highlight-cl"><div class="highlight"><pre><span class="p">(</span><span class="nv">add-hook</span> <span class="ss">'ein:connect-mode-hook</span> <span class="ss">'ein:jedi-setup</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="id15">
+<h3><a class="toc-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id49">MuMaMo</a><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#id15" title="Permalink to this headline">¶</a></h3>
+<dl class="variable">
+<dt id="ein:mumamo-codecell-mode">
+<em class="property">variable </em><tt class="descname">ein:mumamo-codecell-mode</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:mumamo-codecell-mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Major Mode for Code Cell.</p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="ein:mumamo-textcell-mode">
+<em class="property">variable </em><tt class="descname">ein:mumamo-textcell-mode</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:mumamo-textcell-mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Major Mode for Text Cell.</p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="ein:mumamo-htmlcell-mode">
+<em class="property">variable </em><tt class="descname">ein:mumamo-htmlcell-mode</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:mumamo-htmlcell-mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Major Mode for HTML Cell.</p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="ein:mumamo-markdowncell-mode">
+<em class="property">variable </em><tt class="descname">ein:mumamo-markdowncell-mode</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:mumamo-markdowncell-mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Major Mode for Markdown Cell.</p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="ein:mumamo-rawcell-mode">
+<em class="property">variable </em><tt class="descname">ein:mumamo-rawcell-mode</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:mumamo-rawcell-mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Major Mode for Raw Cell.</p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="ein:mumamo-headingcell-mode">
+<em class="property">variable </em><tt class="descname">ein:mumamo-headingcell-mode</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:mumamo-headingcell-mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Major Mode for Heading Cell.</p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="ein:mumamo-fallback-mode">
+<em class="property">variable </em><tt class="descname">ein:mumamo-fallback-mode</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:mumamo-fallback-mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fallback Major Mode.</p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="ein:use-mumamo-indent-line-function-workaround">
+<em class="property">variable </em><tt class="descname">ein:use-mumamo-indent-line-function-workaround</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:use-mumamo-indent-line-function-workaround" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn on workaround for <tt class="xref el el-symbol docutils literal"><span class="pre">mumamo-indent-line-function</span></tt>.</p>
+<p>In code cell, hitting TAB or C-j at the end of input area causes
+error from MuMaMo.  When this variable is non-<tt class="xref el el-symbol docutils literal"><span class="pre">nil</span></tt>, EIN patches
+<tt class="xref el el-symbol docutils literal"><span class="pre">mumamo-indent-line-function</span></tt> to workaround this problem.  This
+workaround is on by default.</p>
+<p>Note that python-mode’s indentation function has other problems
+with MuMaMo.  For example, hitting TAB twice, which decreases the
+indentation level by one in normal Python buffer, causes similar
+error in code cell.  The current workaround does not fix this
+problem.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="id16">
+<h3><a class="toc-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id50">Misc</a><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#id16" title="Permalink to this headline">¶</a></h3>
+<dl class="variable">
+<dt id="ein:filename-translations">
+<em class="property">variable </em><tt class="descname">ein:filename-translations</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:filename-translations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert file paths between Emacs and Python process.</p>
+<p>This value can take these form:</p>
+<dl class="docutils">
+<dt>alist</dt>
+<dd>Its key specifies URL-OR-PORT and value must be a list of two
+functions: (TO-PYTHON FROM-PYTHON).  Key (URL-OR-PORT) can be
+string (URL), integer (port), or <tt class="xref el el-symbol docutils literal"><span class="pre">default</span></tt> (symbol).  The
+value of <tt class="xref el el-symbol docutils literal"><span class="pre">default</span></tt> is used when other key does not much.</dd>
+<dt>function</dt>
+<dd>Called with an argument URL-OR-PORT (integer or string).
+This function must return a list of two functions:
+(TO-PYTHON FROM-PYTHON).</dd>
+</dl>
+<p>Here, the functions TO-PYTHON and FROM-PYTHON are defined as:</p>
+<dl class="docutils">
+<dt>TO-PYTHON</dt>
+<dd>A function which converts a file name (returned by
+<tt class="xref el el-symbol docutils literal"><span class="pre">buffer-file-name</span></tt>) to the one Python understands.</dd>
+<dt>FROM-PYTHON</dt>
+<dd>A function which converts a file path returned by
+Python process to the one Emacs understands.</dd>
+</dl>
+<p>Use <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:tramp-create-filename-translator" title="ein:tramp-create-filename-translator"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:tramp-create-filename-translator</span></tt></a> to easily generate the
+pair of TO-PYTHON and FROM-PYTHON.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="ein:tramp-create-filename-translator">
+<em class="property">function </em><big>(</big><tt class="descname">ein:tramp-create-filename-translator </tt><em>remote-host</em> <em>&amp;optional</em> <em>username</em><big>)</big><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:tramp-create-filename-translator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a pair of TO-PYTHON and FROM-PYTHON for
+<a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:filename-translations" title="ein:filename-translations"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:filename-translations</span></tt></a>.</p>
+<p>Usage:</p>
+<div class="highlight-cl"><div class="highlight"><pre><span class="p">(</span><span class="k">setq</span> <span class="nv">ein:filename-translations</span>
+      <span class="o">`</span><span class="p">((</span><span class="mi">8888</span>
+         <span class="o">.</span> <span class="o">,</span><span class="p">(</span><span class="nv">ein:tramp-create-filename-translator</span> <span class="s">"MY-HOSTNAME"</span><span class="p">))))</span>
+<span class="c1">;; Equivalently:</span>
+<span class="p">(</span><span class="k">setq</span> <span class="nv">ein:filename-translations</span>
+      <span class="p">(</span><span class="k">lambda</span> <span class="p">(</span><span class="nv">url-or-port</span><span class="p">)</span>
+        <span class="p">(</span><span class="nb">when</span> <span class="p">(</span><span class="nb">equal</span> <span class="nv">url-or-port</span> <span class="mi">8888</span><span class="p">)</span>
+          <span class="p">(</span><span class="nv">ein:tramp-create-filename-translator</span> <span class="s">"MY-HOSTNAME"</span><span class="p">))))</span>
+</pre></div>
+</div>
+<p>This setting assumes that the IPython server which can be
+connected using the port 8888 in localhost is actually running in
+the host named MY-HOSTNAME.</p>
+<p>Adapted from <tt class="xref el el-symbol docutils literal"><span class="pre">slime-create-filename-translator</span></tt>.</p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="ein:query-timeout">
+<em class="property">variable </em><tt class="descname">ein:query-timeout</tt><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#ein:query-timeout" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default query timeout for HTTP access in millisecond.</p>
+<p>Setting this to <tt class="xref el el-symbol docutils literal"><span class="pre">nil</span></tt> means no timeout.</p>
+<p>If you do the same operation before the timeout, old operation
+will be canceled (see also <tt class="xref el el-symbol docutils literal"><span class="pre">ein:query-singleton-ajax</span></tt>).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>This value exists because it looks like <tt class="xref el el-symbol docutils literal"><span class="pre">url-retrieve</span></tt>
+occasionally fails to finish (start?) querying.  Timeout is
+used to let user notice that their operation is not finished.
+It also prevent opening a lot of useless process buffers.
+You will see them when closing Emacs if there is no timeout.</p>
+<p class="last">If you know how to fix the problem with <tt class="xref el el-symbol docutils literal"><span class="pre">url-retrieve</span></tt>, please
+let me know or send pull request at github!
+(Related bug report in Emacs bug tracker:
+<a class="reference external" href="http://debbugs.gnu.org/cgi/bugreport.cgi?bug=11469">http://debbugs.gnu.org/cgi/bugreport.cgi?bug=11469</a>)</p>
+</div>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="gotchas-and-caveats">
+<h2><a class="toc-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id51">Gotchas and caveats</a><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#gotchas-and-caveats" title="Permalink to this headline">¶</a></h2>
+<p>Although EIN mostly works fine, there are some deficits I noticed but
+have not fixed yet.  It seems that they originate from some upstream
+bugs so there is little I can do in EIN (but I’m not sure – it’s
+possible that I am misusing the libraries!).</p>
+<p>If you know how to fix/workaround them, patches are very welcome.</p>
+<div class="section" id="url-retrieve">
+<h3><a class="toc-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id52"><tt class="xref el el-symbol docutils literal"><span class="pre">url-retrieve</span></tt></a><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#url-retrieve" title="Permalink to this headline">¶</a></h3>
+<p>While using EIN, probably most of the error messages are about server
+connections.  It looks like the problem is in <tt class="xref el el-symbol docutils literal"><span class="pre">url-retrieve</span></tt>.
+But in those cases you don’t loose any notebook data and your IPython
+kernel is fine.  You can just type the command again and it will go
+fine most of the time.  For saving notebook, I implemented code to
+retry when there is an error comes from <tt class="xref el el-symbol docutils literal"><span class="pre">url-retrieve</span></tt> to
+make it even safer.</p>
+</div>
+<div class="section" id="id17">
+<h3><a class="toc-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id53">MuMaMo</a><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#id17" title="Permalink to this headline">¶</a></h3>
+<p>When using MuMaMo based notebook mode, you will notice that
+highlighting outside of the cell input is turned off while you are in
+the input area.  It seems there is a bug in MuMaMo <a class="footnote-reference" href="https://tkf.github.io/emacs-ipython-notebook/#m3bug" id="id18">[6]</a>.</p>
+<p>If you are using smartrep and MuMaMo together, see also the warning in
+<a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:use-smartrep" title="ein:use-smartrep"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:use-smartrep</span></tt></a> document.</p>
+<table class="docutils footnote" frame="void" id="m3bug" rules="none">
+<colgroup><col class="label"><col></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id18">[6]</a></td><td>See the relevant bug report I posted:
+<a class="reference external" href="https://bugs.launchpad.net/nxhtml/+bug/1013794">https://bugs.launchpad.net/nxhtml/+bug/1013794</a></td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="gotchas-python-mode-el">
+<span id="id19"></span><h3><a class="toc-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id54">python-mode.el</a><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#gotchas-python-mode-el" title="Permalink to this headline">¶</a></h3>
+<p>In my environment, using <a class="reference external" href="https://tkf.github.io/emacs-ipython-notebook/:https://launchpad.net/python-mode">python-mode.el</a> without byte-compiling it
+in MuMaMo based notebook mode produces segfault.</p>
+<p>Also, <tt class="docutils literal"><span class="pre">mumamo-idle-set-major-mode</span></tt> messages error
+<tt class="docutils literal"><span class="pre">(wrong-type-argument</span> <span class="pre">listp</span> <span class="pre">python-saved-check-command)</span></tt>
+time to time, making minibuffer bit noisy while editing notebook.
+See <a class="reference external" href="https://github.com/tkf/emacs-ipython-notebook/wiki/Tips">Tips</a> to fix this problem.</p>
+</div>
+</div>
+<div class="section" id="advanced">
+<h2><a class="toc-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id55">Advanced</a><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#advanced" title="Permalink to this headline">¶</a></h2>
+<p>By telling IPython a little bit about Emacs Lisp, you can execute
+Emacs Lisp from IPython, just like you can execute Javascript in the
+web client.  See <a class="reference external" href="https://github.com/tkf/emacs-ipython-notebook/blob/master/tools/emacslisp.py">emacslisp.py</a> for more details.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+<span class="o">%</span><span class="n">run</span> <span class="n">PATH</span><span class="o">/</span><span class="n">TO</span><span class="o">/</span><span class="n">emacslisp</span><span class="o">.</span><span class="n">py</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span>
+<span class="n">EmacsLisp</span><span class="p">(</span><span class="s">'(+ 1 2 3)'</span><span class="p">)</span>
+<span class="n">Out</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span>
+<span class="mi">6</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="reporting-issue">
+<h2><a class="toc-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id56">Reporting issue</a><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#reporting-issue" title="Permalink to this headline">¶</a></h2>
+<p>Please use <tt class="docutils literal"><span class="pre">M-x</span> <span class="pre">ein:dev-bug-report-template</span></tt> to write a bug report.
+It pops up a buffer containing some system information and instruction
+for bug report.</p>
+<div class="section" id="logging">
+<h3><a class="toc-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id57">Logging</a><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#logging" title="Permalink to this headline">¶</a></h3>
+<p>Sometime more information that the <tt class="docutils literal"><span class="pre">*Message*</span></tt> buffer provides is
+needed to debug.</p>
+<ol class="arabic">
+<li><p class="first">Execute <tt class="docutils literal"><span class="pre">(ein:log-set-level</span> <span class="pre">'debug)</span></tt>
+(e.g., <tt class="docutils literal"><span class="pre">M-:</span> <span class="pre">(ein:log-set-level</span> <span class="pre">'debug)</span> <span class="pre">RET</span></tt>).</p>
+</li>
+<li><p class="first">Then do some operation which cause the problem.</p>
+</li>
+<li><p class="first">Go to the log buffer <tt class="docutils literal"><span class="pre">_*ein:log-all*</span></tt> (it starts with a space)
+and paste the whole buffer to the issue tracker.</p>
+<p>Please enclose the log with three backquotes to make the snippet as
+a code block, like this:</p>
+<div class="highlight-cl"><div class="highlight"><pre><span class="o">```</span>
+<span class="nv">[verbose]</span> <span class="nv">Start</span> <span class="nv">logging.</span> <span class="nv">@#&lt;buffer</span> <span class="nv">*ein:</span> <span class="nv">8888/NAME*&gt;</span>
+<span class="nv">[info]</span> <span class="nv">Notebook</span> <span class="nv">NAME</span> <span class="nv">is</span> <span class="nv">ready</span> <span class="nv">@#&lt;buffer</span> <span class="nv">*ein:</span> <span class="nv">8888/NAME*&gt;</span>
+<span class="nv">[info]</span> <span class="nv">Kernel</span> <span class="nv">started:</span> <span class="nv">5e4f74d1-ce91-4e7e-9575-9646adea5172</span> <span class="nv">@#&lt;buffer</span> <span class="vg">*scratch*</span><span class="nb">&gt;</span>
+<span class="o">```</span>
+</pre></div>
+</div>
+<p>See also: <a class="reference external" href="http://github.github.com/github-flavored-markdown/">GitHub Flavored Markdown - Introduction</a></p>
+<p>If it is too long, you can use paste bin service such as
+<a class="reference external" href="https://gist.github.com/">gist</a>.</p>
+</li>
+</ol>
+<div class="section" id="id20">
+<h4><a class="toc-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id58">websocket.el</a><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#id20" title="Permalink to this headline">¶</a></h4>
+<p>websocket.el has its logging buffer.  Sometime its useful to see its
+log.  This is how to do that.</p>
+<ol class="arabic simple">
+<li><tt class="docutils literal"><span class="pre">(require</span> <span class="pre">'ein-dev)</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">(setq</span> <span class="pre">websocket-debug</span> <span class="pre">t)</span></tt> or call <tt class="xref el el-symbol docutils literal"><span class="pre">ein:dev-start-debug</span></tt>.</li>
+<li>Then do the operation which causes the problem.</li>
+<li>Go to log buffer using
+<tt class="xref el el-symbol docutils literal"><span class="pre">ein:dev-pop-to-debug-shell</span></tt> and
+<tt class="xref el el-symbol docutils literal"><span class="pre">ein:dev-pop-to-debug-iopub</span></tt>.
+These command must be called in the notebook buffer.</li>
+</ol>
+</div>
+</div>
+<div class="section" id="debugging">
+<h3><a class="toc-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id59">Debugging</a><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#debugging" title="Permalink to this headline">¶</a></h3>
+<p>If you are interested in debugging EIN, you should start it with
+calling the command <tt class="xref el el-symbol docutils literal"><span class="pre">ein:dev-start-debug</span></tt>.
+This command sets <tt class="xref el el-symbol docutils literal"><span class="pre">debug-on-error</span></tt> to <tt class="docutils literal"><span class="pre">t</span></tt> and do some
+patching to debugger.  This patching is required because printing EWOC
+objects freezes Emacs otherwise.  It also changes log level to
+log everything the log buffer.  You can reset the patch and log level
+with <tt class="xref el el-symbol docutils literal"><span class="pre">ein:dev-stop-debug</span></tt>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="change-log">
+<h1><a class="toc-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id60">Change Log</a><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#change-log" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="v0-2-1">
+<h2><a class="toc-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id61">v0.2.1</a><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#v0-2-1" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Add support for <cite>kernel_info</cite> request for IPython kernel protocol,
+which is introduced by
+<a class="reference external" href="https://github.com/ipython/ipython/issues/2649">ipython/ipython#2649</a>.
+This protocol is not used in EIN anywhere yet.</li>
+<li>Use <a class="reference external" href="https://github.com/tkf/emacs-request">request.el</a> for smoother experience.</li>
+</ul>
+</div>
+<div class="section" id="v0-2">
+<h2><a class="toc-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id62">v0.2</a><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#v0-2" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Preliminary login support.  See <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:notebooklist-login" title="ein:notebooklist-login"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:notebooklist-login</span></tt></a>.</li>
+<li>Code completion in notebook happens <em>really</em> automatically.
+You don’t need to hit a key to start completion.</li>
+<li><tt class="xref el el-symbol docutils literal"><span class="pre">ein:console-open</span></tt> works without <a class="reference external" href="https://github.com/fgallina/python.el">python.el</a>.</li>
+<li>Expand code cell output on execution.
+(<a class="reference external" href="https://github.com/tkf/emacs-ipython-notebook/issues/88">#88</a>).</li>
+<li>Improve <tt class="xref el el-symbol docutils literal"><span class="pre">ein:completer-dot-complete</span></tt> and
+<tt class="xref el el-symbol docutils literal"><span class="pre">ein:jedi-dot-complete</span></tt>.  Do not expand common part when
+inserting dot, to make typing code containing dots less surprising.</li>
+<li>Add support for <a class="reference external" href="https://github.com/tkf/emacs-jedi">Jedi.el</a>.  See <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:jedi-setup" title="ein:jedi-setup"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:jedi-setup</span></tt></a>.</li>
+<li>Add a simple org-mode link support.</li>
+<li>Add built-in multiple language fontification for notebook:
+<tt class="xref el el-symbol docutils literal"><span class="pre">ein:notebook-multilang-mode</span></tt>.
+This is the new default for <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:notebook-modes" title="ein:notebook-modes"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:notebook-modes</span></tt></a>.</li>
+<li>Add helm/anything interface to search kernel history:
+<a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#helm-ein-kernel-history" title="helm-ein-kernel-history"><tt class="xref el el-symbol docutils literal"><span class="pre">helm-ein-kernel-history</span></tt></a> and
+<a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#anything-ein-kernel-history" title="anything-ein-kernel-history"><tt class="xref el el-symbol docutils literal"><span class="pre">anything-ein-kernel-history</span></tt></a>.
+See also the configurable options to use these commands:
+<a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:helm-kernel-history-search-key" title="ein:helm-kernel-history-search-key"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:helm-kernel-history-search-key</span></tt></a> and
+<a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:anything-kernel-history-search-key" title="ein:anything-kernel-history-search-key"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:anything-kernel-history-search-key</span></tt></a>.</li>
+<li>Preliminary support for multiple worksheets.</li>
+<li>Rename notion of “scratch notebook” to “junk notebook”.
+This is to avoid confusion with newly added “scratch sheet”.
+Old commands are renamed to <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:junk-new" title="ein:junk-new"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:junk-new</span></tt></a> and
+<a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:junk-rename" title="ein:junk-rename"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:junk-rename</span></tt></a>.</li>
+<li>Preferred MIME types to be used can be configured using the variable
+<a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:output-type-preference" title="ein:output-type-preference"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:output-type-preference</span></tt></a>.</li>
+<li>HTML content is rendered SHR (Simple HTML Renderer) by default.
+Use <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:shr-env" title="ein:shr-env"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:shr-env</span></tt></a> to tweak how HTML rendered.</li>
+<li><tt class="xref el el-symbol docutils literal"><span class="pre">ein:notebook-discard-output-on-save</span></tt> is obsolete now.</li>
+<li>Support execution history.  Commands
+<tt class="xref el el-symbol docutils literal"><span class="pre">ein:worksheet-previous-input-history</span></tt> and
+<tt class="xref el el-symbol docutils literal"><span class="pre">ein:worksheet-next-input-history</span></tt> can be used
+to insert previously executed code into the current cell.</li>
+<li>Add <tt class="xref el el-symbol docutils literal"><span class="pre">ein:pseudo-console-mode</span></tt>.</li>
+<li>Add “scratch sheet”.  This acts almost as same as worksheet, but you
+don’t need to save it.  You can use try any code without saving
+junks in your notebook.  Use the command
+<tt class="xref el el-symbol docutils literal"><span class="pre">ein:notebook-scratchsheet-open</span></tt> to open scratch sheet.</li>
+<li>Menu support in notebook mode and notebook list mode.</li>
+<li>Auto-connection support.
+The new function <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:connect-to-default-notebook" title="ein:connect-to-default-notebook"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:connect-to-default-notebook</span></tt></a> can be
+added to <tt class="xref el el-symbol docutils literal"><span class="pre">python-mode-hook</span></tt> to automatically connect
+python-mode buffers to default notebook specified by
+<a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:connect-default-notebook" title="ein:connect-default-notebook"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:connect-default-notebook</span></tt></a>.  See also
+<a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:notebooklist-load" title="ein:notebooklist-load"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:notebooklist-load</span></tt></a>.</li>
+<li>Add <tt class="xref el el-symbol docutils literal"><span class="pre">ein:worksheet-execute-cell-and-insert-below</span></tt>.</li>
+<li>Change the timing to trigger auto-execution in connected buffer.
+It was triggered on save before.  Now it is on run, eval or reload.
+See <tt class="xref el el-symbol docutils literal"><span class="pre">ein:connect-toggle-autoexec</span></tt>.</li>
+</ul>
+</div>
+<div class="section" id="v0-1-2">
+<h2><a class="toc-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id63">v0.1.2</a><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#v0-1-2" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Mostly refactoring for worksheet support in v0.2.</li>
+<li>Rename command <tt class="xref el el-symbol docutils literal"><span class="pre">ein:notebook-console-open</span></tt> to
+<tt class="xref el el-symbol docutils literal"><span class="pre">ein:console-open</span></tt>.  It is available from non-notebook
+buffer such as connected buffer now.</li>
+<li>Add <tt class="xref el el-symbol docutils literal"><span class="pre">ein:connect-reload-buffer</span></tt>.
+Old default <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:connect-run-buffer" title="ein:connect-run-buffer"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:connect-run-buffer</span></tt></a> behavior is
+replaced by this function.  <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:connect-run-buffer" title="ein:connect-run-buffer"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:connect-run-buffer</span></tt></a>
+now actually runs buffer instead of loading it.</li>
+</ul>
+</div>
+<div class="section" id="v0-1-1">
+<h2><a class="toc-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id64">v0.1.1</a><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#v0-1-1" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Support <a class="reference external" href="http://cx4a.org/software/auto-complete/">auto-complete.el</a>‘s popup/quick help.</li>
+<li>Add <tt class="xref el el-symbol docutils literal"><span class="pre">ein:notebooklist-first-open-hook</span></tt>.</li>
+<li>Handle carriage return
+(<a class="reference external" href="https://github.com/tkf/emacs-ipython-notebook/issues/13">#13</a>).</li>
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:connect-to-notebook-command" title="ein:connect-to-notebook-command"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:connect-to-notebook-command</span></tt></a> is improved;
+it can connect to the notebook which is not opened yet.</li>
+<li>Plain text type output is favored over LaTeX type output
+(previous setting was opposite).</li>
+<li>Workaround indentation problem when using MuMaMo
+(<a class="reference external" href="https://github.com/tkf/emacs-ipython-notebook/issues/20">#20</a>).
+See <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:use-mumamo-indent-line-function-workaround" title="ein:use-mumamo-indent-line-function-workaround"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:use-mumamo-indent-line-function-workaround</span></tt></a>.</li>
+<li>Add <tt class="xref el el-symbol docutils literal"><span class="pre">ein:notebook-rename-to-scratch-command</span></tt>.</li>
+<li>Add <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:pytools-pandas-to-ses" title="ein:pytools-pandas-to-ses"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:pytools-pandas-to-ses</span></tt></a>.</li>
+<li>Add Imenu support.</li>
+<li>Better heading cell faces.</li>
+<li>Add <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:iexec-mode" title="ein:iexec-mode"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:iexec-mode</span></tt></a></li>
+<li>Add auto-execution mode
+(see <tt class="xref el el-symbol docutils literal"><span class="pre">ein:connect-toggle-autoexec</span></tt> and
+<tt class="xref el el-symbol docutils literal"><span class="pre">ein:notebook-turn-on-autoexec</span></tt>).</li>
+<li>Start completion when ”.” is inserted.
+Use <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:complete-on-dot" title="ein:complete-on-dot"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:complete-on-dot</span></tt></a> to disable this feature.</li>
+<li>Support tramp.  See <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#ein:filename-translations" title="ein:filename-translations"><tt class="xref el el-symbol docutils literal"><span class="pre">ein:filename-translations</span></tt></a>.</li>
+<li>Change callback API in <tt class="xref el el-symbol docutils literal"><span class="pre">ein:kernel-execute</span></tt>
+to adapt messaging protocol change in
+<a class="reference external" href="https://github.com/ipython/ipython/pull/2051">IPython (#2051)</a>.</li>
+<li>Add helm/anything support.
+Use <a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#helm-ein-notebook-buffers" title="helm-ein-notebook-buffers"><tt class="xref el el-symbol docutils literal"><span class="pre">helm-ein-notebook-buffers</span></tt></a> or
+<a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/#anything-ein-notebook-buffers" title="anything-ein-notebook-buffers"><tt class="xref el el-symbol docutils literal"><span class="pre">anything-ein-notebook-buffers</span></tt></a>.</li>
+</ul>
+</div>
+<div class="section" id="v0-1">
+<h2><a class="toc-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id65">v0.1</a><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#v0-1" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>First release.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="license">
+<h1><a class="toc-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id66">License</a><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#license" title="Permalink to this headline">¶</a></h1>
+<p>Emacs IPython Notebook is licensed under GPL v3.
+See COPYING for details.</p>
+</div>
+<div class="section" id="indices-and-tables">
+<h1><a class="toc-backref" href="https://tkf.github.io/emacs-ipython-notebook/#id67">Indices and tables</a><a class="headerlink" href="https://tkf.github.io/emacs-ipython-notebook/#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/genindex.html"><em>Index</em></a></li>
+<li><a class="reference internal" href="https://tkf.github.io/emacs-ipython-notebook/search.html"><em>Search Page</em></a></li>
+</ul>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="https://tkf.github.io/emacs-ipython-notebook/genindex.html" title="General Index">index</a></li>
+        <li><a href="https://tkf.github.io/emacs-ipython-notebook/#">Emacs IPython Notebook 0.2.1alpha1 documentation</a> »</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        © Copyright 2012, Takafumi Arakaki.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  
+</body></html>

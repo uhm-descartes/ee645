@@ -1,0 +1,41 @@
+---
+title: The Central Limit Theorem
+published: true
+morea_id: experience-ctci
+morea_type: experience
+morea_summary: "Simulate the Central Limit Theorem"
+morea_sort_order: 1
+morea_start_date: "2023-01-14T23:00"
+morea_labels:
+  - The Central Limit Theorem
+---
+
+The Central Limit Theorem (Berry-Essen bounds) posits that the sum of
+independent, identically distributed random variables \\(X_1,\ldots,
+X_n\\) with finite third moment is distributed with a pdf that is very
+close to that of a Gaussian random variable, no matter what the
+distribution of \\(X_i\)) is.  \\(X_i\\) could be continuous or discrete (as
+long as they have finite third moment).
+
+This means that while \\(\sum X_i\\) is a random variable, its
+distribution is predictable, and is approximately Gaussian. We could
+therefore answer questions like, what is the probability \\(\sum X_i >
+a\\) or for an appropriate set \\(A\\), what is the probability \\(\sum X_i
+\in A\\).
+
+There is actually a wealth of ideas in the last line above. What sort of a set
+\\(A\\) can we have? Look at the demo for an example of a set \\(A\\) for
+which we cannot ask the question. This will lead to a story of topology,
+and those interested can explore this in modules to come in future semesters,
+or look at "Convergence of Probability Measures" by Patrick Billingsley (Wiley Series in Probability and Statistics, 2nd edition).
+
+The central limit theorem is a special case of a larger set of results
+called the Laws of Large Numbers (LLNs), or deviation inequalities. It is
+also why we often choose to model certain kinds of noise (either in
+measurements, or thermal noise) as Gaussian---because such sources of
+noise are contributions from a large number of small independent
+similar components (thermal noise is vibrations of a large number of
+atoms). There are many variations of such LLNs---the
+central limit theorem is an example of what is called "convergence in
+distribution". There are stronger versions of LLNs, you can explore them
+in the module "Convergence of Random Variables", usually taught in EE 640.
