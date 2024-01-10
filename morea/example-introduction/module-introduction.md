@@ -15,6 +15,7 @@ morea_experiences:
 #  - experience-environment-configuration
 #  - experience-introduce-yourself
 #  - experience-learn-the-command-line
+   - lecture-lin-reg-geometry
 morea_assessments:
 morea_type: module
 morea_icon_url: /morea/example-introduction/introduction.jpg
