@@ -31,7 +31,7 @@ a sophisticated and nuanced fashion.
 ## Pedagogy
 
 EE 645 is structured as a series of
-[modules](https://uhm-descartes.github.io/ee345/modules), each taking
+[modules](https://uhm-descartes.github.io/ee645/modules), each taking
 approximately 2-3 weeks to complete. Given the diversity of students,
 we will tailor courses towards multiple categories of students
 (theory, simulations, developing applications for non-traditional
@@ -41,10 +41,10 @@ multiple perspectives together.
 
 Modules have:
 
-  * [Prerequisites](https://uhm-descartes.github.io/ee345/prerequisites), describing skills you should have prior to starting the module.
-  * [Learning outcomes](https://uhm-descartes.github.io/ee345/outcomes), describing the major goals for the module.
-  * [Readings and other online resources](https://uhm-descartes.github.io/ee345/readings), providing background material.
-  * [Experiential learning activities](https://uhm-descartes.github.io/ee345/experiences), providing a structured set of challenges enabling you to acquire mastery of material.
+  * [Prerequisites](https://uhm-descartes.github.io/ee645/prerequisites), describing skills you should have prior to starting the module.
+  * [Learning outcomes](https://uhm-descartes.github.io/ee645/outcomes), describing the major goals for the module.
+  * [Readings and other online resources](https://uhm-descartes.github.io/ee645/readings), providing background material.
+  * [Experiential learning activities](https://uhm-descartes.github.io/ee645/experiences), providing a structured set of challenges enabling you to acquire mastery of material.
   * [Assessments](https://uhm-descartes.github.io/ee345/assessments), which help you determine if you have acquired mastery of the material.
 
 ## About the instructor

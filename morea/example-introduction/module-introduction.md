@@ -1,5 +1,5 @@
 ---
-title: "Introduction to Machine Learning"
+title: "Soft start: Linear methods"
 published: true
 morea_coming_soon: false
 morea_id: example-introduction
