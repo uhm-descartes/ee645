@@ -16,8 +16,10 @@ morea_experiences:
 #  - experience-introduce-yourself
 #  - experience-learn-the-command-line
    - lecture-lin-reg-geometry
+   - lecture-regularization
+   - lecture-classification
 morea_assessments:
-   - assessment-lin-reg
+   - assessment-lr
 morea_type: module
 morea_icon_url: https://uhm-descartes.github.io/ee345/morea/linear-regression/linear-regression.png
 morea_start_date: "2023-01-26"

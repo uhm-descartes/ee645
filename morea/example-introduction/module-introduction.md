@@ -17,7 +17,7 @@ morea_experiences:
 #  - experience-learn-the-command-line
 #   - lecture-lin-reg-geometry
 morea_assessments:
-#   - assessment-lin-reg
+#   - assessment-lr
 morea_type: module
 morea_icon_url: introduction.png
 morea_start_date: "2024-01-08"
