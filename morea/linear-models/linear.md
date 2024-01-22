@@ -10,20 +10,25 @@ morea_readings:
 #  - reading-screencast-guided-tour-introduction
 #  - reading-screencast-intro
 #  - reading-how-to-watch-screencasts-the-smart-way
-  - reading-syllabus
+#  - reading-syllabus
 morea_experiences:
 #  - experience-environment-configuration
 #  - experience-introduce-yourself
 #  - experience-learn-the-command-line
-#   - lecture-lin-reg-geometry
+   - lecture-lin-reg-geometry
 morea_assessments:
-#   - assessment-lin-reg
+   - assessment-lin-reg
 morea_type: module
-morea_icon_url: introduction.png
-morea_start_date: "2024-01-08"
-morea_end_date: "2023-01-08"
+morea_icon_url: https://uhm-descartes.github.io/ee345/morea/linear-regression/linear-regression.png
+morea_start_date: "2023-01-26"
+morea_end_date: "2023-07-01T23:00"
 morea_labels:
 morea_sort_order: 10
+morea_prerequisites:
+  - lin-reg
+  - lin-class
+  - single-neuron
+  - ff-nn
 ---
 
-Welcome to EE 645
+Basics of linear models
