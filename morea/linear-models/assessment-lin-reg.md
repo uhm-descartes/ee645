@@ -56,15 +56,15 @@ topics are quite interesting. Here are different angles to think about them.
    yet), but let us not worry about that right away.
 
    	  1. Can you show that the linear regression prediction falls into
-  	  	  this template? Let me get you started: the test sample, $\z$
-  	  	  can be thought of as the query. What would be the key/value
-  	  	  pairs?  What would be the transformation matrices?
+  	  	 this template? Let me get you started: the test sample, $\z$
+  	  	 can be thought of as the query. What would be the key/value
+  	  	 pairs?  What would be the transformation matrices?
 
    	  2. If \\(\y\\) could be perfectly modeled by a linear model
-  	      (that is \\(\y\\) is in the column space of \\(X\\)), what
-  	      will be the output of the attention mechanism if one of the
-  	      training examples, \\(\x_i\\), is used as the query? What if
-  	      \\(\y\\) cannot be perfectly modeled linearly?
+  	     (that is \\(\y\\) is in the column space of \\(X\\)), what
+  	     will be the output of the attention mechanism if one of the
+  	     training examples, \\(\x_i\\), is used as the query? What if
+  	     \\(\y\\) cannot be perfectly modeled linearly?
 
 2. Prove that in the case of binary classification, the line onto
    which the Fisher discriminant projects all the training points onto
