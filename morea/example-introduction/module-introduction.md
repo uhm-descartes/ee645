@@ -19,9 +19,9 @@ morea_experiences:
 morea_assessments:
 #   - assessment-lr
 morea_type: module
-morea_icon_url: introduction.png
+morea_icon_url: /morea/example-introduction/introduction.jpg
 morea_start_date: "2024-01-08"
-morea_end_date: "2023-01-08"
+morea_end_date: "2024-01-08"
 morea_labels:
 morea_sort_order: 10
 ---
