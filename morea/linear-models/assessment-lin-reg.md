@@ -6,21 +6,22 @@ morea_summary: "Linear methods"
 morea_outcomes_assessed:
   - outcome-linear
 morea_type: assessment
-morea_start_date: "2021-07-16T09:00"
+morea_start_date: "2024-01-24"
 morea_labels:
 ---
 
 # Theory
+\\( \newcommand{\CD}{\mathcal{D}} \\)
 \\( \newcommand{\q}{\mathbf{q}} \\)
 \\( \newcommand{\w}{\mathbf{w}} \\)
 \\( \newcommand{\x}{\mathbf{x}} \\)
 \\( \newcommand{\y}{\mathbf{y}} \\)
 \\( \newcommand{\z}{\mathbf{z}} \\)
 \\( \newcommand{\k}{\mathbf{k}} \\)
-Here are a few questions for you to think about, and see the concepts we
-discussed in class through different angles.
+We covered the basic highlights of linear methods in class, but these
+topics are quite interesting. Here are different angles to think about them.
 
-* For a \\(n\times p\\) training matrix \\(X\\) with target \\(\y\\), we have seen that the least squares solution is
+1. For a \\(n\times p\\) training matrix \\(X\\) with target \\(\y\\), we have seen that the least squares solution is
 \\[ {\hat \w} = (X^TX)^{-1} X^T \y, \\]
 so that on a test example \\(\z\\), the prediction is
 \\[ \z^T{\hat \w} = {\z}^T (X^TX)^{-1} X^T \y. \\]
@@ -55,12 +56,19 @@ It is also common to normalize the attention (or pass it through a
 softmax layer---do not worry if you do not recognize this word yet),
 but let us not worry about that right away.
 
-  * Can you show that the linear regression prediction falls into this template? Let me get you started: the test sample, $\z$ can be thought of as the query. What would be the key/value pairs? What would be the transformation matrices?
+  	1. Can you show that the linear regression prediction falls into
+  	   this template? Let me get you started: the test sample, $\z$
+  	   can be thought of as the query. What would be the key/value
+  	   pairs?  What would be the transformation matrices?
 
-  * If \\(\y\\) could be perfectly modeled by a linear model (that is \\(\y\\) is in the column space of \\(X\\)), what will be the output of the attention mechanism if one of the training examples, \\(\x_i\\), is used as the query? What if \\(\y\\) cannot be perfectly modeled linearly?
+  	2. If \\(\y\\) could be perfectly modeled by a linear model (that
+  	   is \\(\y\\) is in the column space of \\(X\\)), what will be
+  	   the output of the attention mechanism if one of the training
+  	   examples, \\(\x_i\\), is used as the query? What if \\(\y\\)
+  	   cannot be perfectly modeled linearly?
 
 
-* Prove that in the case of binary classification, the line onto which
+2. Prove that in the case of binary classification, the line onto which
 the Fisher discriminant projects all the training points onto is along
 the Linear Regression solution (with class labels \\(\pm 1\\). Assume
 the two classes are balanced (that is they have the same number of points).
@@ -70,7 +78,7 @@ How would you obtain the Fisher discrimant for binary classification
 with Linear Regression if the classes were not balanced (there are
 more examples for one class)?
 
-* The following data is from the M.D. Anderson Cancer Center, and
+3. The following data is from the M.D. Anderson Cancer Center, and
 contains 191 patients diagnosed with Acute Myelogenous Leukaemia, a
 kind of cancer. Measurements include clinical variables including
 demographics, history of cancer, chemotherapy or radiation treatments,
@@ -87,11 +95,19 @@ and has been downloaded from
 
 The task is to model the following targets: 
 
- * resp.simple: Response to treatment, categorical (CR: complete response or RESISTANT)
- * Relapse: Whether the patient had a relapse, categorical (Yes, No, NA)
- * vital status: Final status of patient at the end of study, categorical (A: alive or D: deceased)
- * Overall_Survival: Overall survival in weeks from diagnosis to exiting the study, real valued data
- * Remission Duration: Duration of time in remission in weeks (numerical data or NA)
+	1. resp.simple: Response to treatment, categorical (CR: complete
+	   response or RESISTANT)
+  
+    2. Relapse: Whether the patient had a relapse, categorical (Yes, No, NA)
+
+	3. vital status: Final status of patient at the end of study,
+	   categorical (A: alive or D: deceased)
+
+	4. Overall_Survival: Overall survival in weeks from diagnosis to
+	   exiting the study, real valued data
+
+	5. Remission Duration: Duration of time in remission in weeks
+	   (numerical data or NA)
  
 Build linear regression based models that predict each of the above
 targets. Note that you have a lot of features (about 271), but only
@@ -106,7 +122,7 @@ Hu et. al., A quantitative analysis of heterogeneities and hallmarks in acute my
 
 for the data.
 
-* In social sciences and economics, the way data is collected sometimes renders
+4. In social sciences and economics, the way data is collected sometimes renders
 different examples to be dependent. In such cases, _mixed effects_ models are
 often used in place of vanilla linear regression we studied in class. Find a dataset or application where mixed effects models are more appropriate than vanilla
 linear regression. 
