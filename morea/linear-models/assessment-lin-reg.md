@@ -1,6 +1,6 @@
 ---
 title: "Linear Regression"
-published: true
+published: false
 morea_id: assessment-lr
 morea_summary: "Linear Regression"
 morea_outcomes_assessed:
