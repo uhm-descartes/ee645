@@ -1,5 +1,5 @@
 ---
-title: "Soft start: Linear methods"
+title: "Introduction"
 published: true
 morea_coming_soon: false
 morea_id: example-introduction
@@ -13,7 +13,7 @@ morea_readings:
   - reading-syllabus
 morea_experiences:
 #  - experience-environment-configuration
-#  - experience-introduce-yourself
+  - experience-introduce-yourself
 #  - experience-learn-the-command-line
 #   - lecture-lin-reg-geometry
 morea_assessments:
