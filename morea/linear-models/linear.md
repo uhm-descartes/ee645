@@ -19,13 +19,13 @@ morea_experiences:
    - lecture-regularization
    - lecture-classification
 morea_assessments:
-#   - assessment-lr
+   - assessment-linear
 morea_type: module
 morea_icon_url: morea/linear-models/linear-regression.png
 morea_start_date: "2024-01-08"
 morea_end_date: "2024-01-17"
 morea_labels:
-morea_sort_order: 10
+morea_sort_order: 20
 morea_prerequisites:
   - lin-reg
   - lin-class
