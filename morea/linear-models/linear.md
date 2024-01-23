@@ -4,7 +4,7 @@ published: true
 morea_coming_soon: false
 morea_id: example-introduction
 morea_outcomes:
-  - outcome-course-structure
+  - outcome-linear
 morea_readings:
 #  - reading-screencast-guided-tour-website
 #  - reading-screencast-guided-tour-introduction

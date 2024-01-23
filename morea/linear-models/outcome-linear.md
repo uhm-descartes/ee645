@@ -1,7 +1,7 @@
 ---
 title: "Linear Models"
 published: true
-morea_id: outcome-course-structure
+morea_id: outcome-linear
 morea_type: outcome
 morea_sort_order: 1
 ---
