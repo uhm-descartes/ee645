@@ -14,5 +14,5 @@ morea_labels:
 To follow along the lecture, please use the following python notebook: [Fisher Discriminant](./fisher.ipynb).
 Slides for the class are [here](./2024-01-17-Note-11-44.pdf)
 
-{% include youtube.html id="LCPni_tVn84" %}
+{% include youtube.html id="FmCMjVh32jE" %}
 
