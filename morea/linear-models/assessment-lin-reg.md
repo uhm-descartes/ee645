@@ -20,22 +20,24 @@ morea_labels:
 Here are a few questions for you to think about, and see the concepts we
 discussed in class through different angles.
 
-* For a \\(n\times p\\) training matrix \(X\) with target \(\y\), we have seen that the least squares solution is
+* For a \\(n\times p\\) training matrix \\(X\\) with target \\(\y\\), we have seen that the least squares solution is
 \\[ {\hat \w} = (X^TX)^{-1} X^T \y, \\]
 so that on a test example \\(\z\\), the prediction is
 \\[ \z^T{\hat \w} = {\z}^T (X^TX)^{-1} X^T \y. \\]
 
 Furthermore let the projection of \\(\y\\) into the column space of
-\\(X\\) be \\({\hat y} = \begin{bmatrix} {\hat y}_1\\\vdots \\ {\hat
-y}_n\end{bmatrix}\\). We will try to understand this (using what
-we know about matrix multiplication) in a slight different way, but
-one that becomes useful when we start looking at something called
-_attention_ in Transformer-based Large Language Models (like chatGPT).
-In the attention approach, there is a dictionary $\cD$ (think of
-a python dictionary object)---a set of key-value pairs, say \\((\k_i, v_i\\),
-where \\(i\\) runs from 1 through \\(n\\). Given a query \\(\q\\),
-the attention mechanism computes the attention the query gives to each
-key \\(\k_i\\) as
+\\(X\\) be
+\\[ {\hat y} = \begin{bmatrix} {\hat y}_1\\\\ \vdots \\\\ {\hat
+y}_n\end{bmatrix}. \\]
+We will try to understand (practicing what we know about matrix
+multiplication) linear regression in a different way. This view
+becomes useful when we start looking at something called attention
+in Transformer-based Large Language Models (like chatGPT).  In the
+attention approach, there is a dictionary \\(\cD\\) (think of a python
+dictionary object)---a set of key-value pairs, say \\((\k_i, v_i)\\),
+where \\(i\\) runs from 1 through \\(n\\). Given a query \\(\q\\), the
+attention mechanism computes the attention the query gives to each key
+\\(\k_i\\) as
 
 \\[ \alpha(\q, \k_i) = (W_q \q)^T (W_k \k_i), \\]
 
@@ -53,9 +55,9 @@ It is also common to normalize the attention (or pass it through a
 softmax layer---do not worry if you do not recognize this word yet),
 but let us not worry about that right away.
 
-  ** Can you show that the linear regression prediction falls into this template? Let me get you started: the test sample, $\z$ can be thought of as the query. What would be the key/value pairs? What would be the transformation matrices?
+  * Can you show that the linear regression prediction falls into this template? Let me get you started: the test sample, $\z$ can be thought of as the query. What would be the key/value pairs? What would be the transformation matrices?
 
-  ** If \\(\y\\) could be perfectly modeled by a linear model (that is \\(\y\\) is in the column space of \\(X\\)), what will be the output of the attention mechanism if one of the training examples, \\(\x_i\\), is used as the query? What if \\(\y\\) cannot be perfectly modeled linearly?
+  * If \\(\y\\) could be perfectly modeled by a linear model (that is \\(\y\\) is in the column space of \\(X\\)), what will be the output of the attention mechanism if one of the training examples, \\(\x_i\\), is used as the query? What if \\(\y\\) cannot be perfectly modeled linearly?
 
 
 * Prove that in the case of binary classification, the line onto which
@@ -85,11 +87,11 @@ and has been downloaded from
 
 The task is to model the following targets: 
 
- ** resp.simple: Response to treatment, categorical (CR: complete response or RESISTANT)
- ** Relapse: Whether the patient had a relapse, categorical (Yes, No, NA)
- ** vital status: Final status of patient at the end of study, categorical (A: alive or D: deceased)
- ** Overall_Survival: Overall survival in weeks from diagnosis to exiting the study, real valued data
- ** Remission Duration: Duration of time in remission in weeks (numerical data or NA)
+ * resp.simple: Response to treatment, categorical (CR: complete response or RESISTANT)
+ * Relapse: Whether the patient had a relapse, categorical (Yes, No, NA)
+ * vital status: Final status of patient at the end of study, categorical (A: alive or D: deceased)
+ * Overall_Survival: Overall survival in weeks from diagnosis to exiting the study, real valued data
+ * Remission Duration: Duration of time in remission in weeks (numerical data or NA)
  
 Build linear regression based models that predict each of the above
 targets. Note that you have a lot of features (about 271), but only
@@ -103,3 +105,8 @@ the paper
 Hu et. al., A quantitative analysis of heterogeneities and hallmarks in acute myelogenous leukaemia. Nature Biomedical Engineering, vol 3, Nov 2019, pages 889-901.
 
 for the data.
+
+* In social sciences and economics, the way data is collected sometimes renders
+different examples to be dependent. In such cases, _mixed effects_ models are
+often used in place of vanilla linear regression we studied in class. Find a dataset or application where mixed effects models are more appropriate than vanilla
+linear regression. 
