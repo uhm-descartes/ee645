@@ -41,10 +41,10 @@ topics are quite interesting. Here are different angles to think about them.
 
    \\[ \alpha(\q, \k_i) = (W_q \q)^T (W_k \k_i), \\]
 
-   where $W_q$ and $W_k$ are weight matrices. An example of such
-   weight matrices would be to pass the key/query through a (linear)
-   neural network, but in general, we could think of them as a
-   transformation that prepare the key and query to interact with each
+   where \\(W_q\\) and \\(W_k\\) are weight matrices. An example of such
+   weight matrices would be to pass the key/query through a
+   neural network, but in general, we could think of them as 
+   transformations that prepare the key and query to interact with each
    other. Now, the attention mechanism returns a weighted sum of the
    values in the dictionary, with each value \\(v_i\\) being weighted
    by the attention given to its key, namely
@@ -55,16 +55,16 @@ topics are quite interesting. Here are different angles to think about them.
    softmax layer---do not worry if you do not recognize this word
    yet), but let us not worry about that right away.
 
-   	  1. Can you show that the linear regression prediction falls into
-  	  	 this template? Let me get you started: the test sample, $\z$
-  	  	 can be thought of as the query. What would be the key/value
-  	  	 pairs?  What would be the transformation matrices?
+   1. Can you show that the linear regression prediction falls into
+  	  	this template? Let me get you started: the test sample, $\z$
+  	  	can be thought of as the query. What would be the key/value
+  	  	pairs?  What would be the transformation matrices?
 
-   	  2. If \\(\y\\) could be perfectly modeled by a linear model
-  	     (that is \\(\y\\) is in the column space of \\(X\\)), what
-  	     will be the output of the attention mechanism if one of the
-  	     training examples, \\(\x_i\\), is used as the query? What if
-  	     \\(\y\\) cannot be perfectly modeled linearly?
+   2. If \\(\y\\) could be perfectly modeled by a linear model
+  	   (that is \\(\y\\) is in the column space of \\(X\\)), what will
+  	   be the output of the attention mechanism if one of the training
+  	   examples, \\(\x_i\\), is used as the query? What if \\(\y\\)
+  	   cannot be perfectly modeled linearly?
 
 2. Prove that in the case of binary classification, the line onto
    which the Fisher discriminant projects all the training points onto
