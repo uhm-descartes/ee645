@@ -132,12 +132,13 @@ topics are quite interesting. Here are different angles to think about them.
     vanilla linear regression.
 
 
-5. Generate a set of examples with binary class labels (keep the
-   examples as 2- or 3-coordinate vectors first, followed by any given
-   number of coordinates) so that the Fisher discriminant direction
-   (the line onto which the points are projected) coincides with the
-   first principal component of the data matrix. Specifically,
-   generate a data matrix \\(X\\), binary class labels for each row of
-   \\(X\\), so that the Fisher discriminant projection coincides with
-   the first principal component of \\(X\\). 
+5. Generate a set of \\(n\\) examples with \\(p\\) features (your code
+   should be able to generate examples for any input values of \\(n\\)
+   and \\(p\\)) with binary class labels so that the Fisher
+   discriminant direction (the line onto which the points are
+   projected) coincides with the first principal component of the data
+   matrix. Specifically, generate a \\(n\times p\\) data matrix
+   \\(X\\), binary class labels for each row of \\(X\\), so that the
+   Fisher discriminant projection coincides with the first principal
+   component of \\(X\\).
    
