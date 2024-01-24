@@ -31,8 +31,9 @@ topics are quite interesting. Here are different angles to think about them.
    \\\\ {\hat y}_n\end{bmatrix}. \\] We will try to understand
    (practicing what we know about matrix multiplication) linear
    regression in a different way. This view becomes useful when we
-   start looking at something called attention in Transformer-based
-   Large Language Models (like chatGPT).  In the attention approach,
+   start looking at something called _attention_ in Transformer-based
+   Large Language Models (like chatGPT or most other models in popular
+   imagination).  In the attention approach,
    there is a dictionary \\(\cD\\) (think of a python dictionary
    object)---a set of key-value pairs, say \\((\k_i, v_i)\\), where
    \\(i\\) runs from 1 through \\(n\\). Given a query \\(\q\\), the
@@ -56,7 +57,7 @@ topics are quite interesting. Here are different angles to think about them.
    away.
 
     * Can you show that the linear regression prediction falls into
-  	  this template? Let me get you started: the test sample, $\z$ can
+  	  this template? Let me get you started: the test sample, \\(\z\\) can
   	  be thought of as the query. What would be the key/value pairs?
   	  What would be the transformation matrices?
 
