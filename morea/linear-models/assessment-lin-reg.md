@@ -11,7 +11,7 @@ morea_labels:
 ---
 
 # Theory
-\\( \newcommand{\CD}{\mathcal{D}} \\)
+\\( \newcommand{\cD}{\mathcal{D}} \\)
 \\( \newcommand{\q}{\mathbf{q}} \\)
 \\( \newcommand{\w}{\mathbf{w}} \\)
 \\( \newcommand{\x}{\mathbf{x}} \\)
@@ -52,8 +52,8 @@ topics are quite interesting. Here are different angles to think about them.
    \\[ \sum_{i} \alpha(\q, \k_i) v_i. \\]
 
    It is also common to normalize the attention (or pass it through a
-   softmax layer---do not worry if you do not recognize this word
-   yet), but let us not worry about that right away.
+   softmax layer), but let us not worry about normalization right
+   away.
 
     * Can you show that the linear regression prediction falls into
   	  this template? Let me get you started: the test sample, $\z$ can
@@ -62,9 +62,9 @@ topics are quite interesting. Here are different angles to think about them.
 
     * If \\(\y\\) could be perfectly modeled by a linear model (that
   	  is \\(\y\\) is in the column space of \\(X\\)), what will be the
-  	  output of the attention mechanism if one of the training
-  	  examples, \\(\x_i\\), is used as the query? What if \\(\y\\)
-  	  cannot be perfectly modeled linearly?
+  	  output of the above linear regression attention if one
+  	  of the training examples, \\(\x_i\\), is used as the query? What
+  	  if \\(\y\\) cannot be perfectly modeled linearly?
 
 2. Prove that in the case of binary classification, the line onto
    which the Fisher discriminant projects all the training points onto
