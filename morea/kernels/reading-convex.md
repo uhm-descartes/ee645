@@ -139,8 +139,8 @@ for \\(f\\) to be convex.
 coordinates.  Recall that the length of \\(\w\\) is
 \\(||\w||= \sqrt{w_1^2+w_2^2}\\).
 
-1. Compute the Hessians of the function \\( f(\w)=||\w||^2 \\) and the function \\( h(\w)= ||\w||\\).
-2. Show that the Hessian of \\(||\w||^2\\) is positive definite (so \\( ||\w||^2 \\) is convex)
+ 	1. Compute the Hessians of the function \\( f(\w)=||\w||^2 \\) and the function \\( h(\w)= ||\w||\\).
+    2. Show that the Hessian of \\(||\w||^2\\) is positive definite (so \\( ||\w||^2 \\) is convex)
   
 Again, the Hessian characterization
 only applies to those convex functions that happen to have a second
