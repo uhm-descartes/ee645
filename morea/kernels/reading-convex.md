@@ -1,8 +1,8 @@
 ---
-title: "RKHS"
-published: false
-morea_id: reading-kernel
-morea_summary: "Reproducing Kernel Hilbert Spaces"
+title: "Convex Functions"
+published: true
+morea_id: reading-convex
+morea_summary: "Convex functions"
 morea_type: reading
 morea_labels:
 ---
@@ -14,6 +14,7 @@ morea_labels:
 \\( \newcommand{\z}{\mathbf{z}} \\)
 \\( \newcommand{\k}{\mathbf{k}} \\)
 \\( \newcommand{\reals}{\mathbb{R}} \\)
+\\( \newcommand{\half}{\frac12} \\)
 
 * Convex functions There are two closely related concepts here: a
 _convex set_ and and a _convex function_. This is a fundamental topic,
@@ -137,14 +138,12 @@ for \\(f\\) to be convex.
 **Exercise** Let \\(\w=(w_1,w_2)\\) be a vector with two
 coordinates.  Recall that the length of \\(\w\\) is
 \\(||\w||= \sqrt{w_1^2+w_2^2}\\).
-1. Compute the Hessians of the function \\(f(\w)=||\w||^2\\) and the
-   function \\(h(\w)= ||\w||\\).
+1. Compute the Hessians of the function \\( f(\w)=||\w||^2 \\) and the
+   function \\( h(\w)= ||\w||\\).
 2. Show that the Hessian of \\(||\w||^2\\) is positive definite
-  (so \\(||\w||^2\\) is convex) but the Hessian of \\(||\w||\\) is
-  NOT positive definite (so \\(||\w||\\) is not a convex function).
-
-Now do you see why we minimize \\(\half ||\w||^2\\) and not \\(||\w||\\) in
-our SVM formulation? Again, the Hessian characterization
+  (so \\( ||\w||^2 \\) is convex)
+  
+Again, the Hessian characterization
 only applies to those convex functions that happen to have a second
 derivative. In general, convex functions need not even have a first
 derivative leave alone the second---absence of derivatives
