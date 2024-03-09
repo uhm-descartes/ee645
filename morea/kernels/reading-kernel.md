@@ -6,6 +6,14 @@ morea_summary: "Convex functions"
 morea_type: reading
 morea_labels:
 ---
+\\( \newcommand{\cD}{\mathcal{D}} \\)
+\\( \newcommand{\q}{\mathbf{q}} \\)
+\\( \newcommand{\w}{\mathbf{w}} \\)
+\\( \newcommand{\x}{\mathbf{x}} \\)
+\\( \newcommand{\y}{\mathbf{y}} \\)
+\\( \newcommand{\z}{\mathbf{z}} \\)
+\\( \newcommand{\k}{\mathbf{k}} \\)
+\\( \newcommand{\reals}{\mathbb{R}} \\)
 
 * Convex functions There are two closely related concepts here: a
 _convex set_ and and a _convex function_. This is a fundamental topic,
@@ -113,7 +121,7 @@ In other words the Hessian of \\(f\\) at any point \\(\x_0\\),
 must be positive-definite (or all eigenvalues are \\(\ge 0\\))
 for \\(f\\) to be convex.
 
-\paragraph{Exercise} Let \\(\w=(w_1,w_2)\\) be a vector with two
+**Exercise** Let \\(\w=(w_1,w_2)\\) be a vector with two
 coordinates.  Recall that the length of \\(\w\\) is
 \\(||\w||= \sqrt{w_1^2+w_2^2}\\).
 \begin{enumerate}
