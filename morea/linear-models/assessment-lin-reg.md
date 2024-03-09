@@ -30,7 +30,7 @@ Work on these problems in teams.
    Furthermore let the projection of \\(\y\\) into the column space of
    \\(X\\) be 
    
-   \\[ {\hat y} = \begin{bmatrix} {\hat y}_1\\ \vdots \\ {\hat y}_n\end{bmatrix}. \\] 
+   \\[ {\hat y} = \begin{bmatrix} {\hat y}_1\\\\ \vdots \\\\ {\hat y}_n\end{bmatrix}. \\] 
    
    We will try to understand
    (practicing what we know about matrix multiplication) linear
