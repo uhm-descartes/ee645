@@ -28,8 +28,11 @@ Work on these problems in teams.
    prediction is \\[ \z^T{\hat \w} = {\z}^T (X^TX)^{-1} X^T \y. \\]
 
    Furthermore let the projection of \\(\y\\) into the column space of
-   \\(X\\) be \\[ {\hat y} = \begin{bmatrix} {\hat y}_1\\\\ \vdots
-   \\\\ {\hat y}_n\end{bmatrix}. \\] We will try to understand
+   \\(X\\) be 
+   
+   \\[ {\hat y} = \begin{bmatrix} {\hat y}_1\\ \vdots \\ {\hat y}_n\end{bmatrix}. \\] 
+   
+   We will try to understand
    (practicing what we know about matrix multiplication) linear
    regression in a different way. This view becomes useful when we
    start looking at something called _attention_ in Transformer-based

@@ -1,11 +1,167 @@
 ---
-title: "CHANGE ME"
-published: false
-morea_id: reading-CHANGE-ME
-morea_summary: "CHANGE ME"
-morea_url: https://github.com/airbnb/javascript
+title: "Convex Functions"
+published: true
+morea_id: reading-convex
+morea_summary: "Convex functions"
 morea_type: reading
 morea_labels:
 ---
 
-(CHANGE ME if no morea_url)
+* Convex functions There are two closely related concepts here: a
+_convex set_ and and a _convex function_. This is a fundamental topic,
+though we did not go through these in class. But we will encounter
+them again shortly when looking at gradient descent in more detail.
+
+Suppose \(C\subset \reals^d\) is a set of vectors with \(d\) coordinates.
+Then we say \(C\) is a convex set if given \(\x\) and \(\x'\) in \(C\),
+all points between \(\x\) and \(\x'\) are also in \(C\). Formally, if
+\(\x\in C\) and \(\x'\in C\), we must have for \(0\le \alpha\le 1\),
+the point \(\alpha \x + (1-\alpha)\x'\in C\),
+
+A \emph{convex function} of \(d\) variables is any function \(f\) 
+that satisfies for all points \(\x\) and \(\x'\), and all \(0\le \alpha \le 1\)
+that
+\begin{equation}
+  \label{eq:cnvxproper}
+  f(\alpha \x +(1-\alpha)\x') \le \alpha f(\x) + (1-\alpha) f(\x'),
+\end{equation}
+namely the chord connecting the points \((\x, f(\x))\) and \((\x', f(\x))\)
+lies \emph{above} the surface \(g(\x,y)=f(\x)-y=0\) when we set the arguments
+of \(f\) between \(\x\) and \(\x'\).
+
+There are many other ways to identify convex functions in
+some restricted cases. You should think of the following as properties
+rather than definitions in the strict sense. 
+
+\paragraph{Tangents: } If \(f\) is also differentiable (or in multiple
+dimensions, the gradient exists), then the tangent plane at any point
+\((\x_0, f(\x_0))\) (the hyperplane perpendicular to the gradient) lies
+completely below the surface \(g(\x,y) = f(\x)-y=0\). The tangent
+interpretation is not a definition since there is no requirement that
+convex functions have to be differentiable (they are just defined
+through\textasciitilde{}\eqref{eq:cnvxproper}). This characterization only applies to
+those convex functions that happen to be differentiable as well, absence
+of a derivative of a function is not any evidence for convexity/absence thereof.
+
+\paragraph{Exercise} Let \(x\) be a real number.
+Is the function \(|x|\) (absolute value of \(x\)) convex? Is it differentiable
+everywhere?
+
+
+\paragraph{}
+(You can skip this derivation and proceed directly to\textasciitilde{}\eqref{eq:cnvx} if
+you wish, but I recommend you try to understand the following.) 
+Mathematically, consider the \(d+1\) dimensional space (where we plot
+the arguments of \(f\) in the first \(d\) dimensions, followed by the
+value of \(f\) in the last dimension\footnote\{This is like a 3d plot for
+  a function of 2 variables, the argument of the function is on the
+  \(x-y\) plane, and the value \(f(x,y)\) is along the \(z\) dimension\}).
+In this \$d+1\$-dimensional space, let us plot tangents of the
+surface \(g(\x,y) = f(\x)-y =0\), where \(\x\) corresponds to the
+\$d-\$dimensional argument and \(y\) is the last dimension that will
+represent the magnitude of the function (so the surface \(f(\x)-y=0\)
+sets \(y=f(\x)\)). Specifically, let us look at the tangent to the
+surface \(g(\x,y)=0\) at the point \(\z_0=(\x_0, f(\x_0)\). This is a plane
+that is perpendicular to the gradient of \(g\), and which passes through
+the point above, \ie all points \(\z = (\x,y)\) satisfying
+\[
+  \Paren{\nabla_{\x,y} g }^T_{\z_0} ( \z -\z_0) = 0,
+\]
+where \(\nabla_{\x,y}\) is the gradient with respect to all arguments of
+\(g\), \ie all coordinates of \(\x\) \emph{and} \(y\). Note that
+$\backslash$[
+  \(\nabla_{\x\text{,y}}\) g =
+\begin{bmatrix} \nabla_x g \\ \frac{\partial g}{\partial y} \end{bmatrix}
+  =
+  \begin{bmatrix} \(\nabla_{\text{x}}\) f $\backslash$\ -1 \end{bmatrix}.
+$\backslash$]
+and therefore the tangent is all points \((\x,y)\) satisfying
+\[
+  \Paren{\nabla_{\x,y} g }^T_{\z_0} ( \z -\z_0) =
+  \Paren{\nabla_{\x} f }^T_{\x_0}(\x-\x_0) - (y- f(\x_0)) = 0,
+\]
+or, reorganizing the above, the tangent plane is all points \((\x,y_\x)\)
+satisfying
+\[
+  y_\x = f(\x_0) +  \Paren{\nabla_{\x} f }^T_{\x_0}(\x-\x_0).
+\]
+\(f(\x)\) is the value of the function at any point \(\x\). If we
+require the tangent plane to be below the function, it means that
+any point on the tangent plane \((\x, y_\x)\) must be below the
+point \((\x, f(\x))\). That means, if \(f\) is convex with the
+first derivative, we have for all \(\x\) and \(\x_0\) that
+\begin{equation}
+  \label{eq:cnvx}
+  f(\x_0) +  \Paren{\nabla_{\x} f }^T_{\x_0}(\x-\x_0) \le f(\x)
+\end{equation}
+
+\paragraph{Hessians: } Convex functions that have the second
+derivatives can be characterized by their Hessians. Looking
+at\textasciitilde{}\eqref{eq:cnvx}, and because the quadratic approximation
+of \(f(\x)\) from the Taylor series (look at notes for Mar 2) around \(\x_0\)
+\[
+  f(\x_0) +
+  \Paren{\nabla_{\x} f }^T_{\x_0}(\x-\x_0) +
+  (\x-\x_0)^T \Paren{\nabla\nabla^T f}_{\x_0} (\x-\x_0),
+\]
+we can conclude that
+\[
+  (\x-\x_0)^T \Paren{\nabla\nabla^T f}_{\x_0} (\x-\x_0) \ge 0
+\]
+no matter what \(\x\) and \(\x_0\) are.
+In other words the Hessian of \(f\) at any point \(\x_0\),
+\[
+  \Paren{\nabla\nabla^T f}_{\x_0}
+\]
+must be positive-definite (or all eigenvalues are \(\ge 0\))
+for \(f\) to be convex.
+
+\paragraph{Exercise} Let \(\w=(w_1,w_2)\) be a vector with two
+coordinates.  Recall that the length of \(\w\) is
+\(||\w||= \sqrt{w_1^2+w_2^2}\).
+\begin{enumerate}
+\item Compute the Hessians of the function $f(\w)=||\w||^2$
+and the function $h(\w)= ||\w||$.
+\item Show that the Hessian of $||\w||^2$ is positive definite
+  (so $||\w||^2$ is convex) but the Hessian of $||\w||$ is
+  NOT positive definite (so $||\w||$ is not a convex function).
+\end{enumerate}
+Now do you see why we minimize \(\half ||\w||^2\) and not \(||\w||\) in
+our formulation\textasciitilde{}\eqref{eq:svmls}? Again, the Hessian characterization
+only applies to those convex functions that happen to have a second
+derivative. In general, convex functions need not even have a first
+derivative leave alone the second---absence of derivatives
+must not be construed as evidence that the function is not convex.
+
+
+\paragraph{Level sets: } If \(f\) is a convex function of \(\x\), then
+all level sets of \(\x\), \ie for all \(L\), the sets
+\[
+f_L=  \Sets{\x \in \reals^d : f(\x) \le L }
+\]
+are convex \emph{sets}. The converse need not generally hold, but this
+is often a quick test that helps you rule out functions that are
+not convex.
+
+\item Lagrange duals and optimization with inequality constraints.
+\label{sec:orgdcb2814}
+\begin{center}
+{\Large \textbf{Support vector machines: Primal/dual formulations}}
+\end{center}
+
+When studying Fisher Discriminants, we have seen how to use the notion
+of Lagrange multipliers when optimizing an objective with an equality
+constraint. In the formulation of support vector machines (both in the
+linearly separable case formulated on Mar 11 and in the general case
+we will see in this handout), we are interested in minimizing an objective
+subject to inequality constraints. We will adapt the method of Lagrangians
+to handle inequality constraints in this handout. 
+
+In addition, our Lagrangian approach allows us to the support vector
+machines from a complete different light, the so-called dual approach,
+which will give us insights into how the training data is used to learn
+a model. In addition, this also reveals to us a structured way to
+introduce non-linearity into our models, and we will exploit these
+insights to understand simple feedforward neural networks.
+
+
