@@ -30,7 +30,9 @@ A _convex function_ of \\(d\\) variables is any function \\(f\\)
 that satisfies for all points \\(\x\\) and \\(\x'\\), and all \\(0\le \alpha \le 1\\)
 that
 
-\\[ f(\alpha \x +(1-\alpha)\x') \le \alpha f(\x) + (1-\alpha) f(\x'),\hfill(1) \\]
+\\[ 
+f(\alpha \x +(1-\alpha)\x') \le \alpha f(\x) + (1-\alpha) f(\x'),\tag*{(1)}
+\\]
 
 namely the chord connecting the points \\((\x, f(\x))\\) and \\((\x', f(\x))\\)
 lies \emph{above} the surface \\(g(\x,y)=f(\x)-y=0\\) when we set the arguments
@@ -88,7 +90,7 @@ Note that
 and therefore the
 tangent is all points \\((\x,y)\\) satisfying 
 
-\\[ \bigl(\nabla_{\x,y} g \bigr)^T_{\z_0} ( \z -\z_0) = \Paren{\nabla_{\x} f }^T_{\x_0}(\x-\x_0) -
+\\[ \bigl(\nabla_{\x,y} g \bigr)^T_{\z_0} ( \z -\z_0) = \Bigl(\nabla_{\x} f \Bigr)^T_{\x_0}(\x-\x_0) -
 (y- f(\x_0)) = 0, \\] 
 
 or, reorganizing the above, the tangent plane is
@@ -113,21 +115,21 @@ at (1), and because the quadratic approximation
 of \\(f(\x)\\) from the Taylor series around \\(\x_0\\)
 
 \\[ f(\x_0) +
-  \Paren{\nabla_{\x} f }^T_{\x_0}(\x-\x_0) +
-  (\x-\x_0)^T \Paren{\nabla\nabla^T f}_{\x_0} (\x-\x_0),
+  \Bigl(\nabla_{\x} f \Bigr)^T_{\x_0}(\x-\x_0) +
+  (\x-\x_0)^T \Bigl(\nabla\nabla^T f\Bigr)_{\x_0} (\x-\x_0),
 \\]
 
 we can conclude that
 
 \\[
-  (\x-\x_0)^T \Paren{\nabla\nabla^T f}_{\x_0} (\x-\x_0) \ge 0
+  (\x-\x_0)^T \Bigl(\nabla\nabla^T f\Bigr)_{\x_0} (\x-\x_0) \ge 0
 \\]
 
 no matter what \\(\x\\) and \\(\x_0\\) are. 
 
 In other words the Hessian of \\(f\\) at any point \\(\x_0\\),
 \\[
-  \Paren{\nabla\nabla^T f}_{\x_0}
+  \Bigl(\nabla\nabla^T f\Bigr)_{\x_0}
 \\]
 must be positive-definite (or all eigenvalues are \\(\ge 0\\))
 for \\(f\\) to be convex.
@@ -135,31 +137,30 @@ for \\(f\\) to be convex.
 **Exercise** Let \\(\w=(w_1,w_2)\\) be a vector with two
 coordinates.  Recall that the length of \\(\w\\) is
 \\(||\w||= \sqrt{w_1^2+w_2^2}\\).
-\begin{enumerate}
-\item Compute the Hessians of the function $f(\w)=||\w||^2$
-and the function $h(\w)= ||\w||$.
-\item Show that the Hessian of $||\w||^2$ is positive definite
-  (so $||\w||^2$ is convex) but the Hessian of $||\w||$ is
-  NOT positive definite (so $||\w||$ is not a convex function).
-\end{enumerate}
+1. Compute the Hessians of the function \\(f(\w)=||\w||^2\\) and the
+   function \\(h(\w)= ||\w||\\).
+2. Show that the Hessian of \\(||\w||^2\\) is positive definite
+  (so \\(||\w||^2\\) is convex) but the Hessian of \\(||\w||\\) is
+  NOT positive definite (so \\(||\w||\\) is not a convex function).
+
 Now do you see why we minimize \\(\half ||\w||^2\\) and not \\(||\w||\\) in
-our formulation\textasciitilde{}\eqref{eq:svmls}? Again, the Hessian characterization
+our SVM formulation? Again, the Hessian characterization
 only applies to those convex functions that happen to have a second
 derivative. In general, convex functions need not even have a first
 derivative leave alone the second---absence of derivatives
 must not be construed as evidence that the function is not convex.
 
 
-\paragraph{Level sets: } If \\(f\\) is a convex function of \\(\x\\), then
+**Level sets:** If \\(f\\) is a convex function of \\(\x\\), then
 all level sets of \\(\x\\), \ie for all \\(L\\), the sets
-\[
+\\[
 f_L=  \Sets{\x \in \reals^d : f(\x) \le L }
-\]
+\\]
 are convex \emph{sets}. The converse need not generally hold, but this
 is often a quick test that helps you rule out functions that are
 not convex.
 
-\item Lagrange duals and optimization with inequality constraints.
+**Lagrange duals and optimization with inequality constraints**
 \label{sec:orgdcb2814}
 \begin{center}
 {\Large \textbf{Support vector machines: Primal/dual formulations}}
