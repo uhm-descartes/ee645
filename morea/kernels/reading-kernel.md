@@ -30,7 +30,7 @@ A _convex function_ of \\(d\\) variables is any function \\(f\\)
 that satisfies for all points \\(\x\\) and \\(\x'\\), and all \\(0\le \alpha \le 1\\)
 that
 
-\\[ f(\alpha \x +(1-\alpha)\x') \le \alpha f(\x) + (1-\alpha) f(\x'), \\]
+\\[ f(\alpha \x +(1-\alpha)\x') \le \alpha f(\x) + (1-\alpha) f(\x'),\hfill(1) \\]
 
 namely the chord connecting the points \\((\x, f(\x))\\) and \\((\x', f(\x))\\)
 lies \emph{above} the surface \\(g(\x,y)=f(\x)-y=0\\) when we set the arguments
@@ -46,9 +46,9 @@ dimensions, the gradient exists), then the tangent plane at any point
 completely below the surface \\(g(\x,y) = f(\x)-y=0\\). The tangent
 interpretation is not a definition since there is no requirement that
 convex functions have to be differentiable (they are just defined
-through\textasciitilde{}\eqref{eq:cnvxproper}). This characterization only applies to
-those convex functions that happen to be differentiable as well, absence
-of a derivative of a function is not any evidence for convexity/absence thereof.
+through Equation (1)). So the tangent characterization only applies to
+those convex functions that also happen to be differentiable as well, absence
+of a derivative of a function is not a factor in determining convexity/absence thereof.
 
 **Exercise** Let \\(x\\) be a real number.
 Is the function \\(|x|\\) (absolute value of \\(x\\)) convex? Is it differentiable
@@ -75,26 +75,37 @@ This is a plane that is perpendicular to the gradient of
 \\(g\\), and which passes through the point above, \ie all points
 \\(\z = (\x,y)\\) satisfying 
 
-\\[ \Paren{\nabla_{\x,y} g }^T_{\z_0} ( \z-\z_0) = 0, \\] 
+\\[ \bigl(\nabla_{\x,y} g \bigr)^T_{\z_0} ( \z-\z_0) = 0, \\] 
 
-where \\(\nabla_{\x,y}\\) is the gradient with respect to all arguments of \\(g\\), \ie all coordinates of \\(\x\\) _and_ \\(y\\). 
+where \\(\nabla_{\x,y}\\) is the gradient with respect to all arguments of \\(g\\), _i.e._ all coordinates of \\(\x\\) _and_ \\(y\\). 
 
-Note that $\backslash$[ \\(\nabla_{\x\text{,y}}\\)
-g = \begin{bmatrix} \nabla_x g \\ \frac{\partial g}{\partial y}
-\end{bmatrix} = \begin{bmatrix} \\(\nabla_{\text{x}}\\) f
-$\backslash$\ -1 \end{bmatrix}.  $\backslash$] and therefore the
-tangent is all points \\((\x,y)\\) satisfying \[ \Paren{\nabla_{\x,y}
-g }^T_{\z_0} ( \z -\z_0) = \Paren{\nabla_{\x} f }^T_{\x_0}(\x-\x_0) -
-(y- f(\x_0)) = 0, \] or, reorganizing the above, the tangent plane is
-all points \\((\x,y_\x)\\) satisfying \[ y_\x = f(\x_0) +
-\Paren{\nabla_{\x} f }^T_{\x_0}(\x-\x_0).  \] \\(f(\x)\\) is the value
+Note that 
+\\[ \nabla_{\x\text{,y}} g = 
+\begin{bmatrix} 
+\nabla_x g \\\\ \frac{\partial g}{\partial y}\end{bmatrix} 
+= \begin{bmatrix} \nabla_{\x} f\\\\ -1 \end{bmatrix}.  \\]
+
+and therefore the
+tangent is all points \\((\x,y)\\) satisfying 
+
+\\[ \bigl(\nabla_{\x,y} g \bigr)^T_{\z_0} ( \z -\z_0) = \Paren{\nabla_{\x} f }^T_{\x_0}(\x-\x_0) -
+(y- f(\x_0)) = 0, \\] 
+
+or, reorganizing the above, the tangent plane is
+all points \\((\x,y_\x)\\) satisfying 
+
+\\[ y_\x = f(\x_0) + \Bigl(\nabla_{\x} f \Bigr)^T_{\x_0}(\x-\x_0).  \\] 
+
+\\(f(\x)\\) is the value
 of the function at any point \\(\x\\). If we require the tangent plane
 to be below the function, it means that any point on the tangent plane
 \\((\x, y_\x)\\) must be below the point \\((\x, f(\x))\\). That
 means, if \\(f\\) is convex with the first derivative, we have for all
-\\(\x\\) and \\(\x_0\\) that \begin{equation} \label{eq:cnvx}
-f(\x_0) + \Paren{\nabla_{\x} f }^T_{\x_0}(\x-\x_0) \le f(\x)
-\end{equation}
+\\(\x\\) and \\(\x_0\\) that 
+
+\\[
+f(\x_0) + \Bigl(\nabla_{\x} f \Bigr)^T_{\x_0}(\x-\x_0) \le f(\x)
+\\]
 
 **Hessians:** Convex functions that have the second
 derivatives can be characterized by their Hessians. Looking
