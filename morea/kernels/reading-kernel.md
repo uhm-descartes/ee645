@@ -160,25 +160,5 @@ are convex \emph{sets}. The converse need not generally hold, but this
 is often a quick test that helps you rule out functions that are
 not convex.
 
-**Lagrange duals and optimization with inequality constraints**
-\label{sec:orgdcb2814}
-\begin{center}
-{\Large \textbf{Support vector machines: Primal/dual formulations}}
-\end{center}
-
-When studying Fisher Discriminants, we have seen how to use the notion
-of Lagrange multipliers when optimizing an objective with an equality
-constraint. In the formulation of support vector machines (both in the
-linearly separable case formulated on Mar 11 and in the general case
-we will see in this handout), we are interested in minimizing an objective
-subject to inequality constraints. We will adapt the method of Lagrangians
-to handle inequality constraints in this handout. 
-
-In addition, our Lagrangian approach allows us to the support vector
-machines from a complete different light, the so-called dual approach,
-which will give us insights into how the training data is used to learn
-a model. In addition, this also reveals to us a structured way to
-introduce non-linearity into our models, and we will exploit these
-insights to understand simple feedforward neural networks.
 
 
