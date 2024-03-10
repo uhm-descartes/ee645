@@ -16,7 +16,9 @@ morea_labels:
 \\( \newcommand{\reals}{\mathbb{R}} \\)
 \\( \newcommand{\half}{\frac12} \\)
 
-* Convex functions There are two closely related concepts here: a
+## Convex Functions
+
+There are two closely related concepts here: a
 _convex set_ and and a _convex function_. This is a fundamental topic,
 though we did not go through these in class. But we will encounter
 them again shortly when looking at gradient descent in more detail.
@@ -36,7 +38,7 @@ f(\alpha \x +(1-\alpha)\x') \le \alpha f(\x) + (1-\alpha) f(\x'),\tag*{(1)}
 \\]
 
 namely the chord connecting the points \\((\x, f(\x))\\) and \\((\x', f(\x))\\)
-lies \emph{above} the surface \\(g(\x,y)=f(\x)-y=0\\) when we set the arguments
+lies _above_ the surface \\(g(\x,y)=f(\x)-y=0\\) when we set the arguments
 of \\(f\\) between \\(\x\\) and \\(\x'\\).
 
 There are many other ways to identify convex functions in
@@ -140,7 +142,7 @@ coordinates.  Recall that the length of \\(\w\\) is
 \\(||\w||= \sqrt{w_1^2+w_2^2}\\).
 
  	1. Compute the Hessians of the function \\( f(\w)=||\w||^2 \\) and the function \\( h(\w)= ||\w||\\).
-    2. Show that the Hessian of \\(||\w||^2\\) is positive definite (so \\( ||\w||^2 \\) is convex)
+    2. Which of the Hessians are positive definite? Which functions are convex?
   
 Again, the Hessian characterization
 only applies to those convex functions that happen to have a second
@@ -152,9 +154,9 @@ must not be construed as evidence that the function is not convex.
 **Level sets:** If \\(f\\) is a convex function of \\(\x\\), then
 all level sets of \\(\x\\), \ie for all \\(L\\), the sets
 \\[
-f_L=  \Sets{\x \in \reals^d : f(\x) \le L }
+f_L=  \Bigl\{\x \in \reals^d : f(\x) \le L \Bigr\}
 \\]
-are convex \emph{sets}. The converse need not generally hold, but this
+are convex _sets_. The converse need not generally hold, but this
 is often a quick test that helps you rule out functions that are
 not convex.
 
