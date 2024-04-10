@@ -11,8 +11,9 @@ morea_readings:
    - reading-svm
 morea_experiences:
   # - experience-CHANGE-ME
+  - lec-kernels
 morea_assessments:
-  # - assessment-CHANGE-ME
+   - assessment-kernels
 morea_type: module
 morea_icon_url: /morea/kernels/svm-nonlinear-nonlinsep.png
 morea_start_date: "2024-01-24"
