@@ -16,6 +16,8 @@ morea_labels:
 \\( \newcommand{\reals}{\mathbb{R}} \\)
 \\( \newcommand{\half}{\frac12} \\)
 \\( \newcommand{\upto}{, \ldots, } \\)
+\\( \newcommand{\cL}{{\cal L}} \\)
+\\(\def \Paren#1{{\left({#1}\right)}}\\)
 
 ## Support Vector Machines 
 Consider classification of linearly separable examples.  We studied
@@ -133,7 +135,7 @@ In the above, the \\(\tilde\w\\) and \\(\tilde b\\) are just dummy variables,
 we can call them by any other name and nothing will really change. Furthermore,
 maximizing \\(1/||\w||\\) is the same as minimizing \\(||\w||\\), which is in turn
 the same as minimizing \\(\half ||\w||^2\\). We can therefore write our training
-objective as obtaining the hyperplane \\((\w^*)^T \x-b^*=0\\), where 
+objective as obtaining the hyperplane \\( {\w^*}^T \x-b^*=0\\), where 
 
 $$  \w^*,b^* = \arg\min_{\w,b} \half{||\w||^2} \tag*{(2)}$$
 subject to \\(y_i(\w^T \z_i -{b}) \ge 1 \\) for all \\(1\le i\le n.\\)
@@ -150,45 +152,42 @@ above to get to the correct form.
 
 #### Lagrangian for the SVM problem
 To write the Lagrangian for this problem, we rewrite each inequality
-constraint above so that it looks like \(f_i(\w,b) \le 0\), namely
+constraint above so that it looks like \\(f_i(\w,b) \le 0\\), namely
 
 $$1-y_i(\w^T \z_i -{b}) \le 0.$$
 
-Each inequality gets its own Lagrange multiplier \(\lambda_i\), so our Lagrangian
-is (letting \(\Lambda = (\lambda_1\upto \lambda_n)\))
+Each inequality gets its own Lagrange multiplier \\(\lambda_i\\), so our
+Lagrangian is (letting \\(\Lambda = (\lambda_1\upto \lambda_n)\\))
 
 $$\cL(\w,b, \Lambda) =
 \half{||\w||^2} + \sum_{i=1}^n \lambda_i \Paren{1-y_i(\w^T \z_i -{b})}.$$
 
-Now consider the following problem for a specific choice of \(\w\) and \(b\),
+Now consider the following problem for a specific choice of \\(\w\\) and \\(b\\),
 
 $$\max_{\Lambda \ge 0}\cL(\w,b, \Lambda) ,$$
 
-where \(\Lambda\ge 0\) is shorthand for \(\lambda_1\ge 0, \lambda_2\ge
-0,\cdots,\lambda_n\ge 0\). Now if \(\w\) and \(b\) satisfy all constraints,
-we will have for all \(1\le i\le n\) that
+where \\(\Lambda\ge 0\\) is shorthand for \\(\lambda_1\ge 0, \lambda_2\ge
+0,\cdots,\lambda_n\ge 0\\). Now if \\(\w\\) and \\(b\\) satisfy all constraints,
+we will have for all \\(1\le i\le n\\) that
 
 $$1-y_i(\w^T \z_i -{b}) \le 0,$$
 
-therefore
-
-$$\cL(\w,b, \Lambda) 
-=
-\half{||\w||^2} + \sum_{i=1}^n \lambda_i \Paren{1-y_i(\w^T \z_i -{b})}\\
+therefore 
+$$\cL(\w,b, \Lambda) = \half{||\w||^2} + \sum_{i=1}^n \lambda_i \Paren{1-y_i(\w^T \z_i -{b})}
 \le
 \half{||\w||^2},
 $$
 
-with equality in the second equation iff we choose \(\lambda_i=0\) for all \(i\). Therefore, for any  \(\w\) and \(b\) satisfying all constraints,
+with equality in the second equation iff we choose \\(\lambda_i=0\\) for all \\(i\\). Therefore, for any  \\(\w\\) and \\(b\\) satisfying all constraints,
 
 $$\max_{\Lambda \ge 0}\cL(\w,b, \Lambda)  = \half ||\w||^2.$$
 
-On the other hand if \(\w\) and \(b\) are such that there is even a single
-constraint violated, that is for some \(j\),
+On the other hand if \\(\w\\) and \\(b\\) are such that there is even a single
+constraint violated, that is for some \\(j\\),
 
 $$1-y_j(\w^T \z_j -{b}) \ge 0.$$
 
-Then to maximize \(\cL(\w,b, \Lambda)\), we can choose \(\lambda_j\to \infty\),
+Then to maximize \\(\cL(\w,b, \Lambda)\\), we can choose \\(\lambda_j\to \infty\\),
 therefore
 
 $$\lambda_j(1-y_j(\w^T \z_j -{b})) \to +\infty,$$
@@ -200,8 +199,7 @@ $$\max_{\Lambda \ge 0}\cL(\w,b, \Lambda)  = \infty.$$
 Putting it together
 
 $$
-\max_{\Lambda \ge 0}\cL(\w,b, \Lambda) 
-=
+\max_{\Lambda \ge 0}\cL(\w,b, \Lambda)  =
 \begin{cases}
 \half ||\w||^2 & \w, b \text{ satisfy all $n$ constraints}\\
 \infty & \text{else.}
@@ -212,16 +210,16 @@ Let us call
 
 $$g(\w,b) \ed \max_{\Lambda \ge 0}\cL(\w,b, \Lambda)$$
 
-for convenience. Now there is definitely at least one \(\w\), \(b\) that
+for convenience. Now there is definitely at least one \\(\w\\), \\(b\\) that
 satisfies all constraints (since the points are linearly
-separable). Therefore, the smallest value \(g(\w,b)\) can take is
-definitely not infinity (so any \(\w,b\) that violates any constraint
-will never minimize \(g(\w,b)\)). That means that if we look for
+separable). Therefore, the smallest value \\(g(\w,b)\\) can take is
+definitely not infinity (so any \\(\w,b\\) that violates any constraint
+will never minimize \\(g(\w,b)\\)). That means that if we look for
 
 $$\arg \min_{\w,b} g(\w,b),$$
 
-the solution must be \(\w^*,b^*\) from\textasciitilde{}\eqref{eq:svmls}, since we are
-minimizing \(\half ||\w||^2\) but only among such \(\w,b\) that satisfy
+the solution must be \\(\w^*,b^*\\) from\textasciitilde{}\eqref{eq:svmls}, since we are
+minimizing \\(\half ||\w||^2\\) but only among such \\(\w,b\\) that satisfy
 every constraint given.
 
 Therefore, we can pose\textasciitilde{}\eqref{eq:svmls} as follows:
