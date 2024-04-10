@@ -16,8 +16,10 @@ morea_labels:
 \\( \newcommand{\reals}{\mathbb{R}} \\)
 \\( \newcommand{\half}{\frac12} \\)
 \\( \newcommand{\upto}{, \ldots, } \\)
-\\( \newcommand{\cL}{{\cal L}} \\)
-\\(\def \Paren#1{{\left({#1}\right)}}\\)
+\\( \newcommand{\cL}{\mathcal{L}} \\)
+\\( \newcommand{\Paren}[1]{{\left({#1}\right)}}\\)
+\\( \newcommand{\ed}{\stackrel{\mathrm{def}}{=}}\\)
+
 
 ## Support Vector Machines 
 Consider classification of linearly separable examples.  We studied
@@ -172,10 +174,8 @@ we will have for all \\(1\le i\le n\\) that
 $$1-y_i(\w^T \z_i -{b}) \le 0,$$
 
 therefore 
-$$\cL(\w,b, \Lambda) = \half{||\w||^2} + \sum_{i=1}^n \lambda_i \Paren{1-y_i(\w^T \z_i -{b})}
-\le
-\half{||\w||^2},
-$$
+
+$$\cL(\w,b, \Lambda) = \half{||\w||^2} + \sum_{i=1}^n \lambda_i \Paren{1-y_i(\w^T \z_i -{b})} \le \half{||\w||^2}, $$
 
 with equality in the second equation iff we choose \\(\lambda_i=0\\) for all \\(i\\). Therefore, for any  \\(\w\\) and \\(b\\) satisfying all constraints,
 
