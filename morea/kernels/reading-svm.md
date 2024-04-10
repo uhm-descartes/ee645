@@ -2,7 +2,7 @@
 title: "Support Vector Machines"
 published: true
 morea_id: reading-svm
-morea_summary: "Primal formulation"
+morea_summary: "Primal: Linearly separable"
 morea_type: reading
 morea_labels:
 ---
