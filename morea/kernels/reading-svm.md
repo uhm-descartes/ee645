@@ -80,7 +80,7 @@ example is classified properly.
 
 So far so good, but we don't really want to compute \\(\gamma(\w,b)\\) or
 try expressing it in any closed/numerical form. But there is a simple
-conceptual way around it. Suppose \\(\w\\) and \\(\b\\) classified all examples
+conceptual way around it. Suppose \\(\w\\) and \\(b\\) classified all examples
 such that every example, \\(\z_1\upto \z_n\\) satisfied
 
 \begin{equation}
@@ -115,7 +115,7 @@ $$\min_{1\le i\le n} k({\w}^T\z_i - {b}) = 1 $$
 
 or equivalently, given any \\({\w}\\) and \\({b}\\), we scale it by
 \\(k=\frac1\gamma\\), where \\(\gamma\\) is as defined as
-in~\eqref{eq:gamma}, to get \\(\tilde{\w}\\) and \\(\tilde{b}\\), and
+in (1), to get \\(\tilde{\w}\\) and \\(\tilde{b}\\), and
 optimize over only the \\(\tilde{\w}\\) and \\(\tilde{b}\\).
 
 Then, we will have 
@@ -135,7 +135,7 @@ In the above, the \\(\tilde\w\\) and \\(\tilde b\\) are just dummy variables,
 we can call them by any other name and nothing will really change. Furthermore,
 maximizing \\(1/||\w||\\) is the same as minimizing \\(||\w||\\), which is in turn
 the same as minimizing \\(\half ||\w||^2\\). We can therefore write our training
-objective as obtaining the hyperplane \\( {\w^*}^T \x-b^*=0\\), where 
+objective as obtaining the hyperplane \\( (\w^*)^T \x-b^*=0 \\), where 
 
 $$  \w^*,b^* = \arg\min_{\w,b} \half{||\w||^2} \tag*{(3)}$$
 subject to \\(y_i(\w^T \z_i -{b}) \ge 1 \\) for all \\(1\le i\le n.\\)
