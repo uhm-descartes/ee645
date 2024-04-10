@@ -15,6 +15,7 @@ morea_labels:
 \\( \newcommand{\k}{\mathbf{k}} \\)
 \\( \newcommand{\reals}{\mathbb{R}} \\)
 \\( \newcommand{\half}{\frac12} \\)
+\\( \newcommand{\upto}{, \ldots, } \\)
 
 ## Support Vector Machines 
 Consider classification of linearly separable examples.  We studied
@@ -46,10 +47,9 @@ Therefore, the distances of the \\(n\\) points to the plane \\(\w^T\x-b=0\\)
 are respectively \\(\gamma_1/||\w|| \upto \gamma_n/||\w||\\). In addition,
 let 
 
-\begin{equation}
-\label{eq:gamma}
-\gamma(\w,b) = \min_{1\le i\le n} \gamma_i(\w,b) = \min_{1\le i\le n}\w^T\z_i - b
-\end{equation}
+$$
+\gamma(\w,b) = \min_{1\le i\le n} \gamma_i(\w,b) = \min_{1\le i\le n}\w^T\z_i - b\tag*{(1)}
+$$
 
 so that the smallest distance between the examples and the hyperplane
 is \\(\gamma(\w,b)/||\w||\\). This is called the \emph{margin} of the classifier
@@ -68,10 +68,9 @@ determined by different examples (\ie the minimizer
 in\textasciitilde{}\eqref{eq:gamma} is different).  Even though we may not have
 \\(\gamma(\w,b)\\) in a simple form, we can still ask for
 
-\begin{align*}
-\w^*,b^* &= \arg\max{\w,b} \frac{\gamma(\w,b)}{||\w||}\\
-\text{subject to } & y_i(\w^T \z_i -b) \ge 0 \text{ for all } 1\le i\le n.
-\end{align*}
+
+$$\w^*,b^* = \arg\max{\w,b} \frac{\gamma(\w,b)}{||\w||}$$
+subject to \\( y_i(\w^T \z_i -b) \ge 0 \text{ for all } 1\le i\le n.\\)
 
 In the optimization above, the first line asks to maximize the margin,
 while the constraints (there are \\(n\\) of them) ensure that each
@@ -98,10 +97,8 @@ Note the shift now---we treat \\(\nu\\) as just a number (not a
 function of \\(\w\\) and \\(b\\)) and see which is the largest combination
 of the number \\(\nu\\), the vector \\(\w\\) and \\(b\\) that satisfies
 
-\begin{align*}
-\w^*,b^*,\nu^* &= \arg\max_{\nu,\w,b} \frac{\nu}{||\w||}\\
-\text{subject to } & y_i(\w^T \z_i -b) \ge \nu \text{ for all } 1\le i\le n.
-\end{align*}
+$$\w^*,b^*,\nu^* &= \arg\max_{\nu,\w,b} \frac{\nu}{||\w||}$$
+subject to \\(y_i(\w^T \z_i -b) \ge \nu \text{ for all } 1\le i\le n.\\)
 
 We can make one more simplification. There is no distinction between
 the plane \\(\w^T\x-b=0\\) and the plane
@@ -113,25 +110,23 @@ same plane (and hence same margin). We may choose just one candidate among
 these while searching for the optimum. To make our life simpler, we
 can choose \\(k\\) such that 
 
-\[ 
-\min_{1\le i\le n} k({\w}^T\z_i - {b}) = 1 
-\]
+$$\min_{1\le i\le n} k({\w}^T\z_i - {b}) = 1 $$
 
 or equivalently, given any \\({\w}\\) and \\({b}\\), we scale it by
 \\(k=\frac1\gamma\\), where \\(\gamma\\) is as defined as
 in~\eqref{eq:gamma}, to get \\(\tilde{\w}\\) and \\(\tilde{b}\\), and
 optimize over only the \\(\tilde{\w}\\) and \\(\tilde{b}\\).
 
-Then, we will have \[ \min_{1\le i\le n} (\tilde{\w}^T\z_i -
-\tilde{b}) = 1 \] and the margin of the hyperplane \\(\tilde{\w}^T
+Then, we will have 
+
+$$\min_{1\le i\le n} (\tilde{\w}^T\z_i -\tilde{b}) = 1 $$
+
+and the margin of the hyperplane \\(\tilde{\w}^T
 \x-\tilde{b}=0\\) is \\(1/||\tilde{\w}||\\).
 So we can rewrite our training goal to be the optimization
 
-\begin{align*}
-\w^*,b^*,\nu^* &= \arg\max_{\nu,\tilde{\w},b} \frac{1}{||\tilde{\w}||}\\
-\text{subject to } & y_i(\tilde{\w}^T \z_i -\tilde{b}) \ge 1 
-\text{ for all } 1\le i\le n.
-\end{align*}
+$$\w^*,b^*,\nu^* &= \arg\max_{\nu,\tilde{\w},b} \frac{1}{||\tilde{\w}||}$$
+subject to \\(y_i(\tilde{\w}^T \z_i -\tilde{b}) \ge 1\\) for all \\(1\le i\le n.\\)
 
 Clearly, the \\(\nu\\) 's are now superflous---they don't exist in either the
 objective or the constraints---we can discard them.
@@ -141,13 +136,8 @@ maximizing \\(1/||\w||\\) is the same as minimizing \\(||\w||\\), which is in tu
 the same as minimizing \\(\half ||\w||^2\\). We can therefore write our training
 objective as obtaining the hyperplane \\((\w^*)^T \x-b^*=0\\), where 
 
-\begin{align}
-  \nonumber
-  \w^*,b^* &= \arg\min_{\w,b} \half{||\w||^2}\\
-  \label{eq:svmls}
-\text{subject to } & y_i(\w^T \z_i -{b}) \ge 1 
-\text{ for all } 1\le i\le n.
-\end{align}
+$$  \w^*,b^* &= \arg\min_{\w,b} \half{||\w||^2} \tag*{(2)}$$
+subject to \\(y_i(\w^T \z_i -{b}) \ge 1 \\) for all \\(1\le i\le n.\\)
 
 You may wonder why we transformed maximizing \\(1/||\w||\\) to minimizing
 \\(\half ||\w||^2\\). The reason is that we want our objectives and

@@ -156,9 +156,11 @@ must not be construed as evidence that the function is not convex.
 
 **Level sets:** If \\(f\\) is a convex function of \\(\x\\), then
 all level sets of \\(\x\\), \ie for all \\(L\\), the sets
+
 \\[
-f_L=  \Bigl\{\x \in \reals^d : f(\x) \le L \Bigr\}
+f_L=  \bigl\{\x \in \reals^d : f(\x) \le L \bigr\}
 \\]
+
 are convex _sets_. The converse need not generally hold, but this
 is often a quick test that helps you rule out functions that are
 not convex.
