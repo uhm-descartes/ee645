@@ -18,10 +18,13 @@ morea_labels:
 
 ## Convex Functions
 
-There are two closely related concepts here: a
-_convex set_ and and a _convex function_. This is a fundamental topic,
-though we did not go through these in class. But we will encounter
-them again shortly when looking at gradient descent in more detail.
+There are two closely related concepts here: a _convex set_ and and a
+_convex function_, though we will restrict our attention to convex
+functions. Convexity is a fundamental topic, though we did not go
+through these in class---consider taking EE 617 for an indepth study
+of this topic. But we will encounter some basics over and over again
+in various fields, including when looking at gradient descent in more
+detail.
 
 Suppose \\(C\subset \reals^d\\) is a set of vectors with \\(d\\) coordinates.
 Then we say \\(C\\) is a convex set if given \\(\x\\) and \\(\x'\\) in \\(C\\),

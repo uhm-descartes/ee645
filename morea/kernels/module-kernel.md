@@ -8,6 +8,7 @@ morea_outcomes:
   # - outcome-CHANGE-ME
 morea_readings:
    - reading-convex
+   - reading-svm
 morea_experiences:
   # - experience-CHANGE-ME
 morea_assessments:
