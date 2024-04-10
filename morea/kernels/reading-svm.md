@@ -159,8 +159,7 @@ $$1-y_i(\w^T \z_i -{b}) \le 0.$$
 Each inequality gets its own Lagrange multiplier \\(\lambda_i\\), so our
 Lagrangian is (letting \\(\Lambda = (\lambda_1\upto \lambda_n)\\))
 
-$$\cL(\w,b, \Lambda) =
-\half{||\w||^2} + \sum_{i=1}^n \lambda_i \Paren{1-y_i(\w^T \z_i -{b})}.$$
+$$\cL(\w,b, \Lambda) = \half{||\w||^2} + \sum_{i=1}^n \lambda_i \Paren{1-y_i(\w^T \z_i -{b})}.$$
 
 Now consider the following problem for a specific choice of \\(\w\\) and \\(b\\),
 
