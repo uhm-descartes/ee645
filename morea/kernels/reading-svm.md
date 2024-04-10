@@ -17,7 +17,6 @@ morea_labels:
 \\( \newcommand{\half}{\frac12} \\)
 \\( \newcommand{\upto}{, \ldots, } \\)
 \\( \newcommand{\cL}{\mathcal{L}} \\)
-\\( \newcommand{\Paren}[1]{{\bigl({#1}\bigr)}} \\)
 \\( \newcommand{\ed}{\stackrel{\mathrm{def}}{=}} \\)
 
 
