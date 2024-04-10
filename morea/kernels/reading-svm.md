@@ -54,7 +54,7 @@ $$
 $$
 
 so that the smallest distance between the examples and the hyperplane
-is \\(\gamma(\w,b)/||\w||\\). This is called the \emph{margin} of the classifier
+is \\(\gamma(\w,b)/||\w||\\). This is called the _margin_ of the classifier
 \\(\w^T\x-b=0\\).
 
 From our training data, we want to obtain that plane \\(\w^T\x-b=0\\) which
@@ -67,7 +67,7 @@ is some complicated function of \\(\w\\) and \\(b\\). Different values of
 \\(\w\\) and \\(b\\) yield potentially different orientations and
 intercepts of the separating hyperplane, and their margin is
 determined by different examples (\ie the minimizer
-in\textasciitilde{}\eqref{eq:gamma} is different).  Even though we may not have
+in (1) is different).  Even though we may not have
 \\(\gamma(\w,b)\\) in a simple form, we can still ask for
 
 
@@ -84,17 +84,16 @@ conceptual way around it. Suppose \\(\w\\) and \\(\b\\) classified all examples
 such that every example, \\(\z_1\upto \z_n\\) satisfied
 
 \begin{equation}
-\label{eq:constraints}
- y_i(\w^T \z_i -b) \ge \nu, \qquad 1\le i\le n.
+ y_i(\w^T \z_i -b) \ge \nu, \qquad 1\le i\le n.\tag*{(2)}
 \end{equation}
 
 For a given \\(\w\\) and \\(b\\), since \\(\gamma(\w,b)/||\w||\\) happens to be the
 distance of the closest point to the plane \\(\w^T \x -b =0\\), we could
-satisfy all \\(n\\) constraints of\textasciitilde{}\eqref{eq:constraints} above for every value of \\(\nu\\) in the range \\(0 \le\nu \le \gamma(\w,b)\\) and for no
+satisfy all \\(n\\) constraints of (2) above for every value of \\(\nu\\) in the range \\(0 \le\nu \le \gamma(\w,b)\\) and for no
 other.
 
 Therefore, we ask to find the maximum number \\(\nu\\) such that all the
-constraints in\textasciitilde{}\eqref{eq:constraints} are satisfied.
+constraints in (2) are satisfied.
 Note the shift now---we treat \\(\nu\\) as just a number (not a
 function of \\(\w\\) and \\(b\\)) and see which is the largest combination
 of the number \\(\nu\\), the vector \\(\w\\) and \\(b\\) that satisfies
@@ -138,18 +137,9 @@ maximizing \\(1/||\w||\\) is the same as minimizing \\(||\w||\\), which is in tu
 the same as minimizing \\(\half ||\w||^2\\). We can therefore write our training
 objective as obtaining the hyperplane \\( {\w^*}^T \x-b^*=0\\), where 
 
-$$  \w^*,b^* = \arg\min_{\w,b} \half{||\w||^2} \tag*{(2)}$$
+$$  \w^*,b^* = \arg\min_{\w,b} \half{||\w||^2} \tag*{(3)}$$
 subject to \\(y_i(\w^T \z_i -{b}) \ge 1 \\) for all \\(1\le i\le n.\\)
 
-You may wonder why we transformed maximizing \\(1/||\w||\\) to minimizing
-\\(\half ||\w||^2\\). The reason is that we want our objectives and
-constraints to be \emph{convex} functions. We will have a little
-digression here to define convex functions and sets, but practically
-every large constrained optimization we can solve is convex (or we
-just fake the steps of a convex optimization if we are stuck with
-non-convex optimization). Often, even convex optimization does not
-look that way to begin with---we need to tweak the formulation as 
-above to get to the correct form.
 
 #### Lagrangian for the SVM problem
 To write the Lagrangian for this problem, we rewrite each inequality
@@ -160,7 +150,7 @@ $$1-y_i(\w^T \z_i -{b}) \le 0.$$
 Each inequality gets its own Lagrange multiplier \\(\lambda_i\\), so our
 Lagrangian is (letting \\(\Lambda = (\lambda_1\upto \lambda_n)\\))
 
-$$\cL(\w,b, \Lambda) = \half{||\w||^2} + \sum_{i=1}^n \lambda_i \Paren{1-y_i(\w^T \z_i -{b})}.$$
+$$\cL(\w,b, \Lambda) = \half{||\w||^2} + \sum_{i=1}^n \lambda_i (1-y_i(\w^T \z_i -{b})).$$
 
 Now consider the following problem for a specific choice of \\(\w\\) and \\(b\\),
 
@@ -174,7 +164,7 @@ $$1-y_i(\w^T \z_i -{b}) \le 0,$$
 
 therefore 
 
-$$\cL(\w,b, \Lambda) = \half{||\w||^2} + \sum_{i=1}^n \lambda_i \Paren{1-y_i(\w^T \z_i -{b})} \le \half{||\w||^2}, $$
+$$\cL(\w,b, \Lambda) = \half{||\w||^2} + \sum_{i=1}^n \lambda_i (1-y_i(\w^T \z_i -{b})) \le \half{||\w||^2}, $$
 
 with equality in the second equation iff we choose \\(\lambda_i=0\\) for all \\(i\\). Therefore, for any  \\(\w\\) and \\(b\\) satisfying all constraints,
 
@@ -222,16 +212,16 @@ every constraint given.
 
 Therefore, we can pose\textasciitilde{}\eqref{eq:svmls} as follows:
 \begin{equation}
-  \label{eq:primal}
-\w^*,b^* = \arg\min_{\w,b} \max_{\Lambda \ge 0} \cL(\w,b, \Lambda).
+\w^*,b^* = \arg\min_{\w,b} \max_{\Lambda \ge 0} \cL(\w,b, \Lambda).\tag*{(4)}
 \end{equation}
 
 We will call the above the \emph{primal} formulation of the
-constrained optimization problem in\textasciitilde{}\eqref{eq:svmls}---where we write the
-Lagrangian, and observe that the solution of\textasciitilde{}\eqref{eq:svmls} is obtained
-by the minmax formulation in\textasciitilde{}\eqref{eq:primal}.
+constrained optimization problem (3)---where we write the Lagrangian,
+and observe that the solution of (3) is
+obtained by the minmax formulation (4).
+
 
 As the name ``primal'' suggests, we will also have a \emph{dual}
-formulation of the optimization problem in\textasciitilde{}\eqref{eq:svmls}. But before
+formulation of the optimization problem in (3). But before
 we get into the dual formulation, we have a little segue into elementary
 game theory.
