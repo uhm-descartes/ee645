@@ -9,7 +9,7 @@ morea_outcomes:
 morea_readings:
   # - reading-CHANGE-ME
 morea_experiences:
-	- lec-nlp
+  - lec-nlp
 morea_assessments:
   # - assessment-CHANGE-ME
 morea_type: module
