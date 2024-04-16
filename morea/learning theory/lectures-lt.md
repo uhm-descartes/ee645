@@ -12,3 +12,5 @@ morea_labels:
 
 
 1. Apr 10 Probability Basics, Hoeffding's inequality, Intro to PAC approaches and VC dimension {% include youtube.html id="BQrTU3xuXnc" %}
+
+2. Apr 15 Finite hypothesis classes, shattering, VC dimension {% include youtube.html id="XLzOZCPl5_Y" %}
