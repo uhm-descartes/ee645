@@ -10,7 +10,12 @@ morea_labels:
 
 # Lecture Recordings
 
+Slides here {pdf](./learning.pdf)
 
-1. Apr 10 Probability Basics, Hoeffding's inequality, Intro to PAC approaches and VC dimension {% include youtube.html id="BQrTU3xuXnc" %}
+1. Apr 10 Probability Basics, Hoeffding's inequality, Intro to PAC approaches and VC dimension. Annotated [slides](./lectures-410.pdf)  {% include youtube.html id="BQrTU3xuXnc" %}
 
-2. Apr 15 Finite hypothesis classes, shattering, VC dimension {% include youtube.html id="XLzOZCPl5_Y" %}
+2. Apr 15 Finite hypothesis classes, shattering, VC dimension. Annotated [slides](./lectures-415.pdf) {% include youtube.html id="XLzOZCPl5_Y" %} 
+
+3. Apr 17 Sauer's lemma, PAC-VC bounds (part 1: symmetrization with ghost samples). Annotated [slides](./lectures-417.pdf) {% include youtube.html id="7gcHWCbUHUw" %}
+
+4. Apr 22 PAC-VC bounds (part 2) and PAC-BAyes bounds
