@@ -18,4 +18,4 @@ Slides here {pdf](./learning.pdf)
 
 3. Apr 17 Sauer's lemma, PAC-VC bounds (part 1: symmetrization with ghost samples). Annotated [slides](./lectures-417.pdf) {% include youtube.html id="7gcHWCbUHUw" %}
 
-4. Apr 22 PAC-VC bounds (part 2) and PAC-BAyes bounds
+4. Apr 22 PAC-VC bounds (part 2) and Rademacher complexity. Annotated [slides](./lectures-422.pdf) {% include youtube.html id="BMhk5ED_9-o" %}
