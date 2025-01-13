@@ -33,4 +33,4 @@ morea_prerequisites:
   - ff-nn
 ---
 
-Basics of linear models
+Basics of linear models (focus on logistic regression)
