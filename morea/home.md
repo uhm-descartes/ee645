@@ -44,7 +44,7 @@ Modules have:
   * [Learning outcomes](https://uhm-descartes.github.io/ee645/outcomes), describing the major goals for the module.
   * [Readings and other online resources](https://uhm-descartes.github.io/ee645/readings), providing background material.
   * [Experiential learning activities](https://uhm-descartes.github.io/ee645/experiences), providing a structured set of challenges enabling you to acquire mastery of material.
-  * [Assessments](https://uhm-descartes.github.io/ee345/assessments), which help you determine if you have acquired mastery of the material.
+  * [Assessments](https://uhm-descartes.github.io/ee645/assessments), which help you determine if you have acquired mastery of the material.
 
 ## About the instructor
 
