@@ -23,8 +23,8 @@ morea_assessments:
    - assessment-logistic
 morea_type: module
 morea_icon_url: morea/linear-models/linear-regression.png
-morea_start_date: "2024-01-13"
-morea_end_date: "2024-01-22"
+morea_start_date: "2025-01-13"
+morea_end_date: "2025-01-22"
 morea_labels:
 morea_sort_order: 20
 morea_prerequisites:
