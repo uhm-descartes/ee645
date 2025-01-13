@@ -1,12 +1,12 @@
 ---
-title: "Linear methods"
+title: "Logistic Regression"
 published: true
 morea_id: assessment-logistic
 morea_summary: "Logistic Regression"
 morea_outcomes_assessed:
   - outcome-linear
 morea_type: assessment
-morea_start_date: "2024-01-24"
+morea_start_date: "2024-01-20"
 morea_labels:
 ---
 
