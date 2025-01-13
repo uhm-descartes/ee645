@@ -20,10 +20,11 @@ morea_experiences:
    - lecture-classification
 morea_assessments:
    - assessment-linear
+   - assessment-logistic
 morea_type: module
 morea_icon_url: morea/linear-models/linear-regression.png
-morea_start_date: "2024-01-08"
-morea_end_date: "2024-01-17"
+morea_start_date: "2024-01-13"
+morea_end_date: "2024-01-22"
 morea_labels:
 morea_sort_order: 20
 morea_prerequisites:

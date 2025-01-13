@@ -1,5 +1,5 @@
 ---
-title: "Linear methods"
+title: "Linear methods: theory"
 published: true
 morea_id: assessment-linear
 morea_summary: "Linear methods"
