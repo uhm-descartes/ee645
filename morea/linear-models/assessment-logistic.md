@@ -10,17 +10,26 @@ morea_start_date: "2024-01-20"
 morea_labels:
 ---
 
-From koa, obtain the Hawaii-Mar dataset that contains hourly weather
-data in the month of Mar for Hawaii for approximately 40 years. Take
-the help of your mentors to read the format of the dataset.
+1. From google drive, obtain the Hawaii-Mar dataset that contains
+   hourly weather data in the month of Mar for Hawaii for
+   approximately 40 years. Take the help of your mentors to read the
+   format of the dataset. Use this dataset to build a logistic
+   regression model that predicts cloud cover 6 hours in the future
+   using current weather measurements. Evaluate your model with a
+   receiver operating characteristic curve, and find the area under
+   the curve. For the evaluation, you will have to make sure that the
+   training and test data are not the same. It is up to you to figure
+   out how to manage this. Test your model on weather data from
+   Stockholm (again obtain the dataset from koa). How good or bad is
+   the model trained in Hawaii?
 
-Use this dataset to build a logistic regression model that predicts
-cloud cover 6 hours in the future using current weather
-measurements. Evaluate your model with a receiver operating
-characteristic curve, and find the area under the curve. For the
-evaluation, you will have to make sure that the training and test
-data are not the same. It is up to you to figure out how to manage
-ths.
+2. Build a neural network with one neuron (with an appropriate choice of
+    a loss function, regularization, and activation) that mimics
+	 * Linear Regression 
+	 * Linear Regression with regularization (LASSO or Ridge)
+	 * Linear classification via Perceptrons
+	 * Linear classification via Support Vector machines (linear kernel)
+   	Optimize the neural network weights using Stochastic Gradient Descent,
+	and see how closely you can match the optimal fit obtained by
+	corresponding closed form solutions. 
 
-Test your model on weather data from Stockholm (again obtain the
-dataset from koa). How good or bad is the model trained in Hawaii?

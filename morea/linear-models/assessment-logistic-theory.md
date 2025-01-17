@@ -1,8 +1,8 @@
 ---
 title: "Linear methods: theory"
-published: false
-morea_id: assessment-linear
-morea_summary: "Linear methods"
+published: true
+morea_id: assessment-logistic
+morea_summary: "Logistic regression theory"
 morea_outcomes_assessed:
   - outcome-linear
 morea_type: assessment
@@ -20,7 +20,6 @@ morea_labels:
 \\( \newcommand{\k}{\mathbf{k}} \\)
 We covered the basic highlights of linear methods in class, but these
 topics are quite interesting. Here are different angles to think about them.
-Work on these problems in teams. 
 
 1. For a \\(n\times p\\) training matrix \\(X\\) with target \\(\y\\),
    we have seen that the least squares solution is \\[ {\hat \w} =
@@ -56,9 +55,9 @@ Work on these problems in teams.
 
    \\[ \sum_{i} \alpha(\q, \k_i) v_i. \\]
 
-   It is also common to normalize the attention (or pass it through a
-   softmax layer), but let us not worry about normalization right
-   away.
+   It is also common to normalize the attention (by passing it through
+   a softmax layer) to make it into a probability distribution, but
+   let us not worry about normalization right away.
 
     * Can you show that the linear regression prediction falls into
   	  this template? Let me get you started: the test sample, \\(\z\\) can
@@ -77,42 +76,5 @@ Work on these problems in teams.
    what we have always done.
 
 
-2. Prove that in the case of binary classification, the line onto
-   which the Fisher discriminant projects all the training points onto
-   is along the Linear Regression solution (with class labels \\(\pm
-   1\\). Assume the two classes are balanced (that is they have the
-   same number of points).  You are welcome to use any resource on the
-   web for this.
-
-   How would you obtain the Fisher discrimant for binary
-   classification with Linear Regression if the classes were not
-   balanced (there are more examples for one class)?
-
-3. Build a neural network with one neuron (with an appropriate choice of
-    a loss function, regularization, and activation) that mimics
-	 * Linear Regression 
-	 * Linear Regression with regularization (LASSO or Ridge)
-	 * Linear classification via Perceptrons
-	 * Linear classification via Support Vector machines (linear kernel)
-   	Optimize the neural network weights using Stochastic Gradient Descent,
-	and see how closely you can match the optimal fit obtained by
-	corresponding closed form solutions. 
-
-4. In social sciences and economics, the way data is collected
-    sometimes renders different examples to be dependent. In such
-    cases, _mixed effects_ models are often used in place of vanilla
-    linear regression we studied in class. Find datasets or
-    applications where mixed effects models are more appropriate than
-    vanilla linear regression.
-
-
-5. Generate a set of \\(n\\) examples with \\(p\\) features (your code
-   should be able to generate examples for any input values of \\(n\\)
-   and \\(p\\)) with binary class labels so that the Fisher
-   discriminant direction (the line onto which the points are
-   projected) coincides with the first principal component of the data
-   matrix. Specifically, generate a \\(n\times p\\) data matrix
-   \\(X\\), binary class labels for each row of \\(X\\), so that the
-   Fisher discriminant projection coincides with the first principal
-   component of \\(X\\).
-   
+2. Fill in the mathematical details behind logistic regresion, as
+   indicated in the slides for the class.

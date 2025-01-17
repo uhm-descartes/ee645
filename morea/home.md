@@ -11,7 +11,7 @@ EE 645 is an graduate level course in machine learning, and a foundational
 course for graduate students who would like to use AI/machine learning
 in their research.
 
-Current students: please sign on to the class discord server [here](https://discord.gg/zbMscJxD).
+Current students: please sign on to the class discord server [here](https://discord.gg/BeU63RnS).
 
 ## Who should take this course
 
