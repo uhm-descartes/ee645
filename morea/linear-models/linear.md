@@ -19,7 +19,7 @@ morea_experiences:
    - lecture-regularization
    - lecture-classification
 morea_assessments:
-   - assessment-linear
+   - assessment-logistic-thy
    - assessment-logistic
 morea_type: module
 morea_icon_url: morea/linear-models/linear-regression.png

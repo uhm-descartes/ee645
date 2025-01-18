@@ -1,7 +1,7 @@
 ---
 title: "Linear methods: theory"
 published: true
-morea_id: assessment-logistic
+morea_id: assessment-logistic-thy
 morea_summary: "Logistic regression theory"
 morea_outcomes_assessed:
   - outcome-linear
