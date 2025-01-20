@@ -15,10 +15,10 @@ Current students: please sign on to the class discord server [here](https://disc
 
 ## Who should take this course
 
-The Spring 2024 edition welcomes students from multiple departments:
+The Spring 2025 edition welcomes students from multiple departments:
 in addition to the traditional ECE, Computer Science, and other STEM
 departments (ME, CEE, Math, Astronomy), we have students from social
-sciences, business and urban planning. Basic familiarity with
+sciences, public policy and business. Basic familiarity with
 statistics, probability and some linear algebra, supplemented with a
 willingness to learn fundamentals, is all that is required. Ideally,
 students should have had some exposure to using machine learning/AI

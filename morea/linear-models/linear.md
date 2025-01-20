@@ -23,7 +23,7 @@ morea_assessments:
    - assessment-logistic-thy
    - assessment-logistic
 morea_type: module
-morea_icon_url: morea/linear-models/linear.png
+morea_icon_url: ./linear.png
 morea_start_date: "2025-01-13"
 morea_end_date: "2025-01-22"
 morea_labels:
