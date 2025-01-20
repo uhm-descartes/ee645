@@ -29,16 +29,23 @@ We went over
 * **Visualization of classification:** here we visualize the space of
   all possible examples. There are two general approaches:
   
-	  * In the **deterministic** view, regions of the space are assigned to each label. 
+	  * In the **deterministic** view, regions of the space are
+        assigned to each label.
 
-	  * In the **probabilisitic** view, each label corresponds to a different probability model over the example space (but the supports of these probability models are allowed to overlap). So in the probabilistic view, multiple classes could potentially generate the same example, albeit with different probabilities.  
+	  * In the **probabilisitic** view, each label corresponds to a different 
+	    probability model over the example space (but the supports of these 
+		probability models are allowed to overlap). So in the probabilistic 
+		view, multiple classes could potentially generate the same example, 
+		albeit with different probabilities.  
 
 ### Jan 22
 
-We look at **logistic regression** in the class, and we did this
-with the probabilistic view of classification. Note that the view we
-take in class is different from what you may have seen in basic stat
-classes and [presented](https://docs.google.com/presentation/d/1PivvNMMgu9gnwzK8dfhZx9MT8UbOo9z1EhTqgYTpUU4/edit?usp=sharing) by Loc and Saber. 
+We look at **logistic regression** in the class, and we did this with
+the probabilistic view of classification. Note that the view we take
+in class is different from what you may have seen in basic stat
+classes and
+[presented](https://docs.google.com/presentation/d/1PivvNMMgu9gnwzK8dfhZx9MT8UbOo9z1EhTqgYTpUU4/edit?usp=sharing)
+by Loc and Saber.
 
 But the two views are obviously completely equivalent and lead to the
 same optimizations. The view we take here has a couple of advantages. It allows
