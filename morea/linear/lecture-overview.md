@@ -27,12 +27,12 @@ We went over
   is different from the high school view of fitting a bunch of points.
   
 * **Visualization of classification:** here we visualize the space of
-  all possible examples. There are two general approaches:
+  all possible examples. There are two general approaches.
   
-	  * In the **deterministic** view, regions of the space are
+	  1. In the **deterministic** view, regions of the space are
         assigned to each label.
 
-	  * In the **probabilisitic** view, each label corresponds to a different 
+	  2. In the **probabilisitic** view, each label corresponds to a different 
 	    probability model over the example space (but the supports of these 
 		probability models are allowed to overlap). So in the probabilistic 
 		view, multiple classes could potentially generate the same example, 
