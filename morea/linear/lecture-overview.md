@@ -47,4 +47,4 @@ us to understand
 * why logistic regression is a _maximum entropy_ approach
 * _where_ the logit function appears from (in the basic stat approach, we just pulled out of a hat)
 
-We will then do a demo with the 
+We will then do a demo with the weather [data](https://drive.google.com/drive/folders/1TvOiktbpG784mYLSRRjk6LULKVGECH3r?usp=sharing).  
