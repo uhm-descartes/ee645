@@ -5,9 +5,9 @@ morea_type: home
 published: true
 ---
 
-## Welcome to EE 645, Spring 2025
+## Welcome to ECE 645, Spring 2025
 
-EE 645 is an graduate level course in machine learning, and a foundational
+ECE 645 is an graduate level course in machine learning, and a foundational
 course for graduate students who would like to use AI/machine learning
 in their research.
 
