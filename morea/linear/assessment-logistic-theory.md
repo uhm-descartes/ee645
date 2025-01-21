@@ -12,12 +12,15 @@ morea_labels:
 
 # Theory
 \\( \newcommand{\cD}{\mathcal{D}} \\)
+\\( \newcommand{\E}{\mathbf{E}} \\)
 \\( \newcommand{\q}{\mathbf{q}} \\)
 \\( \newcommand{\w}{\mathbf{w}} \\)
 \\( \newcommand{\x}{\mathbf{x}} \\)
 \\( \newcommand{\y}{\mathbf{y}} \\)
 \\( \newcommand{\z}{\mathbf{z}} \\)
 \\( \newcommand{\k}{\mathbf{k}} \\)
+\\( \newcommand{\upto}{,\ldots,} \\)
+\\( \newcommand{\prob}{\mathbb{P}} \\)
 We covered the basic highlights of linear methods in class, but these
 topics are quite interesting. Here are different angles to think about them.
 
@@ -76,5 +79,35 @@ topics are quite interesting. Here are different angles to think about them.
    what we have always done.
 
 
-2. Fill in the mathematical details behind logistic regresion, as
-   indicated in the slides for the class.
+2. Fill in the mathematical details behind logistic regresion. Refer
+   to this [handout](./logistic.pdf) for reference and help in this
+   problem. Assume training data \\(\x_i, y_i\\), \\(i = 1\upto
+   n\\). We assume the examples \\(\x_i\))are from a continuous
+   (real-valued) space and the labels \\(y_i\\) are from the set
+   \\(\{0,1\}\\).  We will also use \\(X\)) (resp. \\(Y\\)) to denote
+   a random example (resp. label).
+   
+     1. Subject to \\( \E[X| Y=0] = c_0\\), show that the conditional
+        probability density on \\(X\\) given \\(Y=0\\) is
+	   
+	    \\[ f_{X|Y}(X=x | Y=0) = \exp(\beta_0 +\beta_1^T \x). \\]
+	   
+	    Explain also how \\(\beta_0\\) and \\(\beta_1\\) can be determined in principle.
+	    Similar observation holds for the conditional density of \\(X\\) given \\(Y=1\\).
+	   
+	 2. From Bayes' rule find \\(\prob(Y=0| X=x)\\) and \\(\prob(Y=1| X=x)\\).
+	 
+	 3. Show that an unbiased estimate of \\(\E[X|Y=j]\\) (for \\(j=0,1\\)) is
+		 \\[ \frac{\sum_{i:y_i=j} \x_i }{N_j}\\]
+		 where \\(N_j \)) is the number of examples in the training data with label \\(j\\).
+		 
+	 4. Show that
+		 \\[ \E[X\prob(Y=j|X)] = \E[X|Y=j] \prob(Y=j). \\]
+	 
+	 5. A Monte Carlo estimate of \\(\E[X\prob(Y=j|X)]\\) is \\(\sum_i
+		 \x_i \prob(Y=j|\x_i)\\).  Substituting the Monte Carlo
+		 estimate, parts 2 and 3 into 4, set up an equality you would
+		 solve to yield \\(\prob(Y=j|X)\\). This is the logistic regression model.
+		 
+	 6. Show that the equality in 5 above is exactly what you would solve from the basic
+		 stat approach as well.

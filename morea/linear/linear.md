@@ -36,3 +36,6 @@ morea_prerequisites:
 ---
 
 Basics of linear models (focus on logistic regression)
+
+
+
