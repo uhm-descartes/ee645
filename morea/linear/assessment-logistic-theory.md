@@ -111,7 +111,7 @@ topics are quite interesting. Here are different angles to think about them.
 		 \x_i \prob(Y=j\mid \x_i)\\).  Logistic regression assigns to each
 		 class \\(j=0,1\\)the maximum entropy model subject to setting \\(
 		 \E[X\mid Y=j] \\) to its unbiased estimate from the training
-		 data (cf. parts 1 and 3 above).  Substituting the Monte Carlo
+		 data (cf. part 1).  Substituting the Monte Carlo
 		 estimate into 4, set up the equality that yields \\(\prob(Y=j\mid X)\\)
 		 from the maximum entropy model above. These are the weights from the logistic
 		 regression model. See the handout for more details.
