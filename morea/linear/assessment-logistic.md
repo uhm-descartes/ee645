@@ -27,9 +27,13 @@ morea_labels:
     a loss function, regularization, and activation) that mimics
 	 * Linear Regression 
 	 * Linear Regression with regularization (LASSO or Ridge)
-	 * Linear classification via Perceptrons
-	 * Linear classification via Support Vector machines (linear kernel)
-   	Optimize the neural network weights using Stochastic Gradient Descent,
-	and see how closely you can match the optimal fit obtained by
-	corresponding closed form solutions. 
+	 * (optional) Linear classification via Perceptrons
+	 * Binary logistic regression 
+	 * (optional) Linear classification via Support Vector machines (linear kernel)
+	 
+    You do not need to turn in the optional parts yet---you can do so if
+	you already know about perceptrons and support vector machines. Optimize the
+	neural network weights using Stochastic Gradient Descent, and see
+	how closely you can match the optimal fit obtained by
+	corresponding closed-form/convex-optimized solutions.
 
