@@ -81,8 +81,8 @@ topics are quite interesting. Here are different angles to think about them.
 
 2. Fill in the mathematical details behind logistic regresion. Refer
    to this [handout](./logistic.pdf) for reference and help in this
-   problem. Assume training data \\( (\x_i, y_i) \\), for \\(i = 1\upto
-   n\\). We assume the examples \\( \x \)) are from a continuous
+   problem. Let the training data \\( (\x_i, y_i) \\), for \\(i = 1\upto
+   n\\). The examples \\(\x\)) are from a continuous
    (real-valued) space and the labels \\(y_i\\) are from the set
    \\(\\{0,1\\}\\).  We will also use \\(X\)) (resp. \\(Y\\)) to denote
    a random example (resp. label).
