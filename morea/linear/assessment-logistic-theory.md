@@ -81,16 +81,16 @@ topics are quite interesting. Here are different angles to think about them.
 
 2. Fill in the mathematical details behind logistic regresion. Refer
    to this [handout](./logistic.pdf) for reference and help in this
-   problem. Assume training data \\(\x_i, y_i\\), \\(i = 1\upto
-   n\\). We assume the examples \\(\x_i\))are from a continuous
+   problem. Assume training data \\( (\x_i, y_i) \\), for \\(i = 1\upto
+   n\\). We assume the examples \\( \x \)) are from a continuous
    (real-valued) space and the labels \\(y_i\\) are from the set
-   \\(\{0,1\}\\).  We will also use \\(X\)) (resp. \\(Y\\)) to denote
+   \\(\\{0,1\\}\\).  We will also use \\(X\)) (resp. \\(Y\\)) to denote
    a random example (resp. label).
    
-     1. Subject to \\( \E[X| Y=0] = c_0\\), show that the conditional
-        probability density on \\(X\\) given \\(Y=0\\) is
+     1. Subject to \\( \E[X| Y=0] = c\\) for a real number \\(c\\), show that the conditional
+        probability density on \\(X\)) given \\(Y=0\\) is
 	   
-	    \\[ f_{X|Y}(X=x | Y=0) = \exp(\beta_0 +\beta_1^T \x). \\]
+	    \\[ f_{X|Y}(X=\x | Y=0) = \exp(\beta_0 +\beta_1^T \x). \\]
 	   
 	    Explain also how \\(\beta_0\\) and \\(\beta_1\\) can be determined in principle.
 	    Similar observation holds for the conditional density of \\(X\\) given \\(Y=1\\).
