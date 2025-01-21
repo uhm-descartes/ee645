@@ -87,13 +87,16 @@ topics are quite interesting. Here are different angles to think about them.
    \\(\\{0,1\\}\\).  We will also use \\(X\)) (resp. \\(Y\\)) to denote
    a random example (resp. label).
    
-     1. Subject to \\( \E[X| Y=0] = c\\) for a real number \\(c\\), show that the conditional
-        probability density on \\(X\)) given \\(Y=0\\) is
+     1. Subject to \\( \E[X| Y=0] = c\\) for a real number \\(c\\),
+		show that the maximum entropy conditional probability density
+		on \\(X\)) given \\(Y=0\\) is
 	   
-	    \\[ f_{X|Y}(X=\x | Y=0) = \exp(\beta_0 +\beta_1^T \x). \\]
+	    \\[ f(X=\x | Y=0) = \exp(\beta_0 +\beta_1^T \x). \\]
 	   
-	    Explain also how \\(\beta_0\\) and \\(\beta_1\\) can be determined in principle.
-	    Similar observation holds for the conditional density of \\(X\\) given \\(Y=1\\).
+	    Explain also how the number \\(\beta_0\\) and the vector
+		\\(\beta_1\\) can be determined in principle given any value
+		for \\(c\\).  Similar observation holds for the conditional
+		density of \\(X\\) given \\(Y=1\\).
 	   
 	 2. From Bayes' rule find \\(\prob(Y=0| X=x)\\) and \\(\prob(Y=1| X=x)\\).
 	 
