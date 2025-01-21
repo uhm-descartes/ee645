@@ -89,7 +89,7 @@ topics are quite interesting. Here are different angles to think about them.
    
      1. Subject to \\( \E[X| Y=0] = c\\) for a real number \\(c\\),
 		show that the maximum entropy conditional probability density
-		on \\(X\)) given \\(Y=0\\) is
+		on \\(X\\) given \\(Y=0\\) is
 	   
 	    \\[ f(X=\x | Y=0) = \exp(\beta_0 +\beta_1^T \x).\\]
 	   
