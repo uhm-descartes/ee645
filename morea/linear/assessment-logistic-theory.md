@@ -100,17 +100,21 @@ topics are quite interesting. Here are different angles to think about them.
 	   
 	 2. From Bayes' rule find \\(\prob(Y=0 \mid X=x)\\) and \\(\prob(Y=1 \mid X=x)\\).
 	 
-	 3. Show that an unbiased estimate of \\(\E[X|Y=j]\\) (for \\(j=0,1\\)) is
+	 3. Show that an unbiased estimate of \\(\E[X \mid Y=j]\\) (for \\(j=0,1\\)) from the training data is
 		 \\[ \frac{\sum_{i:y_i=j} \x_i }{N_j}\\]
 		 where \\(N_j \\) is the number of examples in the training data with label \\(j\\).
 		 
 	 4. Show that
-		 \\[ \E[X\prob(Y=j|X)] = \E[X|Y=j] \prob(Y=j). \\]
+		 \\[ \E[X\prob(Y=j \mid X)] = \E[X\mid Y=j] \prob(Y=j). \\]
 	 
-	 5. A Monte Carlo estimate of \\(\E[X\prob(Y=j|X)]\\) is \\(\sum_i
-		 \x_i \prob(Y=j|\x_i)\\).  Substituting the Monte Carlo
-		 estimate, parts 2 and 3 into 4, set up an equality you would
-		 solve to yield \\(\prob(Y=j|X)\\). This is the logistic regression model.
+	 5. A Monte Carlo estimate of \\(\E[X\prob(Y=j\mid X)]\\) is \\(\sum_i
+		 \x_i \prob(Y=j\mid \x_i)\\).  Logistic regression assigns to each
+		 class the maximum entropy model subject to setting \\(
+		 \E[X\mid Y=0] \\) to the unbiased estimate from the training
+		 data (part 1 and 3 above).  Substituting the Monte Carlo
+		 estimate into 4, set up the equality that yields \\(\prob(Y=j\mid X)\\)
+		 from the maximum entropy model above. These are the weights from the logistic
+		 regression model. See the handout for more details.
 		 
 	 6. Show that the equality in 5 above is exactly what you would solve from the basic
 		 stat approach as well.
