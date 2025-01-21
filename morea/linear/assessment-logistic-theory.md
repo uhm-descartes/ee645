@@ -82,16 +82,16 @@ topics are quite interesting. Here are different angles to think about them.
 2. Fill in the mathematical details behind logistic regresion. Refer
    to this [handout](./logistic.pdf) for reference and help in this
    problem. Let the training data \\( (\x_i, y_i) \\), for \\(i = 1\upto
-   n\\). The examples \\(\x\)) are from a continuous
+   n\\). The examples \\(\x\\) are from a continuous
    (real-valued) space and the labels \\(y_i\\) are from the set
-   \\(\\{0,1\\}\\).  We will also use \\(X\)) (resp. \\(Y\\)) to denote
+   \\(\\{0,1\\}\\).  We will also use \\(X\\) (resp. \\(Y\\) ) to denote
    a random example (resp. label).
    
      1. Subject to \\( \E[X| Y=0] = c\\) for a real number \\(c\\),
 		show that the maximum entropy conditional probability density
 		on \\(X\)) given \\(Y=0\\) is
 	   
-	    \\[ f(X=\x | Y=0) = \exp(\beta_0 +\beta_1^T \x). \\]
+	    \\[ f(X=\x | Y=0) = \exp(\beta_0 +\beta_1^T \x).\\]
 	   
 	    Explain also how the number \\(\beta_0\\) and the vector
 		\\(\beta_1\\) can be determined in principle given any value
