@@ -23,7 +23,7 @@ morea_assessments:
    - assessment-logistic-thy
    - assessment-logistic
 morea_type: module
-morea_icon_url: morea/linear/linear.png
+morea_icon_url: morea/linear/linear.jpg
 morea_start_date: "2025-01-13"
 morea_end_date: "2025-01-22"
 morea_labels:
@@ -35,7 +35,7 @@ morea_prerequisites:
   - ff-nn
 ---
 
-Basics of linear models (focus on logistic regression)
+Basics of linear models (focus on visualizations and logistic regression)
 
 
 
