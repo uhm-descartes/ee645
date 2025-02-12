@@ -40,22 +40,17 @@ that the examples are as far away from it as possible.
 Suppose \\( \z_1\upto \z_n \\\) are \\(n\\\)
 training examples in \(\reals^p\\) given to us with labels \\(y_1\upto y_n\\)
 respectively (each label is either \\(+1\\) or \\(-1\\)). Let \\(\w\in\reals^p\\)
-and \\(b\\) be a number, and define
+and \\(b\\) be a number, and define the distance of the $i'$th point from the plane $\w^T\x-b=0$ (where $\x$ is a dummy variable) to be $\gamma_i(\w,b)$, and
+hence
 
-$$\gamma_i(\w,b) = \w^T\z_i - b.$$
+$$\gamma_i(\w,b) = \frac{\w^T\z_i - b}{||\w||}.$$
 
-
-Therefore, the distances of the \\(n\\) points to the plane \\(\w^T\x-b=0\\) 
-are respectively \\(\gamma_1/||\w|| \upto \gamma_n/||\w||\\). In addition,
-let 
-
+Let the _margin_ of the classifier be
 $$
-\gamma(\w,b) = \min_{1\le i\le n} \gamma_i(\w,b) = \min_{1\le i\le n}\w^T\z_i - b\tag*{(1)}
+\gamma(\w,b) = \min_{1\le i\le n} \gamma_i(\w,b) = \min_{1\le i\le n}\frac{\w^T\z_i - b}{||\w||}\tag*{(1)}
 $$
-
 so that the smallest distance between the examples and the hyperplane
-is \\(\gamma(\w,b)/||\w||\\). This is called the _margin_ of the classifier
-\\(\w^T\x-b=0\\).
+is \\(\gamma(\w,b)\\).
 
 From our training data, we want to obtain that plane \\(\w^T\x-b=0\\) which
 classifies all examples correctly, but in addition has the largest
@@ -70,70 +65,35 @@ determined by different examples (\ie the minimizer
 in (1) is different).  Even though we may not have
 \\(\gamma(\w,b)\\) in a simple form, we can still ask for
 
-
-$$\w^*,b^* = \arg\max{\w,b} \frac{\gamma(\w,b)}{||\w||}$$
+$$\w^*,b^* = \arg\max{\w,b} \gamma(\w,b)}$$
 subject to \\( y_i(\w^T \z_i -b) \ge 0 \text{ for all } 1\le i\le n.\\)
 
 In the optimization above, the first line asks to maximize the margin,
 while the constraints (there are \\(n\\) of them) ensure that each
 example is classified properly.
 
-So far so good, but we don't really want to compute \\(\gamma(\w,b)\\) or
+So far so good, but we don't really want to compute \\(\gamma(\w,b)\\\) or
 try expressing it in any closed/numerical form. But there is a simple
-conceptual way around it. Suppose \\(\w\\) and \\(b\\) classified all examples
-such that every example, \\(\z_1\upto \z_n\\) satisfied
-
+conceptual way around it. Note that scaling both \\(\w\\) and \\(b\\) by the same
+number doesn't change the margin. So when searching for the best \\(\w\\) and
+\\(b\\), among all choices of the pair \\((\w, b)\\) that happen to be scalings
+of each other, we only need to choose one representative. We do this choice
+smartly, picking that value of \\((\w,b)\\) among all scalings that set
 \begin{equation}
- y_i(\w^T \z_i -b) \ge \nu, \qquad 1\le i\le n.\tag*{(2)}
+\min_{i} y_i(\w^T \z_i -b) =1\tag*{(2)}
 \end{equation}
+Note that the left side is not the margin of the classifer \\(gamma(\w,b)\\), but its numerator.
 
-For a given \\(\w\\) and \\(b\\), since \\(\gamma(\w,b)/||\w||\\) happens to be the
-distance of the closest point to the plane \\(\w^T \x -b =0\\), we could
-satisfy all \\(n\\) constraints of (2) above for every value of \\(\nu\\) in the range \\(0 \le\nu \le \gamma(\w,b)\\) and for no
-other.
 
-Therefore, we ask to find the maximum number \\(\nu\\) such that all the
-constraints in (2) are satisfied.
-Note the shift now---we treat \\(\nu\\) as just a number (not a
-function of \\(\w\\) and \\(b\\)) and see which is the largest combination
-of the number \\(\nu\\), the vector \\(\w\\) and \\(b\\) that satisfies
+This now implies that for all valid \(\w, b\), (\ie the ones hat satisfy (2)),
+the margin is
+$$ \frac1{||\w||}.$$ 
+We choose the best among them. Therefore
 
-$$\w^*,b^*,\nu^* = \arg\max_{\nu,\w,b} \frac{\nu}{||\w||}$$
-subject to \\(y_i(\w^T \z_i -b) \ge \nu \text{ for all } 1\le i\le n.\\)
+$$\w^*,b^* = \arg\max_{\w,b} \frac{1}{||\w||}$$
+subject to \\(y_i(\w^T \z_i -b) \ge 1\\) for all \\(1\le i\le n.\\)
 
-We can make one more simplification. There is no distinction between
-the plane \\(\w^T\x-b=0\\) and the plane
-\\(k(\w^T\x-b) =0\\) for any real number \\(k\ne 0\\) (because
-if \\(\x\\) satisfies the equation \\({\w}^T\x-{b}=0\\), it
-automatically satifies the other and vice versa). So all the
-candidates (\\(k{\w}, k{b}\\)), \\(k\ne 0\\), yield exactly the
-same plane (and hence same margin). We may choose just one candidate among
-these while searching for the optimum. To make our life simpler, we
-can choose \\(k\\) such that 
-
-$$\min_{1\le i\le n} k({\w}^T\z_i - {b}) = 1 $$
-
-or equivalently, given any \\({\w}\\) and \\({b}\\), we scale it by
-\\(k=\frac1\gamma\\), where \\(\gamma\\) is as defined as
-in (1), to get \\(\tilde{\w}\\) and \\(\tilde{b}\\), and
-optimize over only the \\(\tilde{\w}\\) and \\(\tilde{b}\\).
-
-Then, we will have 
-
-$$\min_{1\le i\le n} (\tilde{\w}^T\z_i -\tilde{b}) = 1 $$
-
-and the margin of the hyperplane \\(\tilde{\w}^T
-\x-\tilde{b}=0\\) is \\(1/||\tilde{\w}||\\).
-So we can rewrite our training goal to be the optimization
-
-$$\w^*,b^*,\nu^* = \arg\max_{\nu,\tilde{\w},b} \frac{1}{||\tilde{\w}||}$$
-subject to \\(y_i(\tilde{\w}^T \z_i -\tilde{b}) \ge 1\\) for all \\(1\le i\le n.\\)
-
-Clearly, the \\(\nu\\) 's are now superflous---they don't exist in either the
-objective or the constraints---we can discard them.
-In the above, the \\(\tilde\w\\) and \\(\tilde b\\) are just dummy variables,
-we can call them by any other name and nothing will really change. Furthermore,
-maximizing \\(1/||\w||\\) is the same as minimizing \\(||\w||\\), which is in turn
+Inmaximizing \\(1/||\w||\\) is the same as minimizing \\(||\w||\\), which is in turn
 the same as minimizing \\(\half ||\w||^2\\). We can therefore write our training
 objective as obtaining the hyperplane \\( (\w^*)^T \x-b^*=0 \\), where 
 
