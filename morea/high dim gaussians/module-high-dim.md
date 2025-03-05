@@ -18,7 +18,7 @@ morea_end_date: "2021-03-13"
 morea_labels:
 morea_sort_order: 31
 morea_prerequisites:
-	- gaussians
+   - gaussians
 ---
 
 High dimensional Gaussians and Gaussian Mixture models
