@@ -4,6 +4,7 @@ published: true
 morea_coming_soon: false
 morea_id: module-high-dim
 morea_prerequisites:
+	- gaussians
 morea_outcomes:
   # - outcome-CHANGE-ME
 morea_readings:

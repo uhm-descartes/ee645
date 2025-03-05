@@ -65,7 +65,9 @@ determined by different examples (\ie the minimizer
 in (1) is different).  Even though we may not have
 \\(\gamma(\w,b)\\) in a simple form, we can still ask for
 
-$$\w^*,b^* = \arg\max{\w,b} \gamma(\w,b)}$$
+$$
+\w^*,b^* = \arg\max_{\w,b} \gamma(\w,b)
+$$
 subject to \\( y_i(\w^T \z_i -b) \ge 0 \text{ for all } 1\le i\le n.\\)
 
 In the optimization above, the first line asks to maximize the margin,
@@ -82,7 +84,7 @@ smartly, picking that value of \\((\w,b)\\) among all scalings that set
 \begin{equation}
 \min_{i} y_i(\w^T \z_i -b) =1\tag*{(2)}
 \end{equation}
-Note that the left side is not the margin of the classifer \\(gamma(\w,b)\\), but its numerator.
+Note that the left side is not the margin \\(\gamma(\w,b)\\), but its numerator.
 
 
 This now implies that for all valid \(\w, b\), (\ie the ones hat satisfy (2)),
@@ -95,7 +97,7 @@ subject to \\(y_i(\w^T \z_i -b) \ge 1\\) for all \\(1\le i\le n.\\)
 
 Inmaximizing \\(1/||\w||\\) is the same as minimizing \\(||\w||\\), which is in turn
 the same as minimizing \\(\half ||\w||^2\\). We can therefore write our training
-objective as obtaining the hyperplane \\( (\w^*)^T \x-b^*=0 \\), where 
+objective as obtaining the hyperplane \\( {\w^*}^T \x-b^*=0 \\), where 
 
 $$  \w^*,b^* = \arg\min_{\w,b} \half{||\w||^2} \tag*{(3)}$$
 subject to \\(y_i(\w^T \z_i -{b}) \ge 1 \\) for all \\(1\le i\le n.\\)
@@ -166,14 +168,14 @@ will never minimize \\(g(\w,b)\\)). That means that if we look for
 
 $$\arg \min_{\w,b} g(\w,b),$$
 
-the solution must be \\(\w^*,b^*\\) from\textasciitilde{}\eqref{eq:svmls}, since we are
+the solution must be \\(\w^*,b^*\\) from (), since we are
 minimizing \\(\half ||\w||^2\\) but only among such \\(\w,b\\) that satisfy
 every constraint given.
 
-Therefore, we can pose\textasciitilde{}\eqref{eq:svmls} as follows:
-\begin{equation}
-\w^*,b^* = \arg\min_{\w,b} \max_{\Lambda \ge 0} \cL(\w,b, \Lambda).\tag*{(4)}
-\end{equation}
+Therefore, we can pose () as follows:
+
+$$\w^*,b^* = \arg\min_{\w,b} \max_{\Lambda \ge 0} \cL(\w,b, \Lambda).\tag*{(4)}$$
+
 
 We will call the above the \emph{primal} formulation of the
 constrained optimization problem (3)---where we write the Lagrangian,
