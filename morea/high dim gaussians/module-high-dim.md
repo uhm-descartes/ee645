@@ -6,7 +6,7 @@ morea_id: module-high-dim
 morea_outcomes:
   # - outcome-CHANGE-ME
 morea_readings:
-  # - reading-CHANGE-ME
+   - reading-paper
 morea_experiences:
    - lec-high-dim
 morea_assessments:
