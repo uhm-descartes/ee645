@@ -10,6 +10,10 @@ morea_start_date: "2021-07-16T09:00"
 morea_labels:
 ---
 # Theory
+\\(\newcommand{\w}{\mathbf w}\\)
+\\(\newcommand{\x}{\mathbf x}\\)
+\\(\newcommand{\z}{\mathbf z}\\)
+\\(\newcommand{\reals}{\mathbb R}\\)
 
 1. Show that the distance of any point \\( \z_i\in \reals^p \\) from a hyperplane \\(\w^T\x -b=0 \\) (where \\(\w\\) and \\(\x\\) are in \\(\reals^p\\),
 and \\(b\in \reals\\) is a number) is given by
@@ -40,7 +44,7 @@ to further hold out a validation set to make decisions.
 
 Next, enhance the base methods with
 	
-3. Probability modeling for the credit risk (in your report, describe
+3\. Probability modeling for the credit risk (in your report, describe
    how the probability scoring works). This is a repeat of theory
    question 2.
    
