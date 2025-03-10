@@ -5,7 +5,7 @@ morea_coming_soon: false
 morea_id: module-kernels
 morea_prerequisites:
 morea_outcomes:
-  # - outcome-CHANGE-ME
+   - outcome-kernels
 morea_readings:
    - reading-convex
    - reading-svm
