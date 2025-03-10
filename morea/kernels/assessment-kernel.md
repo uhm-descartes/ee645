@@ -20,7 +20,7 @@ and \\(b\in \reals\\) is a number) is given by
 
 	$$\frac{\w^T \z_i -b }{|| \w||}.$$
 
-2. Find an approach to assign probabilities to the classes using a support vector machine. See the first problem in the enhancements section below. 
+2. Find an approach to assign probabilities to the classes using a support vector machine. See part 3 in the mini-project.
 
 # Mini-project
 
@@ -44,11 +44,11 @@ to further hold out a validation set to make decisions.
 
 Next, enhance the base methods with
 	
-3\. Probability modeling for the credit risk (in your report, describe
-   how the probability scoring works). This is a repeat of theory
-   question 2.
+3\.  Probability modeling for the credit risk (in your report,
+   describe how the probability scoring works). This is a repeat of
+   theory question 2.
    
-4. Ensemble methods: rather than use just one classifier, use one of
+4\.  Ensemble methods: rather than use just one classifier, use one of
    the two approaches (i) boosting or (ii) bagging. These are methods
    that take a base learner and amplify them in different
    ways. Boosting takes weak learners and amplifies their
