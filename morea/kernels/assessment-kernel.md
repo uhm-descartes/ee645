@@ -18,9 +18,9 @@ morea_labels:
 1. Show that the distance of any point \\( \z_i\in \reals^p \\) from a hyperplane \\(\w^T\x -b=0 \\) (where \\(\w\\) and \\(\x\\) are in \\(\reals^p\\),
 and \\(b\in \reals\\) is a number) is given by
 
-$$\frac{\w^T \z_i -b }{|| \w||}.$$
+	$$\frac{\w^T \z_i -b }{|| \w||}.$$
 
-2. Find an approach to assign probabilities to the classes using a support vector machine. See one 
+2. Find an approach to assign probabilities to the classes using a support vector machine. See the first problem in the enhancements section below. 
 
 # Mini-project
 
