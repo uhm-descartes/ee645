@@ -10,7 +10,7 @@ morea_readings:
 morea_experiences:
    - lec-high-dim
 morea_assessments:
-  # - assessment-gaussians
+   - assessment-high-dim
 morea_type: module
 morea_icon_url: https://uhm-descartes.github.io/ee445/morea/gaussians/gaussians.png
 morea_start_date: "2025-03-03"
