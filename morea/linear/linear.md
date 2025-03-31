@@ -15,6 +15,7 @@ morea_experiences:
 #  - experience-environment-configuration
 #  - experience-introduce-yourself
 #  - experience-learn-the-command-line
+   - experience-nndemo
    - lecture-lin-reg-geometry
    - lecture-regularization
    - lecture-classification
