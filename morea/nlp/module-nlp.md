@@ -10,6 +10,7 @@ morea_readings:
   # - reading-CHANGE-ME
 morea_experiences:
   - lec-nlp
+  - exp-svd
 morea_assessments:
   # - assessment-CHANGE-ME
 morea_type: module
