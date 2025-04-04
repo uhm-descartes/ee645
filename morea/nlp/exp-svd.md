@@ -45,9 +45,9 @@ span the null space of \\(XX^T\\), so the rest of the eigenvalues are
 
 You can also verify the same way that if you fixed the eigenvectors of \\(XX^T\\) to be \\(u_1\upto \u_n\\), you would have that as long as \\(X^T\u_i\ne 0\\), we will have \\(X^T\u_i\\) will be an eigenvector of \\(X^TX\\). 
 
-Putting these together, we have
+Putting these together, and letting \\(\Lambda\\) be the \\(p\times p\\) diagonal matrix whose entries are \\(\lambda_1\upto \lambda_p\\), we have
 
-$$ X^T X = V \Lambda V^T \text{ and } XX^T = U \Lambda U^T.$$
+$$ X^T X = V \Lambda V^T \text{ and } XX^T = U \begin{bmatrix} \Lambda\\ {\bf 0}_{n-p\times p} \end{bmatrix} U^T.$$
 
 Multiplying the left equation by \\(X\\) on the left and noting \\(XV = U\begin{bmatrix} \Lambda \\ {\bf 0}\end{bmatrix} \\), we have
 
