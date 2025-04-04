@@ -37,11 +37,13 @@ centering), let us say we start with \\(X^T\\), whose rows are the columns of \\
 
 $$ X X^T X \v_i = \lambda_i X\v_i, $$
 
-which implies \\( X\v_i\\) is an eigenvector of \\(XX^T\\) with
-eigenvalue \\(\lambda_i\\) for each \\(1\le i \le p\\).  Let the above
-eigenvectors \\(X\v_i = \u_i\\). The remaining \\(n-p\\) eigenvectors
-span the null space of \\(XX^T\\), so the rest of the eigenvalues are
-0.
+which implies that so long as \\( X\v_i\ne 0\\), it is an eigenvector
+of \\(XX^T\\) with eigenvalue \\(\lambda_i\\) for each \\(1\le i \le
+p\\).  Let the above eigenvectors \\(X\v_i = \u_i\\) for all \\(i\\)
+such that \\(X\v_i\ne 0\\). The remaining eigenvectors span the null
+space of \\(XX^T\\), so the rest of the eigenvalues are 0, and one can
+take any orthogonal basis of the null space to be the remaining
+eigenvectors.
 
 You can also verify the same way that if you fixed the eigenvectors of \\(XX^T\\) to be \\(u_1\upto \u_n\\), you would have that as long as \\(X^T\u_i\ne 0\\), we will have \\(X^T\u_i\\) will be an eigenvector of \\(X^TX\\). 
 

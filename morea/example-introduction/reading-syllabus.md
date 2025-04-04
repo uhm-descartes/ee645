@@ -8,7 +8,7 @@ morea_sort_order: 10
 morea_labels: 
 ---
 
-A pdf version of the syllabus is [here](https://uhm-descartes.github.io/ee645/modules/example-introduction/syllabus-645.pdf)
+A pdf version of the syllabus is [here](https://uhm-descartes.github.io/ee645/morea/example-introduction/syllabus-645.pdf)
 
 
 The Spring 2025 edition welcomes students from multiple departments:
