@@ -27,14 +27,14 @@ $$ X^TX \v_i = \lambda_i \v_i. \tag*{(1)}$$
 Say we do that and examine the eigenvectors. The eigenvectors assign
 weights to the \\(p\\) movies, and are directions in the movie
 space. In large datasets, we would probably think of them as "genres". With the
-small set we have, we don't quite that level of detail, but we still get something. For example, the second eigenvector assigns the following weights:
+small set we have, we don't quite that level of detail, but we still get something. For example, the second eigenvector assigns the following weights (we have omitted those with small weights):
 
 <img src="./secondeig.png" alt="Weights for movies" width="400px"/>
 
 A cursory post-fact interpretation may be that this direction weights heavy/intense movies at one end of the scale and lighter/relaxing ones at the other end. Not to worry, in larger systems, for example, weights in large language models, we will find much better interpretations and examples. The point is, the decomposition helped us find very interesting patterns in the data.
 
 We could do the same with columns. For arguments sake, without worrying about
-centering), let us say we start with \\(X^T\\), whose rows are the columns of \\(X\\). We would then take the eigendecomposition of the \\(n\times n\\) matrix \\( (X^T)^T X^T\\), ie \\(XX^T\\), and say the eigenvectors are in \\(U\\). Also note that multiplying both sides of Equation (1) with \\(X\\) on the left yields
+centering, let us say we start with \\(X^T\\), whose rows are the columns of \\(X\\). We would then take the eigendecomposition of the \\(n\times n\\) matrix \\( (X^T)^T X^T\\), ie \\(XX^T\\). Also note that multiplying both sides of Equation (1) with \\(X\\) on the left yields
 
 $$ X X^T X \v_i = \lambda_i X\v_i, $$
 
@@ -44,9 +44,9 @@ p\\).  Let the above eigenvectors \\(X\v_i = \u_i\\) for all \\(i\\)
 such that \\(X\v_i\ne 0\\). The remaining eigenvectors span the null
 space of \\(XX^T\\), so the rest of the eigenvalues are 0, and one can
 take any orthogonal basis of the null space to be the remaining
-eigenvectors.
+eigenvectors. Put the \\(n\\) eigenvectors as columns of a matrix \\(U\\)
 
-You can also verify the same way that if you fixed the eigenvectors of \\(XX^T\\) to be \\(u_1\upto \u_n\\), you would have that as long as \\(X^T\u_i\ne 0\\), we will have \\(X^T\u_i\\) will be an eigenvector of \\(X^TX\\). 
+You can also verify the same way that, if you fixed the eigenvectors of \\(XX^T\\) to be \\(\u_1\upto \u_n\\), as long as \\(X^T\u_i\ne 0\\) it will be an eigenvector of \\(X^TX\\). 
 
 Putting these together, and letting \\(\Lambda\\) be the \\(p\times p\\) diagonal matrix whose entries are \\(\lambda_1\upto \lambda_p\\), we have
 
