@@ -17,7 +17,7 @@ morea_labels:
 
 The singular value decomposition is a neat way to understand what is happening with matrix operations, and one good direction to interpret LLMs under the hood. We begin with a motivating example: the movie ratings data. The below is a snippet of preferences (from 1-5 where 5 is best) of 26 movies rated by 61 students (anonymized):
 
-<img src="./movieprefs.png" alt="Movie ratings" width="7cm"/>
+<img src="./movieprefs.png" alt="Movie ratings" width="500px"/>
 
 Let \\( R\\) be the \\(n\times p\\) matrix of these movie ratings, and let \\(X\\) be the centered version of \\(R\\) (namely, the mean of all the rows of \\(R\\) is subtracted out from each row of \\(R\\)). In this specific example, \\(n=61\\) and \\(p=26\\). From what we learned about PCA, the directions of maximum variance of the rows are captured by the eigenvectors of \\(X^TX\\). Let \\(V\\) be the matrix of eigenvectors of \\(X^TX\\), i.e. \\(V\\) is \\(p\times p\\) whose columns are the eigenvectors of \\(X^TX\\). Following convention, let the eigenvectors be arranged as the columns of \\(V\\), \\(\v_1\upto \v_n\\), with associated eigenvalues \\(\lambda_1\upto \lambda_p\\) satisfying \\(\lambda_1\ge \lambda_2\ge\cdots\ge \lambda_p\)). Therefore, we have for \\(i=1\upto p\\) that
 
@@ -49,10 +49,14 @@ Putting these together, and letting \\(\Lambda\\) be the \\(p\times p\\) diagona
 
 $$ X^T X = V \Lambda V^T \text{ and } XX^T = U \begin{bmatrix} \Lambda\\ {\bf 0}_{n-p\times p} \end{bmatrix} U^T.$$
 
-Multiplying the left equation by \\(X\\) on the left and noting \\(XV = U\begin{bmatrix} \Lambda \\ {\bf 0}\end{bmatrix} \\), we have
+Multiplying the left equation by \\(X\\) on the left and noting 
 
-$$ XX^T X = U \begin{bmatrix} \Lambda^2 \\ 0 \end{bmatrix} V^T. $$
+$$XV = U\begin{bmatrix} \Lambda \\ {\bf 0}_{n-p\times p}\end{bmatrix},$$ 
+
+we have
+
+$$ XX^T X = U \begin{bmatrix} \Lambda^2 \\ {\bf 0}_{n-p\times p} \end{bmatrix} V^T. $$
 and therefore
 
-$$ X = U \begin{bmatrix} \Lambda \\ 0 \end{bmatrix} V^T. $$
+$$ X = U \begin{bmatrix} \Lambda \\ {\bf 0}_{n-p\times p} \end{bmatrix} V^T. $$
 
