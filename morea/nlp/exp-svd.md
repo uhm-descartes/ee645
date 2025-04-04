@@ -58,8 +58,8 @@ $$XV = U\begin{bmatrix} \Lambda \\ {\bf 0}_{n-p\times p}\end{bmatrix},$$
 
 we have
 
-$$ XX^T X = U \begin{bmatrix} \Lambda^2 \\ {\bf 0}_{n-p\times p} \end{bmatrix} V^T. $$
-and therefore
+$$ XX^T X = U \begin{bmatrix} \Lambda^2 \\ {\bf 0}_{n-p\times p} \end{bmatrix} V^T, $$
+and therefore noting that \\(V^T = V^{-1}\\), we have
 
 $$ X = U \begin{bmatrix} \Lambda \\ {\bf 0}_{n-p\times p} \end{bmatrix} V^T. $$
 
