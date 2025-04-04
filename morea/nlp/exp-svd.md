@@ -56,10 +56,13 @@ Multiplying the left equation by \\(X\\) on the left and noting
 
 $$XV = U\begin{bmatrix} \Lambda \\ {\bf 0}_{(n-p)\times p}\end{bmatrix},$$ 
 
-we have
+we have (show why?)
 
 $$ XX^T X = U \begin{bmatrix} \Lambda^2 \\ {\bf 0}_{(n-p)\times p} \end{bmatrix} V^T, $$
 and therefore noting that \\(V^T = V^{-1}\\), we have
 
 $$ X = U \begin{bmatrix} \Lambda \\ {\bf 0}_{(n-p)\times p} \end{bmatrix} V^T. $$
+
+This is the singular value decomposition. 
+
 
