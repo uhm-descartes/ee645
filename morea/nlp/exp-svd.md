@@ -48,18 +48,18 @@ eigenvectors. Put the \\(n\\) eigenvectors as columns of a matrix \\(U\\)
 
 You can also verify the same way that, if you fixed the eigenvectors of \\(XX^T\\) to be \\(\u_1\upto \u_n\\), as long as \\(X^T\u_i\ne 0\\) it will be an eigenvector of \\(X^TX\\). 
 
-Putting these together, and letting \\(\Lambda\\) be the \\(p\times p\\) diagonal matrix whose entries are \\(\lambda_1\upto \lambda_p\\), we have
+Putting these together, and letting \\(\Lambda\\) be the \\(p\times p\\) diagonal matrix whose entries are \\(\lambda_1\upto \lambda_p\\), we have (can you show why?)
 
-$$ X^T X = V \Lambda V^T \text{ and } XX^T = U \begin{bmatrix} \Lambda\\ {\bf 0}_{n-p\times p} \end{bmatrix} U^T.$$
+$$ X^T X = V \Lambda V^T \text{ and } XX^T = U \begin{bmatrix} \Lambda\\ {\bf 0}_{(n-p)\times p} \end{bmatrix} U^T.$$
 
 Multiplying the left equation by \\(X\\) on the left and noting 
 
-$$XV = U\begin{bmatrix} \Lambda \\ {\bf 0}_{n-p\times p}\end{bmatrix},$$ 
+$$XV = U\begin{bmatrix} \Lambda \\ {\bf 0}_{(n-p)\times p}\end{bmatrix},$$ 
 
 we have
 
-$$ XX^T X = U \begin{bmatrix} \Lambda^2 \\ {\bf 0}_{n-p\times p} \end{bmatrix} V^T, $$
+$$ XX^T X = U \begin{bmatrix} \Lambda^2 \\ {\bf 0}_{(n-p)\times p} \end{bmatrix} V^T, $$
 and therefore noting that \\(V^T = V^{-1}\\), we have
 
-$$ X = U \begin{bmatrix} \Lambda \\ {\bf 0}_{n-p\times p} \end{bmatrix} V^T. $$
+$$ X = U \begin{bmatrix} \Lambda \\ {\bf 0}_{(n-p)\times p} \end{bmatrix} V^T. $$
 
