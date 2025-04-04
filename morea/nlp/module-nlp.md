@@ -7,7 +7,7 @@ morea_prerequisites:
 morea_outcomes:
   # - outcome-CHANGE-ME
 morea_readings:
-  # - reading-CHANGE-ME
+   - reading-gpt
 morea_experiences:
   - lec-nlp
   - exp-svd
