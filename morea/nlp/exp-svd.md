@@ -28,7 +28,7 @@ weights to the \\(p\\) movies, and are directions in the movie
 space. In large datasets, we would probably think of them as "genres". With the
 small set we have, we don't quite that level of detail, but we still get something. For example, the second eigenvector assigns the following weights:
 
-![Weights for movies](./secondeig.png)
+<img src="./secondeig.png" alt="Weights for movies" width="900px"/>
 
 A cursory post-fact interpretation may be that this direction weights heavy/intense movies at one end of the scale and lighter/relaxing ones at the other end. Not to worry, in larger systems, for example, weights in large language models, we will find much better interpretations and examples. The point is, the decomposition helped us find very interesting patterns in the data.
 
