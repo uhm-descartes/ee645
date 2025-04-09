@@ -14,6 +14,7 @@ morea_labels:
 \\( \newcommand{\v}{\mathbf{v}} \\)
 \\( \newcommand{\upto}{,\ldots,} \\)
 \\( \newcommand{\prob}{\mathbb{P}} \\)
+Use the following [notebook](./demosvd.ipynb) to run the simulations. The anonymized movie preference data is [here](./movieratingsfall23.csv).
 
 ## Motivation
 The singular value decomposition is a neat way to understand what is happening with matrix operations, and one good direction to interpret LLMs under the hood. We begin with a motivating example: the movie ratings data. The below is a snippet of preferences (from 1-5 where 5 is best) of 26 movies rated by 61 students (anonymized):

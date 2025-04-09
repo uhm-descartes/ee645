@@ -1,5 +1,5 @@
 ---
-title: "Natural Language Processing"
+title: "Large Language Models"
 published: true
 morea_coming_soon: false
 morea_id: module-nlp
@@ -21,4 +21,4 @@ morea_labels:
 morea_sort_order: 41
 ---
 
-Natural Language Processing, Transformers
+Transformers and in-context learning
