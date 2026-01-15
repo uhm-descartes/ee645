@@ -1,0 +1,22 @@
+---
+title: "NLP: Lectures"
+published: true
+morea_id: lec-nlp
+morea_type: experience
+morea_summary: "Lectures"
+morea_start_date: "2024-03-25"
+morea_sort_order: 4
+morea_labels:
+---
+
+# Kernel methods
+
+Slides for all the lectures are [here](./nlp.pdf)
+
+1. Mar 25
+2. Mar 27 {% include youtube.html id="91x226XrhoQ" %}
+3. Apr 1 Primal and dual formulations, general case {% include youtube.html id="koNRZlRLmDU" %}
+4. Apr 3 Kernel non-linearities {% include youtube.html id="kgQWbqWWtJs" %}
+5. Apr 8 Kernel ridge regression, credit risk data {% include youtube.html id="pU7RUtake18" %}
+
+June covered classes from Feb 5, 7, 12 and 14. Feb 19 was a holiday. Slides are [here]

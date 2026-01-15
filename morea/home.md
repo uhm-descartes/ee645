@@ -5,7 +5,7 @@ morea_type: home
 published: true
 ---
 
-## Welcome to ECE 645, Spring 2025
+## Welcome to ECE 645, Spring 2026
 
 ECE 645 is an graduate level course in machine learning, and a foundational
 course for graduate students who would like to use AI/machine learning
@@ -15,10 +15,9 @@ Current students: please sign on to the class discord server [here](https://disc
 
 ## Who should take this course
 
-The Spring 2025 edition welcomes students from multiple departments:
-in addition to the traditional ECE, Computer Science, and other STEM
-departments (ME, CEE, Math, Astronomy), we have students from social
-sciences, public policy and business. Basic familiarity with
+The Spring 2026 edition welcomes students from multiple departments:
+the traditional ECE, Computer Science, and other STEM departments (ME,
+CEE, Math, ORE), as well as Business. Basic familiarity with
 statistics, probability and some linear algebra, supplemented with a
 willingness to learn fundamentals, is all that is required. Ideally,
 students should have had some exposure to using machine learning/AI
@@ -34,9 +33,14 @@ EE 645 is structured as a series of
 approximately 2-3 weeks to complete. Given the diversity of students,
 we will tailor courses towards multiple categories of students
 (theory, simulations, developing applications for non-traditional
-areas). The course will operate in partially flipped mode, where we
-will delegate some topics to recordings and use class time for threading
-multiple perspectives together. 
+areas).
+
+The course will operate in stacked mode, alongside the undergraduate
+ECE 445 course. Lectures will be the same for both courses, but projects
+and assignments will be different. ECE 445 students connect basic
+concepts to machine learning ideas, while 645 students focus on connecting
+different machine learning ideas in more sophisticated manner and using
+them in their research. 
 
 Modules have:
 
